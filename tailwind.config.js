@@ -4,13 +4,14 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./public/**/*.js",
   ],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
-      sm: '640px',
-      md: '950px',
+      sm: '700px',
+      md: '900px',
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
@@ -19,6 +20,7 @@ module.exports = {
       maxWidth: {
         '64': '16rem',
         '52': '13rem',
+        '44': '11rem',
       }
     },
     supports: {},
@@ -122,6 +124,7 @@ module.exports = {
       96: '24rem',
     },
     animation: {
+      'open-menu': 'open-menu 0.3s ease-in-out forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -582,6 +585,11 @@ module.exports = {
       full: '100%',
     }),
     keyframes: {
+      'open-menu': {
+        '0%': { transform: 'scaleY(0)' },
+        '80%': { transform: 'scaleY(1.2)' },
+        '100%': { transform: 'scaleY(1)' },
+      },
       spin: {
         to: {
           transform: 'rotate(360deg)',

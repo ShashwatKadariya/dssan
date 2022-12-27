@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DSSAN</title>
     @vite('resources/css/app.css')
+    <script src="{{ asset('js/main.js') }}" defer></script>
     @livewireStyles
 </head>
 
-<body>
+<body class="min-h-screen bg-white dark:bg-black dark:text-white">
     <livewire:nav-bar />
 
-    <div class="main">
+    <div>
         @yield('content')
     </div>
 
