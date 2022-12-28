@@ -21,6 +21,9 @@ module.exports = {
         '64': '16rem',
         '52': '13rem',
         '44': '11rem',
+        '48': '12rem',
+        '40': '10rem',
+        '32': '8rem',
       }
     },
     supports: {},
@@ -57,6 +60,7 @@ module.exports = {
       'orange': '#FF9D66',
       'light-orange': '#FFB891',
       'very-light-orange': '#FFD4BC',
+      'deep-blue': '#0d5489',
     }),
     columns: {
       auto: 'auto',
@@ -124,7 +128,7 @@ module.exports = {
       96: '24rem',
     },
     animation: {
-      'open-menu': 'open-menu 0.3s ease-in-out forwards',
+      'open-menu': 'open-menu 0.5s ease-in-out forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
