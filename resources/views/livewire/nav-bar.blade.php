@@ -17,13 +17,13 @@
     </section>
 
     <section id="mobile-menu"
-        class="absolute top-11 sm:top-12 bg-white dark:bg-black w-full hidden flex-col origin-top animate-open-menu">
-        <nav class="flex flex-col py-2 px-5" aria-label="mobile">
-            <a href="/home" class="hover:text-very-deep-orange">Home</a>
-            <a href="/about" class="hover:text-very-deep-orange">About</a>
-            <a href="/gallery" class="hover:text-very-deep-orange">Gallery</a>
-            <a href="/alumni" class="hover:text-very-deep-orange">Alumni</a>
-            <a href="/news&events" class="hover:text-very-deep-orange">News & Events</a>
+        class="absolute top-11 my-2 sm:top-12 sm:hidden bg-very-deep-orange w-full hidden flex-col origin-top animate-open-menu">
+        <nav class="flex flex-col px-5 pb-1" aria-label="mobile">
+            <a href="/home" class="hover:text-white dark:hover:text-black">Home</a>
+            <a href="/about" class="hover:text-white dark:hover:text-black">About</a>
+            <a href="/gallery" class="hover:text-white dark:hover:text-black">Gallery</a>
+            <a href="/alumni" class="hover:text-white dark:hover:text-black">Alumni</a>
+            <a href="/news&events" class="hover:text-white dark:hover:text-black">News & Events</a>
         </nav>
     </section>
 </header>
