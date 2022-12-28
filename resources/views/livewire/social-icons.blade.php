@@ -1,4 +1,4 @@
-<section class="fixed bottom-4 right-0 hidden sm:block">
+<section class="fixed bottom-4 right-0 hidden sm:block z-10">
     <ul class="float-right">
         <li class="px-3 py-2"><a href="https://www.facebook.com/"><img src="{{ asset('images/icon/facebook.png') }}"
                     alt="link_to_facebook" class="w-4"></a></li>
