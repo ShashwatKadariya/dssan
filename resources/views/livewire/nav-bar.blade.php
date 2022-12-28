@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-10 bg-white dark:bg-black">
-    <section class="mx-auto py-3 px-5 flex justify-between items-center sm:px-10">
+    <section class="mx-auto py-3 px-5 flex justify-between items-center sm:px-8">
         <a href="/home">
             <img src="{{ asset('images/logo/dssanlogo.png') }}" alt="dssanlogo"
                 class="max-w-[11rem] sm:max-w-[13rem] md:max-w-[16rem]">
