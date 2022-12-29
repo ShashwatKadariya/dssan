@@ -61,6 +61,7 @@ module.exports = {
       'light-orange': '#FFB891',
       'very-light-orange': '#FFD4BC',
       'deep-blue': '#0d5489',
+      'dark-red': '#870303',
     }),
     columns: {
       auto: 'auto',
