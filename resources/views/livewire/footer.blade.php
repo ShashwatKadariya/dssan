@@ -1,4 +1,4 @@
-<div class="text-sm bg-slate-50 dark:bg-zinc-800">
+<div class="mt-auto text-sm bg-slate-50 dark:bg-zinc-800">
     <footer class="px-5 py-3 sm:px-8 sm:py-5 sm:flex sm:flex-row-reverse sm:gap-4">
         <section class="sm:basis-3/4">
             <p class="text-deep-blue text-xl font-medium pb-2">Connect</p>
