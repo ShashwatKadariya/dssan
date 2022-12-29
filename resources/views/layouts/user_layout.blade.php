@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DSSAN</title>
     @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <script src="{{ asset('js/main.js') }}" defer></script>
     @livewireStyles
 </head>
