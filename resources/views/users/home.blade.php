@@ -65,8 +65,6 @@
         <div class="sm:grid sm:grid-cols-3 sm:gap-9 sm:px-10 sm:py-8">
 
             <div class="max-w-3xs mx-auto m-8 p-10 pb-24 bg-orange rounded-2xl sm:p-8 sm:pb-12 sm:m-0 sm:mx-auto">
-                <div class="rounded-full bg-cover h-32 w-32 mx-auto"
-                    style="background-image: url({{ asset('images/icon/female.png') }})">
                 </div>
                 <p class="text-center font-bold text-2xl mt-2">Alex Smith</p>
                 <p class="text-center font-medium text-lg">Chief Officer</p>

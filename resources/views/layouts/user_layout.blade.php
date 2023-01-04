@@ -12,7 +12,7 @@
     @livewireStyles
 </head>
 
-<body class="min-h-screen flex flex-col bg-white dark:bg-black dark:text-white">
+<body class="min-h-screen flex flex-col bg-off-white">
     <livewire:nav-bar />
 
     <div>
