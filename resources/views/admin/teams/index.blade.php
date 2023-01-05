@@ -23,12 +23,13 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr class="border">
                         <th scope="col" class="px-6 py-3">Image</th>
-                        <th scope="col" class="px-6 py-3">Name</th>
+                        <th scope="col" class="px-6 py-3">First Name</th>
+                        <th scope="col" class="px-6 py-3">Last Name</th>
                         <th scope="col" class="px-6 py-3">Designation</th>
                         <th scope="col" class="px-6 py-3">Position</th>
                         <th scope="col" class="px-6 py-3">Statement</th>
                         <th scope="col" class="px-6 py-3">LinkedIn url</th>
-                        <th scope="col" colspan="2" class="px-6 py-3 text-center">Action</th>
+                        <th scope="col" colspan="2" class="px-6 py-3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,13 +37,13 @@
                         <tr class="bg-white border hover:bg-zinc-50">
                             <td class="px-6 py-3"><img src="{{ asset('/storage/' . $team->image) }}" alt="image"
                                     class="w-20 h-20 rounded-full"></td>
-                            <th scope="row" class="px-6 py-3 font-medium">
-                                {{ $team->full_name }}</th>
+                            <td class="px-6 py-3 font-medium">{{ $team->first_name }}</td>
+                            <td class="px-6 py-3">{{ $team->last_name }}</th>
                             <td class="px-6 py-3">{{ $team->designation }}</td>
                             <td class="px-6 py-3">{{ $team->position }}</td>
                             <td class="px-6 py-3">{{ $team->statement }}</td>
                             <td class="px-6 py-3">{{ $team->linkedin_url }}</td>
-                            <td class="flex items-center justify-center px-6 py-12">
+                            <td class="px-6 py-12">
                                 <form action="{{ route('team.destroy', $team->id) }}" method="POST">
                                     <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-1"
                                         href="{{ route('team.edit', $team->id) }}">Edit</a>

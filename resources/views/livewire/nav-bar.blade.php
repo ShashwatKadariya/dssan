@@ -18,10 +18,14 @@
     <section id="mobile-menu"
         class="absolute top-11 my-2 sm:top-12 bg-slate-50 sm:hidden w-full hidden flex-col origin-top animate-open-menu">
         <nav class="flex flex-col px-5 pb-1" aria-label="mobile">
-            <a href="/home" class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange">Home</a>
-            <a href="/gallery" class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange">Gallery</a>
-            <a href="/alumni" class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange">Alumni</a>
-            <a href="/news&events" class="py-2 hover:text-very-deep-orange">News & Events</a>
+            <a href="/home"
+                class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange active:text-very-deep-orange">Home</a>
+            <a href="/gallery"
+                class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange active:text-very-deep-orange">Gallery</a>
+            <a href="/alumni"
+                class="py-2 hover:text-very-deep-orange border-b border-very-deep-orange active:text-very-deep-orange">Alumni</a>
+            <a href="/news&events" class="py-2 hover:text-very-deep-orange active:text-very-deep-orange">News &
+                Events</a>
         </nav>
     </section>
 </header>

@@ -24,7 +24,8 @@ class TeamFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'full_name' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'designation' => 'required',
             'position' => 'required',
             'statement' => 'required',
