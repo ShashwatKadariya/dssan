@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});
 
 Route::get('/home', function () {
     return view('users.home');
@@ -32,3 +37,5 @@ Route::get('/alumni', function () {
 Route::get('/news&events', function () {
     return view('users.news&events');
 });
+
+Route::resource('/team', TeamController::class);
