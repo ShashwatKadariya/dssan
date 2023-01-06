@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [HomeController::class, 'home']);
 
-Route::get('/admin/dashboard', function () {
+Route::get('/login', function () {
+    return view('admin.login');
+});
+
+Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
