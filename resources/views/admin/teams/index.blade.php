@@ -2,20 +2,17 @@
 
 @section('content')
     <div class="p-4">
-        <a class="text-white bg-blue-600 hover:bg-blue-700 shadow-sm font-medium rounded-sm text-sm px-3 py-1 text-center"
-            href="/dashboard">Back</a>
+        <a class="back-btn" href="/dashboard">Back</a>
         <div class="flex flex-row justify-between px-2 py-4">
             <div>
                 <p class="text-xl font-semibold">Team</p>
                 <p class="text-sm">A list of all the members in alumni team.</p>
             </div>
             <form action="{{ route('team.create') }}">
-                <button type="submit"
-                    class="text-white bg-blue-600 hover:bg-blue-700 shadow-sm font-medium rounded-sm text-sm px-3 py-2 text-center">Add
+                <button type="submit" class="create-btn">Add
                     Member</button>
             </form>
         </div>
-
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
