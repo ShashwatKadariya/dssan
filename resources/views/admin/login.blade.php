@@ -24,7 +24,7 @@
                         Log in to your account
                     </button>
                 </div>
-                <p class="mb-3 text-blue-500">
+                <p class="mb-3 text-blue-500 text-right">
                     <a href="#!">Forgot password?</a>
                 </p>
             </form>
