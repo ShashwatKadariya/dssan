@@ -6,7 +6,7 @@
         <div class="flex flex-row justify-between px-2 py-4">
             <div>
                 <p class="text-xl font-semibold">Team</p>
-                <p class="text-sm">A list of all the members in alumni team.</p>
+                <p class="text-sm">A list of current team members in DSSAN.</p>
             </div>
             <form action="{{ route('team.create') }}">
                 <button type="submit" class="create-btn">Add
