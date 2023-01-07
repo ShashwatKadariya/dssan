@@ -10,7 +10,7 @@
     @livewireStyles
 </head>
 
-<body class="min-h-screen font-sans">
+<body class="min-h-screen font-sans bg-gray-100">
 
     <div>
         @yield('content')
