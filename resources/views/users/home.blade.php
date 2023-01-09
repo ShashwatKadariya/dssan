@@ -64,13 +64,17 @@
 
         <div class="sm:grid sm:grid-cols-3 sm:gap-9 sm:px-10 sm:py-8">
             @foreach ($teams as $team)
-                <div class="max-w-3xs mx-auto m-8 p-8 bg-orange rounded-2xl sm:p-8 sm:pb-12 sm:m-0 sm:mx-auto">
+                <div class="container max-w-3xs mx-auto m-8 p-8 bg-orange rounded-2xl sm:p-8 sm:pb-12 sm:m-0 sm:mx-auto">
                     <div class="rounded-full bg-cover h-36 w-36 mx-auto"
                         style="background-image: url({{ asset('/storage/' . $team->image) }})">
                     </div>
                     <p class="text-center font-bold text-2xl mt-2">{{ $team->first_name }}</p>
                     <p class="text-center font-bold text-2xl">{{ $team->last_name }}</p>
                     <p class="text-center font-medium text-lg mt-2">{{ $team->designation }}</p>
+                    <div class="overlay">
+                        <p>{{ $team->statement }}</p>
+                        <a href="{{ $team->linkedin_url }}">LinkedIn</a>
+                    </div>
                 </div>
             @endforeach
         </div>
