@@ -130,7 +130,7 @@ module.exports = {
       96: '24rem',
     },
     animation: {
-      'open-menu': 'open-menu 0.5s ease-in-out forwards',
+      'open-menu': 'open-menu 0.3s ease forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -194,6 +194,7 @@ module.exports = {
     blur: {
       0: '0',
       none: '0',
+      xs: '2px',
       sm: '4px',
       DEFAULT: '8px',
       md: '12px',
@@ -594,7 +595,6 @@ module.exports = {
     keyframes: {
       'open-menu': {
         '0%': { transform: 'scaleY(0)' },
-        '80%': { transform: 'scaleY(1.2)' },
         '100%': { transform: 'scaleY(1)' },
       },
       spin: {
