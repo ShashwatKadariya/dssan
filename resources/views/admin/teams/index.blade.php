@@ -31,7 +31,7 @@
                     @foreach ($teams as $team)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3"><img src="{{ asset('/storage/' . $team->image) }}" alt="image"
-                                    class="h-20 rounded-full"></td>
+                                    class="h-20 w-20 rounded-full"></td>
                             <td class="p-3">{{ $team->first_name }}</td>
                             <td class="p-3">{{ $team->last_name }}</th>
                             <td class="p-3">{{ $team->designation }}</td>
