@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FactController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -44,3 +45,4 @@ Route::get('/news&events', function () {
 
 Route::resource('/team', TeamController::class);
 Route::resource('/fact', FactController::class);
+Route::resource('/feedback', FeedbackController::class);
