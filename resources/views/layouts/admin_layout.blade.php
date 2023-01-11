@@ -13,11 +13,10 @@
 </head>
 
 <body class="min-h-screen font-sans bg-gray-100">
-
     <div>
         @yield('content')
     </div>
-
+    <livewire:message-box />
     @livewireScripts
 </body>
 

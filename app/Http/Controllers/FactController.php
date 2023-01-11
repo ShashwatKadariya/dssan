@@ -23,7 +23,7 @@ class FactController extends Controller
     {
         $validatedData = $request->validated();
         Fact::create($validatedData);
-        return redirect()->route('fact.index');
+        return redirect()->route('fact.index')->with('success', 'Details saved successfully.');
     }
 
     public function show(Fact $fact)
@@ -39,12 +39,12 @@ class FactController extends Controller
     public function update(FactFormRequest $request, Fact $fact)
     {
         $fact->update($request->validated());
-        return redirect()->route('fact.index');
+        return redirect()->route('fact.index')->with('success', 'Details updated successfully.');
     }
 
     public function destroy(Fact $fact)
     {
         $fact->delete();
-        return redirect()->route('fact.index');
+        return redirect()->route('fact.index')->with('danger', 'Details deleted successfully.');
     }
 }

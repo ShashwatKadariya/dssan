@@ -27,7 +27,7 @@ class FeedbackController extends Controller
             $validatedData->image = $request->file('image')->store('feedbackImage');
         }
         Feedback::create($validatedData);
-        return redirect('/home')->with('success', 'Your message has been recorded.');
+        return redirect('/home')->with('info', 'Your message has been recorded.');
     }
 
     public function show(Feedback $feedback)
@@ -60,6 +60,6 @@ class FeedbackController extends Controller
             Storage::delete($feedback->image);
         }
         $feedback->delete();
-        return redirect()->route('feedback.index')->with('success', 'Feedback deleted successfully.');
+        return redirect()->route('feedback.index')->with('danger', 'Details deleted successfully.');
     }
 }

@@ -54,6 +54,6 @@ class TeamController extends Controller
     {
         Storage::delete($team->image);
         $team->delete();
-        return redirect()->route('team.index')->with('success', 'Member deleted successfully.');
+        return redirect()->route('team.index')->with('danger', 'Team member removed successfully.');
     }
 }
