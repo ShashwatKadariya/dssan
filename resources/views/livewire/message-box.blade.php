@@ -24,7 +24,7 @@
 @endif
 
 @if ($message = Session::get('danger'))
-    <div id="toastr" class="message-box" role="alert">
+    <div id="toastr" class="message-box" role="alert" style="visibility: visible">
         <div class="icon text-red-500 bg-red-100">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
