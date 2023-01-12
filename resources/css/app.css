@@ -22,4 +22,12 @@
     .message-box {
         @apply absolute top-0 right-0 flex items-center w-full max-w-xs p-2 m-1 bg-white rounded-sm shadow;
     }
+
+    .icon {
+        @apply inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg;
+    }
+
+    .close-btn {
+        @apply ml-auto bg-white text-gray-500 hover:text-gray-900 rounded-lg items-center justify-center inline-flex h-8 w-8;
+    }
 }

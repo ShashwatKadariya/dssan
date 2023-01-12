@@ -1,7 +1,6 @@
 @if ($message = Session::get('success'))
-    <div id="toast-success" class="message-box" role="alert">
-        <div
-            class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
+    <div id="toastr" class="message-box" role="alert" style="visibility: visible">
+        <div class="icon text-green-500 bg-green-100">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -11,9 +10,8 @@
             <span class="sr-only">Check icon</span>
         </div>
         <div class="ml-3 text-sm">{{ $message }}</div>
-        <button type="button"
-            class="ml-auto bg-white text-gray-500 hover:text-gray-900 rounded-lg items-center justify-center inline-flex h-8 w-8"
-            data-dismiss-target="#toast-success" aria-label="Close">
+        <button type="button" class="close-btn" data-dismiss-target="#toastr" aria-label="Close"
+            onclick="getElementById('toastr').className = 'hidden'">
             <span class="sr-only">Close</span>
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +24,8 @@
 @endif
 
 @if ($message = Session::get('danger'))
-    <div id="toast-danger" class="message-box" role="alert">
-        <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg">
+    <div id="toastr" class="message-box" role="alert">
+        <div class="icon text-red-500 bg-red-100">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -37,9 +35,8 @@
             <span class="sr-only">Error icon</span>
         </div>
         <div class="ml-3 text-sm">{{ $message }}</div>
-        <button type="button"
-            class="ml-auto bg-white text-gray-500 hover:text-gray-900 rounded-lg items-center justify-center inline-flex h-8 w-8"
-            data-dismiss-target="#toast-danger" aria-label="Close">
+        <button type="button" class="close-btn" data-dismiss-target="#toast-danger" aria-label="Close"
+            onclick="getElementById('toastr').className = 'hidden'">
             <span class="sr-only">Close</span>
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -50,3 +47,10 @@
         </button>
     </div>
 @endif
+
+<script>
+    function hideMessageBox() {
+        document.getElementById('toastr').style.visibility = "hidden";
+    }
+    setTimeout('hideMessageBox()', 3000);
+</script>
