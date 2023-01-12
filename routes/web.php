@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\FactController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', [HomeController::class, 'home']);
+
+Route::get('/login', function () {
+    return view('admin.login');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/about', function () {
+    return view('users.about');
+});
+
+Route::get('/gallery', function () {
+    return view('users.gallery');
+});
+
+Route::get('/alumni', function () {
+    return view('users.alumni');
+});
+
+Route::get('/news&events', function () {
+    return view('users.news&events');
+});
+
+Route::resource('/team', TeamController::class);
+Route::resource('/fact', FactController::class);
+Route::resource('/feedback', FeedbackController::class);
