@@ -30,4 +30,8 @@
     .close-btn {
         @apply ml-auto bg-white text-gray-500 hover:text-gray-900 rounded-lg items-center justify-center inline-flex h-8 w-8;
     }
+
+    .delete-box {
+        @apply fixed w-96 h-44 top-1/2 left-1/2 -mt-24 -ml-48;
+    }
 }

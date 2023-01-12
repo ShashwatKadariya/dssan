@@ -39,14 +39,14 @@
                             <td class="p-3">{{ $team->statement }}</td>
                             <td class="p-3">{{ $team->linkedin_url }}</td>
                             <td class="p-3">
-                                <form action="{{ route('team.destroy', $team->id) }}" method="POST">
+                                <form id="submitForm" action="{{ route('team.destroy', $team->id) }}" method="POST">
                                     <a class="font-medium text-blue-600 hover:underline pb-1"
                                         href="{{ route('team.edit', $team->id) }}">Edit</a>
                                     <br>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit"
-                                        class="font-medium text-red-600 hover:underline pt-1">Delete</button>
+                                    <button type="button" class="font-medium text-red-600 hover:underline pt-1"
+                                        onclick="document.getElementById('deleteBox').className = 'block'">Delete</button>
                                 </form>
                             </td>
                         </tr>

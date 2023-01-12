@@ -27,3 +27,7 @@ function loading() {
     loading.classList.toggle('hidden')
     loading.classList.toggle('inline')
 }
+
+function confirmDelete() {
+    document.getElementById("submitForm").submit();
+}
