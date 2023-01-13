@@ -581,6 +581,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      '88': '22rem',
     }),
     inset: ({ theme }) => ({
       auto: 'auto',

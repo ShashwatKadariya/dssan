@@ -1,12 +1,14 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-    <div class="relative h-screen w-full flex justify-center items-center gap-10 bg-cover blur-xs"
-        style="background-image: url({{ asset('images/city-evening-cityscape.jpg') }})">
+    <div class="bg-cover"
+        style="background-image: url({{ asset('images/loginBG.png') }})">
         <div class="bg-black w-full h-screen opacity-40">
         </div>
     </div>
-    <div class="absolute top-1/4 left-1/3 bg-white opacity-90 px-8 py-4 w-1/3 rounded">
+    <div class="fixed w-96 h-[22rem] top-1/2 left-1/2 -mt-44 -ml-48 bg-black opacity-20">
+    </div>
+    <div class="fixed w-96 h-[22rem] top-1/2 left-1/2 -mt-44 -ml-48 bg-white opacity-90 px-8 py-4 rounded">
         <p class="text-xl text-center mb-4 font-semibold">Sign in to your account</p>
         <form>
             <div class="mb-4">
@@ -27,7 +29,7 @@
                     Log in to your account
                 </button>
             </div>
-            <p class="mb-3 text-blue-600 hover:text-blue-700 text-right">
+            <p class="mb-3 text-blue-600 hover:text-blue-700 text-center hover:underline">
                 <a href="#!">Forgot password?</a>
             </p>
         </form>
