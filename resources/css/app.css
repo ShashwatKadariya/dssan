@@ -20,7 +20,7 @@
     }
 
     .message-box {
-        @apply absolute top-0 right-0 flex items-center w-full max-w-xs p-2 m-1 bg-white rounded-sm shadow;
+        @apply absolute top-0 right-0 flex items-center w-full max-w-xs p-2 m-1 bg-white rounded-sm shadow animate-toast-notify;
     }
 
     .icon {

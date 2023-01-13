@@ -131,6 +131,7 @@ module.exports = {
     },
     animation: {
       'open-menu': 'open-menu 0.3s ease forwards',
+      'toast-notify': 'toast-notify 1s ease forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -594,8 +595,11 @@ module.exports = {
     }),
     keyframes: {
       'open-menu': {
-        '0%': { transform: 'scaleY(0)' },
-        '100%': { transform: 'scaleY(1)' },
+        '0%': { transform: 'scalex(0)' },
+        '100%': { transform: 'scalex(1)' },
+      },
+      'toast-notify': {
+        '0%': { transform: 'translateX(100%)' },
       },
       spin: {
         to: {
