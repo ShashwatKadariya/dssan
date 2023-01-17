@@ -33,15 +33,15 @@
                                     class="h-20 w-20 rounded-full"></td>
                             <td class="p-3">{{ $feedback->display_status }}</td>
                             <td class="p-3">
-                                <form id="submitForm" action="{{ route('feedback.destroy', $feedback->id) }}"
-                                    method="POST">
+                                <form id="submitForm_{{ $feedback->id }}"
+                                    action="{{ route('feedback.destroy', $feedback->id) }}" method="POST">
                                     <a class="font-medium text-blue-600 hover:underline pb-1"
                                         href="{{ route('feedback.edit', $feedback->id) }}">Edit</a>
                                     <br>
                                     @csrf
                                     @method('DELETE')
                                     <button type="button" class="font-medium text-red-600 hover:underline pt-1"
-                                        onclick="document.getElementById('deleteBox').className = 'block'">Delete</button>
+                                        onclick="deleteBox({{ $feedback->id }})">Delete</button>
                                 </form>
                             </td>
                         </tr>

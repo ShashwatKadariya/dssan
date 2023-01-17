@@ -31,7 +31,7 @@
                     @foreach ($teams as $team)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3"><img src="{{ asset('/storage/' . $team->image) }}" alt="image"
-                                    class="h-20 w-20 rounded-full"></td>
+                                    class="w-20 rounded-full"></td>
                             <td class="p-3">{{ $team->first_name }}</td>
                             <td class="p-3">{{ $team->last_name }}</th>
                             <td class="p-3">{{ $team->designation }}</td>
@@ -39,14 +39,15 @@
                             <td class="p-3">{{ $team->statement }}</td>
                             <td class="p-3">{{ $team->linkedin_url }}</td>
                             <td class="p-3">
-                                <form id="submitForm" action="{{ route('team.destroy', $team->id) }}" method="POST">
+                                <form id="submitForm_{{ $team->id }}" action="{{ route('team.destroy', $team->id) }}"
+                                    method="POST">
                                     <a class="font-medium text-blue-600 hover:underline pb-1"
                                         href="{{ route('team.edit', $team->id) }}">Edit</a>
                                     <br>
                                     @csrf
                                     @method('DELETE')
                                     <button type="button" class="font-medium text-red-600 hover:underline pt-1"
-                                        onclick="document.getElementById('deleteBox').className = 'block'">Delete</button>
+                                        onclick="deleteBox({{ $team->id }})">Delete</button>
                                 </form>
                             </td>
                         </tr>

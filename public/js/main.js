@@ -28,6 +28,12 @@ function loading() {
     loading.classList.toggle('inline')
 }
 
+let global_id;
+function deleteBox(id) {
+    global_id = id;
+    document.getElementById('deleteBox').className = 'block';
+}
+
 function confirmDelete() {
-    document.getElementById("submitForm").submit();
+    document.getElementById(`submitForm_${global_id}`).submit();
 }
