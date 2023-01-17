@@ -20,9 +20,10 @@ module.exports = {
       maxWidth: {
         '64': '16rem',
         '52': '13rem',
-        '44': '11rem',
         '48': '12rem',
+        '44': '11rem',
         '40': '10rem',
+        '36': '9rem',
         '32': '8rem',
       }
     },
@@ -55,14 +56,7 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      'very-deep-orange': '#EA5D0F',
-      'deep-orange': '#FF813B',
-      'orange': '#FF9D66',
-      'light-orange': '#FFB891',
-      'very-light-orange': '#FFD4BC',
-      'deep-blue': '#0d5489',
-      'dark-red': '#870303',
-      'off-white': '#f5f5f6',
+      'light-green': '#eefffd',
     }),
     columns: {
       auto: 'auto',

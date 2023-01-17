@@ -1,4 +1,4 @@
-<div class="mt-auto text-sm bg-slate-50">
+<div class="mt-auto text-sm bg-off-white">
     <footer class="px-5 py-3 sm:px-8 sm:py-5 sm:flex sm:flex-row-reverse sm:gap-4">
         <section class="sm:basis-3/4">
             <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data" class="w-2/4">
