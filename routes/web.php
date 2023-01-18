@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BatchController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
@@ -19,18 +20,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [HomeController::class, 'home']);
 
-Route::get('/login', function () {
-    return view('admin.login');
-});
-
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
-
-Route::get('/about', function () {
-    return view('users.about');
-});
-
 Route::get('/gallery', function () {
     return view('users.gallery');
 });
@@ -43,6 +32,15 @@ Route::get('/news&events', function () {
     return view('users.news&events');
 });
 
+Route::get('/login', function () {
+    return view('admin.login');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
 Route::resource('/team', TeamController::class);
 Route::resource('/fact', FactController::class);
 Route::resource('/feedback', FeedbackController::class);
+Route::resource('/batch', BatchController::class);
