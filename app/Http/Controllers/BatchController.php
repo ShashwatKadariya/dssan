@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alumni;
 use App\Models\Batch;
 use Illuminate\Http\Request;
+
+use function Symfony\Component\VarDumper\Dumper\esc;
 
 class BatchController extends Controller
 {
@@ -27,8 +30,11 @@ class BatchController extends Controller
         return redirect()->route('batch.index')->with('success', 'Batch added successfully.');
     }
 
-    public function show(Batch $batch)
+    public function show($id)
     {
+        $batch = Batch::findorFail($id);
+        $alumni = $batch->alumni->where('batch_id', $id);
+        return view('admin.batch.show', compact('batch', 'alumni'));
     }
 
     public function edit(Batch $batch)
@@ -47,7 +53,12 @@ class BatchController extends Controller
 
     public function destroy(Batch $batch)
     {
-        $batch->delete();
-        return redirect()->route('batch.index')->with('danger', 'Batch deleted successfully.');
+        $alumni = $batch->alumni->where('batch_id', $batch->id);
+        if (count($alumni) == 0) {
+            $batch->delete();
+            return redirect()->route('batch.index')->with('danger', 'Batch deleted successfully.');
+        } else {
+            return redirect()->route('batch.index')->with('danger', 'Batch not empty.');
+        }
     }
 }

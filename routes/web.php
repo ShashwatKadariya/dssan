@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\BatchController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
@@ -44,3 +45,8 @@ Route::resource('/team', TeamController::class);
 Route::resource('/fact', FactController::class);
 Route::resource('/feedback', FeedbackController::class);
 Route::resource('/batch', BatchController::class);
+Route::get('/alumni/create/{id}', [AlumniController::class, 'create'])->name('alumni.create');
+Route::post('/alumni/store/{id}', [AlumniController::class, 'store'])->name('alumni.store');
+Route::get('/alumni/edit/{id}', [AlumniController::class, 'edit'])->name('alumni.edit');
+Route::post('/alumni/update/{id}', [AlumniController::class, 'update'])->name('alumni.update');
+Route::delete('/alumni/destroy/{id}', [AlumniController::class, 'destroy'])->name('alumni.destroy');

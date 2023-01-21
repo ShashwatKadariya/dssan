@@ -9,6 +9,11 @@ class Batch extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'batch',
+        'id', 'batch',
     ];
+
+    public function alumni()
+    {
+        return $this->hasMany(Alumni::class);
+    }
 }
