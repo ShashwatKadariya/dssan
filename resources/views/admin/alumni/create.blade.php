@@ -50,7 +50,7 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="block mb-1 text-sm font-medium text-gray-500">Gender</label>
+                <label class="text-sm text-gray-500">Gender</label>
                 <select name="gender" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2">
                     <option value="">--Select--</option>
                     <option value="Male">Male</option>
@@ -75,10 +75,10 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="form-label">Image</label>
+                <label class="text-sm text-gray-500">Upload Photo</label>
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
-                <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
+                <img id="preview" class="hidden mt-2 max-w-20 max-h-20 rounded-full">
                 @error('image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

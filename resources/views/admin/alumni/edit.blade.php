@@ -75,11 +75,11 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="form-label">Image</label>
+                <label class="text-sm text-gray-500">Edit Photo</label>
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
                 <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
-                <img src="{{ asset('/storage/' . $alumni->image) }}" class="p-2 w-20 h-20 rounded-full" alt="&#10060;">
+                <img id="oldImage" src="{{ asset('/storage/' . $alumni->image) }}" class="p-2 w-20 h-20 rounded-full" alt="&#10060;">
                 @error('image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

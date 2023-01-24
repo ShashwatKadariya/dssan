@@ -7,15 +7,15 @@
             @csrf
             <p class="mb-6">Add Details</p>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="number" name="graduated" class="form-input peer" placeholder=" ">
-                <label class="form-label">Graduated</label>
+                <input type="integer" name="graduated" class="form-input peer" placeholder=" ">
+                <label class="form-label">Graduated number of students from DSS</label>
                 @error('graduated')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="number" name="current_members" class="form-input peer" placeholder=" ">
-                <label class="form-label">Current Members</label>
+                <input type="integer" name="current_members" class="form-input peer" placeholder=" ">
+                <label class="form-label">Number of alumnus in Alumni Team</label>
                 @error('current_members')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

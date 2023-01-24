@@ -14,14 +14,14 @@
             </form>
         </div>
         <div class="relative overflow-x-auto">
-            <table class="w-1/2 text-sm text-center mx-auto">
+            <table class="w-1/2 text-sm mx-auto">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr class="border">
                         <th scope="col" class="p-3">Batch</th>
                         <th scope="col" colspan="3" class="p-3">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="text-center">
                     @foreach ($batches as $batch)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3">{{ $batch->batch }}</td>

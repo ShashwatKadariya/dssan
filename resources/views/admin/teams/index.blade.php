@@ -14,7 +14,7 @@
             </form>
         </div>
         <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left">
+            <table class="w-full text-sm">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr class="border">
                         <th scope="col" class="p-3">Image</th>
@@ -27,11 +27,11 @@
                         <th scope="col" colspan="2" class="p-3">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="text-center">
                     @foreach ($teams as $team)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3"><img src="{{ asset('/storage/' . $team->image) }}" alt="image"
-                                    class="max-w-20 max-h-20 rounded-full"></td>
+                                    class="max-w-20 max-h-20 rounded-full mx-auto"></td>
                             <td class="p-3">{{ $team->first_name }}</td>
                             <td class="p-3">{{ $team->last_name }}</th>
                             <td class="p-3">{{ $team->designation }}</td>
