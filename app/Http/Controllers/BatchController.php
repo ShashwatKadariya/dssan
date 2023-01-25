@@ -33,7 +33,7 @@ class BatchController extends Controller
     public function show($id)
     {
         $batch = Batch::findorFail($id);
-        $alumni = $batch->alumni->where('batch_id', $id);
+        $alumni = Alumni::where('batch_id', $id)->orderBy('full_name', 'asc')->get();
         return view('admin.batch.show', compact('batch', 'alumni'));
     }
 
