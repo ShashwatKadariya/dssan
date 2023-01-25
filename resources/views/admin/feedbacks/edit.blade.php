@@ -48,11 +48,24 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="form-label">Image</label>
+                <label class="block mb-1 text-sm font-medium text-gray-500">Display Status</label>
+                <select name="display_status"
+                    class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2">
+                    <option value="{{ $feedback->display_status }}" selected>{{ $feedback->display_status }}</option>
+                    <option value="Displayed">Displayed</option>
+                    <option value="Hidden">Hidden</option>
+                </select>
+                @error('display_status')
+                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                @enderror
+            </div>
+            <div class="relative z-0 w-full mb-6 group">
+                <label class="form-label">Edit Photo</label>
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
                 <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
-                <img src="{{ asset('/storage/' . $feedback->image) }}" class="p-2 w-20 h-20 rounded-full" alt="&#10060;">
+                <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}"
+                    class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"

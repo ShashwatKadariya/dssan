@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('batch');
             $table->longText('message');
             $table->string('image')->nullable();
-            $table->enum('display_status', ['view', 'hide'])->default('hide');
+            $table->enum('display_status', ['Displayed', 'Hidden'])->default('Hidden');
             $table->timestamps();
         });
     }

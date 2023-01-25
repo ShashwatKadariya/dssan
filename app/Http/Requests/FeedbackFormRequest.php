@@ -29,6 +29,7 @@ class FeedbackFormRequest extends FormRequest
             'subject' => 'required',
             'batch' => 'required',
             'message' => 'required',
+            'display_status' => 'required',
         ];
         return $rules;
     }

@@ -40,6 +40,12 @@
                     @enderror
                 </div>
                 <div class="relative z-0 w-full mb-6 group">
+                    <input type="hidden" name="display_status" class="form-input peer" placeholder=" " value="Hidden">
+                    @error('display_status')
+                        <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                    @enderror
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
                     <label class="form-label">Image</label>
                     <input type="file" name="image" class="form-input peer" accept="image/*"
                         onchange="previewImage(event)">

@@ -11,7 +11,7 @@ class FeedbackController extends Controller
 {
     public function index()
     {
-        $feedbacks = Feedback::get();
+        $feedbacks = Feedback::orderBy('display_status', 'asc')->latest()->get();
         return view('admin.feedbacks.index', compact('feedbacks'));
     }
 
