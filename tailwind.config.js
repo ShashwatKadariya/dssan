@@ -57,6 +57,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       'light-green': '#eefffd',
+      'body-white': '#fbfbfb',
     }),
     columns: {
       auto: 'auto',
@@ -124,7 +125,7 @@ module.exports = {
       96: '24rem',
     },
     animation: {
-      'open-menu': 'open-menu 0.3s ease forwards',
+      'open-menu': 'open-menu 0.1s ease-in-out forwards',
       'toast-notify': 'toast-notify 1s ease forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
@@ -590,8 +591,8 @@ module.exports = {
     }),
     keyframes: {
       'open-menu': {
-        '0%': { transform: 'scalex(0)' },
-        '100%': { transform: 'scalex(1)' },
+        '0%': { transform: 'scaleY(0)' },
+        '100%': { transform: 'scaleY(1)' },
       },
       'toast-notify': {
         '0%': { transform: 'translateX(100%)' },

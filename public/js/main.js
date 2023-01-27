@@ -1,3 +1,4 @@
+// navbar view toggle
 const initApp = () => {
     const hamburgerBtm = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
@@ -8,7 +9,9 @@ const initApp = () => {
     hamburgerBtm.addEventListener('click', toggleMenu)
     mobileMenu.addEventListener('click', toggleMenu)
 }
-document.addEventListener('DOMContentLoaded', initApp)
+if ($(window).width() <= 600) {
+    document.addEventListener('DOMContentLoaded', initApp)
+}
 
 function previewImage(event) {
     var reader = new FileReader();
