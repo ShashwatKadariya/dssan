@@ -58,6 +58,10 @@ module.exports = {
       rose: colors.rose,
       'light-green': '#eefffd',
       'body-white': '#fbfbfb',
+      'footer-bgcolor': '#f5f5f7',
+      'footer-text': '#6e6e73',
+      'footer-text-dark': '#424245',
+      'line-color': '#d2d2d7',
     }),
     columns: {
       auto: 'auto',

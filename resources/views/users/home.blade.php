@@ -1,6 +1,21 @@
 @extends('layouts.user_layout')
 
 @section('content')
+    <div class="intro">
+        <h1>Your journey doesn't end at Graduation.</h1>
+        <video src="{{ asset('videos/video.mp4') }}"></video>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
     {{-- for mobile view
     <section class="px-5 w-full mx-auto sm:hidden">
         <div class="p-0 bg-image">
@@ -57,7 +72,8 @@
     <section class="text-center m-2">
         <p class="text-3xl text-heading-purple font-bold">Team</p>
         <p class="text-xl font-medium text-heading-purple">Dedication. Expertise. Passion</p>
-        <p class="leading-5 w-3/5 mx-auto text-text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit
+        <p class="leading-5 w-3/5 mx-auto text-text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Cupiditate impedit
             quam est
             numquam. Voluptatibus nulla consequatur culpa expedita neque.
         </p>
