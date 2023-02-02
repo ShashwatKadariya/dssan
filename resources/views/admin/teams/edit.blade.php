@@ -3,8 +3,8 @@
 @section('content')
     <div class="p-4">
         <a class="back-btn" href="{{ route('team.index') }}">Back</a>
-
-        <form action="{{ route('team.update', $team->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto">
+        <form action="{{ route('team.update', $team->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
+            id="submitForm">
             @csrf
             @method('PUT')
             <p class="mb-6">Edit Details</p>
@@ -57,10 +57,10 @@
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-gray-500 text-sm">Edit Photo</label>
-                <input type="file" name="image" class="form-input" accept="image/*"
-                    onchange="previewImage(event)">
+                <input type="file" name="image" class="form-input" accept="image/*" onchange="previewImage(event)">
                 <img id="preview" class="hidden mt-2 max-w-20 max-h-20 rounded-full">
-                <img id="oldImage" src="{{ asset('/storage/' . $team->image) }}" class="block p-2 max-w-20 max-h-20 rounded-full" alt="team">
+                <img id="oldImage" src="{{ asset('/storage/' . $team->image) }}"
+                    class="block p-2 max-w-20 max-h-20 rounded-full" alt="team">
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"

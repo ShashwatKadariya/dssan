@@ -5,7 +5,7 @@
         <a class="back-btn" href="{{ route('feedback.index') }}">Back</a>
 
         <form action="{{ route('feedback.update', $feedback->id) }}" method="POST" enctype="multipart/form-data"
-            class="w-2/4 m-auto">
+            class="w-2/4 m-auto" id="submitForm">
             @csrf
             @method('PUT')
             <p class="mb-6">Edit Details</p>
@@ -64,8 +64,13 @@
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
                 <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
-                <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}"
-                    class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
+                @if ($feedback->image)
+                    <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}"
+                        class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
+                @else
+                    <img id="oldImage" src="{{ asset('/storage/default/default.png') }}" alt="&#10060;"
+                        class="p-2 max-w-20 max-h-20 rounded-full">
+                @endif
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"

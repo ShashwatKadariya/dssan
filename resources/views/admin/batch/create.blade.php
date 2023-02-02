@@ -3,7 +3,8 @@
 @section('content')
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.index') }}">Back</a>
-        <form action="{{ route('batch.store') }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto">
+        <form action="{{ route('batch.store') }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
+            id="submitForm">
             @csrf
             <p class="mb-6">Add New Batch</p>
             <div class="relative z-0 w-full mb-6 group">

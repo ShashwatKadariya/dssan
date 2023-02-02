@@ -3,7 +3,8 @@
 @section('content')
     <div class="p-4">
         <a class="back-btn" href="{{ route('fact.index') }}">Back</a>
-        <form action="{{ route('fact.update', $fact->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto">
+        <form action="{{ route('fact.update', $fact->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
+            id="submitForm">
             @csrf
             @method('PUT')
             <p class="mb-6">Edit Details</p>

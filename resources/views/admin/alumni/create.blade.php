@@ -4,46 +4,46 @@
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.show', $batch->id) }}">Back</a>
         <form action="{{ route('alumni.store', $batch->id) }}" method="POST" enctype="multipart/form-data"
-            class="w-2/4 m-auto">
+            class="w-2/4 m-auto" id="submitForm">
             @csrf
             <p class="mb-6">Add alumnus for {{ $batch->batch }}</p>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="full_name" class="form-input peer" placeholder=" ">
+                <input type="text" name="full_name" class="form-input peer" placeholder=" " value="{{ old('full_name') }}">
                 <label class="form-label">Full Name</label>
                 @error('full_name')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="email" name="email" class="form-input peer" placeholder=" ">
+                <input type="email" name="email" class="form-input peer" placeholder=" " value="{{ old('email') }}">
                 <label class="form-label">Email address</label>
                 @error('email')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="address" class="form-input peer" placeholder=" ">
+                <input type="text" name="address" class="form-input peer" placeholder=" " value="{{ old('address') }}">
                 <label class="form-label">Current Address</label>
                 @error('address')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="contact" class="form-input peer" placeholder=" ">
+                <input type="text" name="contact" class="form-input peer" placeholder=" " value="{{ old('contact') }}">
                 <label class="form-label">Contact Number</label>
                 @error('contact')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="url" name="social_link" class="form-input peer" placeholder=" ">
+                <input type="url" name="social_link" class="form-input peer" placeholder=" " value="{{ old('social_link') }}">
                 <label class="form-label">Social Link (url)</label>
                 @error('social_link')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="date" name="birth_date" class="form-input peer" placeholder=" ">
+                <input type="date" name="birth_date" class="form-input peer" placeholder=" " value="{{ old('birth_date') }}">
                 <label class="form-label">Birth Date</label>
                 @error('birth_date')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
@@ -51,8 +51,8 @@
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-sm text-gray-500">Gender</label>
-                <select name="gender" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2">
-                    <option value="">--Select--</option>
+                <select name="gender" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2 focus:outline-none focus:ring-0 focus:border-blue-600">
+                    <option value="{{ old('gender') }}">{{ old('gender') }}</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
@@ -61,14 +61,14 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="current_university" class="form-input peer" placeholder=" ">
+                <input type="text" name="current_university" class="form-input peer" placeholder=" " value="{{ old('current_university') }}">
                 <label class="form-label">Current University</label>
                 @error('current_university')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="major_subject" class="form-input peer" placeholder=" ">
+                <input type="text" name="major_subject" class="form-input peer" placeholder=" " value="{{ old('major_subject') }}">
                 <label class="form-label">Major Subject</label>
                 @error('major_subject')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>

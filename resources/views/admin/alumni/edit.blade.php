@@ -4,11 +4,12 @@
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.show', $alumni->batch_id) }}">Back</a>
         <form action="{{ route('alumni.update', $alumni->id) }}" method="POST" enctype="multipart/form-data"
-            class="w-2/4 m-auto">
+            class="w-2/4 m-auto" id="submitForm">
             @csrf
             <p class="mb-6">Edit details for {{ $alumni->full_name }}, {{ $alumni->batch->batch }}</p>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="full_name" class="form-input peer" placeholder=" " value="{{ $alumni->full_name }}">
+                <input type="text" name="full_name" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->full_name }}">
                 <label class="form-label">Full Name</label>
                 @error('full_name')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
@@ -29,21 +30,24 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="contact" class="form-input peer" placeholder=" " value="{{ $alumni->contact }}">
+                <input type="text" name="contact" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->contact }}">
                 <label class="form-label">Contact Number</label>
                 @error('contact')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="url" name="social_link" class="form-input peer" placeholder=" " value="{{ $alumni->social_link }}">
+                <input type="url" name="social_link" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->social_link }}">
                 <label class="form-label">Social Link (url)</label>
                 @error('social_link')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="date" name="birth_date" class="form-input peer" placeholder=" " value="{{ $alumni->birth_date }}">
+                <input type="date" name="birth_date" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->birth_date }}">
                 <label class="form-label">Birth Date</label>
                 @error('birth_date')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
@@ -51,7 +55,8 @@
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <label class="block mb-1 text-sm font-medium text-gray-500">Gender</label>
-                <select name="gender" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2">
+                <select name="gender"
+                    class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded w-full p-2 focus:outline-none focus:ring-0 focus:border-blue-600">
                     <option value="{{ $alumni->gender }}" selected>{{ $alumni->gender }}</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -61,14 +66,16 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="current_university" class="form-input peer" placeholder=" " value="{{ $alumni->current_university }}">
+                <input type="text" name="current_university" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->current_university }}">
                 <label class="form-label">Current University</label>
                 @error('current_university')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="major_subject" class="form-input peer" placeholder=" " value="{{ $alumni->major_subject }}">
+                <input type="text" name="major_subject" class="form-input peer" placeholder=" "
+                    value="{{ $alumni->major_subject }}">
                 <label class="form-label">Major Subject</label>
                 @error('major_subject')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
@@ -79,7 +86,13 @@
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
                 <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
-                <img id="oldImage" src="{{ asset('/storage/' . $alumni->image) }}" class="p-2 w-20 h-20 rounded-full" alt="&#10060;">
+                @if ($alumni->image)
+                    <img id="oldImage" src="{{ asset('/storage/' . $alumni->image) }}"
+                        class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
+                @else
+                    <img id="oldImage" src="{{ asset('/storage/default/default.png') }}" alt="&#10060;"
+                        class="p-2 max-h-20 max-w-20 rounded-full"></td>
+                @endif
                 @error('image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

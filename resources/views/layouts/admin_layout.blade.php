@@ -8,12 +8,25 @@
     <link rel="shortcut icon" href="{{ asset('images/logo/deerlogo.png') }}" type="image/x-icon">
     <title>ADMIN | DSSAN</title>
     @vite('resources/css/app.css')
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="{{ asset('js/admin.js') }}" defer></script>
     @livewireStyles
+    <style>
+        /* Minimize autofill highlighting */
+        input:-webkit-autofill {
+            -webkit-text-fill-color: #111827 !important;
+            -webkit-box-shadow: 0 0 0 0 #f3f4f6 inset !important;
+            background-clip: content-box !important;
+        }
+
+        /* scrollbar styling */
+        ::-webkit-scrollbar {
+            display: none;
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
-<body class="min-h-screen font-sans bg-gray-100">
+<body class="min-h-screen bg-gray-100">
     <div>
         @yield('content')
     </div>

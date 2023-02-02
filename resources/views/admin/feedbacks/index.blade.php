@@ -29,8 +29,13 @@
                             <td class="p-3">{{ $feedback->subject }}</td>
                             <td class="p-3">{{ $feedback->batch }}</td>
                             <td class="p-3">{{ $feedback->message }}</td>
-                            <td class="p-3"><img src="{{ asset('/storage/' . $feedback->image) }}" alt="&#10060;"
-                                    class="h-20 w-20 rounded-full"></td>
+                            @if ($feedback->image)
+                                <td class="p-3"><img src="{{ asset('/storage/' . $feedback->image) }}" alt="&#10060;"
+                                        class="max-h-20 max-w-20 rounded-full"></td>
+                            @else
+                                <td class="p-3"><img src="{{ asset('/storage/default/default.png') }}"
+                                        alt="&#10060;" class="max-h-20 max-w-20 rounded-full"></td>
+                            @endif
                             <td class="p-3">{{ $feedback->display_status }}</td>
                             <td class="p-3">
                                 <form id="submitForm_{{ $feedback->id }}"

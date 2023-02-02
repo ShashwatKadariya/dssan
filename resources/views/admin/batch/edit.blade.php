@@ -4,7 +4,7 @@
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.index') }}">Back</a>
         <form action="{{ route('batch.update', $batch->id) }}" method="POST" enctype="multipart/form-data"
-            class="w-2/4 m-auto">
+            class="w-2/4 m-auto" id="submitForm">
             @csrf
             @method('PUT')
             <p class="mb-6">Edit Details</p>
