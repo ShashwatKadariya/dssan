@@ -18,6 +18,7 @@
     <main>
         @yield('content')
     </main>
+    <livewire:feedback-form />
     <livewire:social-icons />
     <livewire:footer />
     @livewireScripts
