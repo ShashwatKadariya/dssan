@@ -1,11 +1,12 @@
 <header class="fixed w-full top-0 z-10 bg-black backdrop-filter backdrop-blur-lg bg-opacity-80">
-    <section class="mx-auto py-2 px-5 flex justify-between items-center">
+    <section class="mx-auto w-11/12 py-2 flex justify-between items-center">
         <a href="/home">
-            <img src="{{ asset('images/logo/dssanlogowhite.png') }}" alt="dssanlogo" class="max-w-[11rem]">
+            <img src="{{ asset('images/logo/dssanwhite.png') }}" alt="dssanlogo" class="max-w-[12rem] 2xl:max-w-[13rem]">
         </a>
+        {{-- big screens navbar --}}
         <div>
             <button id="hamburger-button" class=" text-white text-lg sm:hidden cursor-pointer">&#9776;</button>
-            <nav class="hidden sm:block space-x-5 text-white/60" aria-label="main">
+            <nav class="hidden sm:block space-x-5 text-white/70" aria-label="main">
                 <a href="/home" class="active:text-white hover:text-white">Home</a>
                 <a href="/gallery" class="active:text-white hover:text-white">Gallery</a>
                 <a href="/alumni" class="active:text-white hover:text-white">Alumni</a>
@@ -14,9 +15,10 @@
         </div>
     </section>
 
+    {{-- mobile-view navbar --}}
     <section id="mobile-menu"
-        class="absolute top-11 bg-black backdrop-filter backdrop-blur-lg bg-opacity-80 sm:hidden w-full hidden flex-col origin-top animate-open-menu">
-        <nav class="flex flex-col px-5 pb-2 text-white/60" aria-label="mobile">
+        class="absolute top-13 bg-black backdrop-filter backdrop-blur-lg bg-opacity-80 sm:hidden w-full hidden flex-col origin-top animate-open-menu">
+        <nav class="flex flex-col w-11/12 mx-auto pb-4 text-white/60" aria-label="mobile">
             <a href="/home" class="py-1 active:text-white hover:text-white border-b border-white/60">Home</a>
             <a href="/gallery" class="py-1 active:text-white hover:text-white border-b border-white/60">Gallery</a>
             <a href="/alumni" class="py-1 active:text-white hover:text-white border-b border-white/60">Alumni</a>

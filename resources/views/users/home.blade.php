@@ -1,83 +1,27 @@
 @extends('layouts.user_layout')
 
 @section('content')
+    {{-- animated video --}}
     <div class="intro">
         <h1>Your journey doesn't end at Graduation.</h1>
         <video src="{{ asset('videos/video.mp4') }}"></video>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+            integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+            integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+            integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
+            integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </div>
-    
 
-
-
-
-
-
-
-
-
-
-    {{-- for mobile view
-    <section class="px-5 w-full mx-auto sm:hidden">
-        <div class="p-0 bg-image">
-            <div class="bg-orange opacity-70 p-4">
-                <div class="font-bold text-lg text-center pt-4">
-                    <p>Deerwalk Sifal School</p>
-                    <p> Alumni Association</p>
-                </div>
-                <div class="text-white text-center pt-14">
-                    <p>Your journey doesn't end</p>
-                    <p>at graduation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- for bigger screens --}}
-    {{-- <section class="hidden w-11/12 mx-auto sm:flex xl:w-10/12">
-        <div class="w-1/3 opacity-75 sm:opacity-100 bg-gradient-to-r from-deep-orange to-orange text-white">
-            <div class="font-bold text-lg text-center pt-14 md:text-xl md:pt-19 xl:text-2xl xl:pt-24">
-                <p>Deerwalk Sifal School</p>
-                <p> Alumni Association</p>
-            </div>
-            <div class="text-gray-100 text-center pt-4 md:text-lg md:pt-12 xl:text-xl xl:pt-14">
-                <p>Your journey doesn't end</p>
-                <p>at graduation.</p>
-            </div>
-        </div>
-        <div class="w-2/3 sm:col-span-2">
-            <img src="{{ asset('images/images/graduation.png') }}" alt="graduation">
-        </div>
-    </section> --}}
-
-    {{-- <section class="text-center my-2">
-        <p class="text-2xl text-dark-red font-semibold">Our Alumni</p>
-        <div class="bg-light-orange grid gap-4 my-2 p-8 sm:grid-cols-3 sm:p-12">
-            <div>
-                <p class="text-dark-red font-bold text-3xl">3000</p>
-                <p class="text-semibold text-lg">GRADUATED</p>
-            </div>
-            <div>
-                <p class="text-dark-red font-bold text-3xl">240</p>
-                <p class="text-semibold text-lg">CURRENT</p>
-                <p class="text-semibold text-lg leading-3">MEMBERS</p>
-            </div>
-            <div class="pt-2 sm:pt-0">
-                <p class="text-dark-red font-bold text-3xl">15</p>
-                <p class="text-semibold text-lg">ACTIVE</p>
-                <p class="text-semibold text-lg leading-3">MEMBERS</p>
-            </div>
-        </div>
-    </section> --}}
-
-    <section class="text-center m-2">
-        <p class="text-3xl text-heading-purple font-bold">Team</p>
-        <p class="text-xl font-medium text-heading-purple">Dedication. Expertise. Passion</p>
-        <p class="leading-5 w-3/5 mx-auto text-text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Cupiditate impedit
-            quam est
-            numquam. Voluptatibus nulla consequatur culpa expedita neque.
-        </p>
-
+    <section class="w-11/12 mx-auto my-2 text-center">
+        <p class="text-3xl font-bold">Our Team</p>
+        <p class="text-xl font-medium">Dedication. Expertise. Passion</p>
+        <p class="leading-5 my-2">Teamwork isn't just about finishing tasks faster. Teamwork increases overall productivity
+            in a workplace over a sustained period, not just for one moment. Effective teams pursue a common outcome and
+            have a common goal they want to reach.</p>
         <div class="sm:grid sm:grid-cols-3 sm:gap-9 sm:px-10 sm:py-8">
             @foreach ($teams as $team)
                 <div class="container max-w-3xs mx-auto m-8 px-8 py-4 border-2 border-dark-green rounded-lg">

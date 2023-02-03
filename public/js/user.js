@@ -30,10 +30,12 @@ function loading() {
     const loading = document.getElementById('loading_icon')
     loading.classList.toggle('hidden')
     loading.classList.toggle('inline')
+    document.getElementById('submitForm').submit();
 }
 
-let global_id;
+var global_id=0;
 function deleteBox(id) {
+    console.log(id);
     global_id = id;
     document.getElementById('deleteBox').className = 'block';
 }
