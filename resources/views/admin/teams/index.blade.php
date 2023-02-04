@@ -30,8 +30,10 @@
                 <tbody class="text-center">
                     @foreach ($teams as $team)
                         <tr class="bg-white border hover:bg-gray-50">
-                            <td class="p-3"><img src="{{ asset('/storage/' . $team->image) }}" alt="image"
-                                    class="max-w-20 max-h-20 rounded-full mx-auto"></td>
+                            <td class="p-3">
+                                <div class="w-20 h-20 rounded-full bg-cover mx-auto"
+                                    style="background-image: url({{ asset('/storage/' . $team->image) }})"></div>
+                            </td>
                             <td class="p-3">{{ $team->first_name }}</td>
                             <td class="p-3">{{ $team->last_name }}</th>
                             <td class="p-3">{{ $team->designation }}</td>

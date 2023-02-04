@@ -6,7 +6,10 @@ function previewImage(event) {
         preview.classList.toggle('hidden')
         preview.classList.toggle('block')
         preview.src = reader.result;
-        document.getElementById('oldImage').className = 'hidden';
+        var oldImage = document.getElementById('oldImage');
+        if (oldImage) {
+            oldImage.className = 'hidden';
+        }
     }
     reader.readAsDataURL(event.target.files[0]);
 }

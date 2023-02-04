@@ -34,13 +34,15 @@
                 <tbody class="text-center">
                     @foreach ($alumni as $alumnus)
                         <tr class="bg-white border hover:bg-gray-50">
-                            @if ($alumnus->image)
-                                <td class="p-3"><img src="{{ asset('/storage/' . $alumnus->image) }}" alt="&#10060;"
-                                        class="max-w-20 max-h-20 rounded-full mx-auto"></td>
-                            @else
-                                <td class="p-3"><img src="{{ asset('/storage/default/default.png') }}"
-                                        alt="&#10060;" class="max-h-20 max-w-20 rounded-full"></td>
-                            @endif
+                            <td class="p-3">
+                                @if ($alumnus->image)
+                                    <div class="w-20 h-20 rounded-full bg-cover mx-auto"
+                                        style="background-image: url({{ asset('/storage/' . $alumnus->image) }})"></div>
+                                @else
+                                    <div class="w-20 h-20 rounded-full bg-cover mx-auto"
+                                        style="background-image: url({{ asset('/storage/default/default.png') }})"></div>
+                                @endif
+                            </td>
                             <td class="p-3">{{ $alumnus->full_name }}</td>
                             <td class="p-3">{{ $alumnus->email }}</th>
                             <td class="p-3">{{ $alumnus->address }}</td>
