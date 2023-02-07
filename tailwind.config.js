@@ -580,6 +580,7 @@ module.exports = {
       max: 'max-content',
       fit: 'fit-content',
       '88': '22rem',
+      '144': '36rem',
     }),
     inset: ({ theme }) => ({
       auto: 'auto',

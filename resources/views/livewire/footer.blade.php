@@ -1,23 +1,23 @@
 <div class="mt-auto text-sm bg-ui-footer-background">
-    <footer class="py-5 w-11/12 mx-auto sm:flex sm:flex-row-reverse sm:justify-between xl:justify-around">
+    <footer class="pt-5 w-11/12 mx-auto sm:flex sm:flex-row-reverse sm:justify-between xl:justify-around">
         <section class="">
             <p class="text-ui-footer-text-darker">Have a project or a question?</p>
             <p class="text-ui-footer-text-darker">Get in touch with the team.</p>
             <div class="my-4">
                 <button
-                    class="text-white/90 bg-ui-footer-text hover:bg-ui-footer-text-darker font-medium rounded-sm text-sm px-5 py-2 text-center">GET
+                    class="text-white/90 bg-ui-footer-text hover:bg-ui-footer-text-darker font-medium rounded-sm text-sm px-5 py-2 text-center" onclick="feedbackForm()">GET
                     IN TOUCH.</button>
             </div>
             <div class="py-2 text-ui-footer-text">
                 <p class="text-ui-footer-text-darker font-semibold">Join Our Social Community</p>
-                <ul>
-                    <li class="my-1 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
+                <ul class="md:flex">
+                    <li class="my-1 mr-4 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
                             href="#">Facebook</a></li>
-                    <li class="mb-1 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
+                    <li class="my-1 mr-4 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
                             href="#">Instagram</a></li>
-                    <li class="mb-1 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
+                    <li class="my-1 mr-4 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
                             href="#">Twitter</a></li>
-                    <li class="mb-1 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
+                    <li class="my-1 mr-4 active:text-ui-footer-text-darker hover:text-ui-footer-text-darker"><a
                             href="#">Youtube</a></li>
                 </ul>
             </div>

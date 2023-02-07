@@ -11,6 +11,20 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="{{ asset('js/user.js') }}" defer></script>
     @livewireStyles
+    <style>
+        /* Minimize autofill highlighting */
+        input:-webkit-autofill {
+            -webkit-text-fill-color: #111827 !important;
+            -webkit-box-shadow: 0 0 0 0 #f3f4f6 inset !important;
+            background-clip: content-box !important;
+        }
+
+        /* scrollbar styling */
+        ::-webkit-scrollbar {
+            display: none;
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-ui-white">

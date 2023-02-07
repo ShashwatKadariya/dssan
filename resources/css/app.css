@@ -34,6 +34,10 @@
     .delete-box {
         @apply fixed w-96 h-44 top-1/2 left-1/2 -mt-24 -ml-48;
     }
+
+    .feedback-form {
+        @apply fixed w-96 h-144 top-1/2 left-1/2 -mt-72 -ml-48;
+    }
 }
 
 @layer base {
