@@ -36,7 +36,11 @@
     }
 
     .feedback-form {
-        @apply fixed w-96 h-144 top-1/2 left-1/2 -mt-72 -ml-48;
+        @apply fixed w-96 h-152 top-1/2 left-1/2 -mt-76 -ml-48;
+    }
+
+    .notification {
+        @apply fixed w-72 h-40 top-1/2 left-1/2 -mt-20 -ml-36;
     }
 }
 

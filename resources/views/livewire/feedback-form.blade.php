@@ -1,6 +1,6 @@
 <div id="feedbackForm" class="hidden">
     <div class="fixed top-0 bg-black w-full h-screen opacity-40"></div>
-    <div class="feedback-form z-50 p-8 bg-ui-footer-background">
+    <div class="feedback-form z-50 p-6 bg-ui-footer-background rounded">
         <button type="button"
             class="text-ui-footer-text absolute top-2.5 right-2.5 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-ui-footer-text-darker hover:text-white"
             data-modal-toggle="deleteModal" onclick="document.getElementById('feedbackForm').className = 'hidden'">
@@ -14,14 +14,15 @@
         </button>
         <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <p class="text-ui-footer-text-darker text-lg font-medium mb-3">GET IN TOUCH</p>
+            <p class="text-ui-footer-text-darker text-lg font-medium">GET IN TOUCH</p>
+            <p class="text-sm text-ui-footer-text mb-3">Your message may be displayed as feedback.</p>
             <div class="relative z-0 w-full mb-6 group">
                 <input required type="text" name="full_name"
                     class="block py-2.5 px-0 w-full text-sm text-ui-footer-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-ui-footer-text peer"
                     placeholder=" ">
                 <label
                     class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
-                    Name</label>
+                    Name*</label>
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <input required type="email" name="email"
@@ -29,32 +30,28 @@
                     placeholder=" ">
                 <label
                     class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
-                    address</label>
+                    address*</label>
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <input required type="text" name="subject"
                     class="block py-2.5 px-0 w-full text-sm text-ui-footer-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-ui-footer-text peer"
                     placeholder=" ">
                 <label
-                    class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject</label>
+                    class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject*</label>
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <input required type="text" name="batch"
                     class="block py-2.5 px-0 w-full text-sm text-ui-footer-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-ui-footer-text peer"
                     placeholder=" ">
                 <label
-                    class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Batch</label>
+                    class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Batch*</label>
             </div>
-            <div class="relative z-0 w-full mb-6 group">
-                <input required type="text" name="message"
-                    class="block py-2.5 px-0 w-full text-sm text-ui-footer-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-ui-footer-text peer"
-                    placeholder=" ">
-                <label
-                    class="peer-focus:font-medium absolute text-sm text-ui-footer-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-ui-footer-text-darker peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
+            <div class="relative z-0 w-full mb-3 group">
+                <label class="text-sm text-ui-footer-text">Message</label>
+                <textarea required rows="2" name="message"
+                    class="block mt-2 p-2 w-full text-sm text-ui-footer-text rounded bg-ui-footer-background border border-gray-300 focus:outline-none focus:ring-0 focus:border-ui-footer-text"></textarea>
             </div>
-            <div class="relative z-0 w-full mb-6 group">
-                <input type="hidden" name="display_status" value="Hidden">
-            </div>
+            <input type="hidden" name="display_status" value="Hidden">
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-sm text-ui-footer-text">Image</label>
                 <input type="file" name="image"

@@ -33,6 +33,7 @@
         @yield('content')
     </main>
     <livewire:feedback-form />
+    <livewire:notification-box />
     <livewire:social-icons />
     <livewire:footer />
     @livewireScripts
