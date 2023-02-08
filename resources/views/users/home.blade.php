@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- animated video --}}
-    <div class="intro">
+    {{-- <div class="intro">
         <h1>Your journey doesn't end at Graduation.</h1>
         <video src="{{ asset('videos/video.mp4') }}"></video>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
             integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
-    </div>
+    </div> --}}
 
     {{-- team section --}}
     <section class="w-11/12 mx-auto mt-8 text-center">
@@ -65,4 +65,35 @@
                 onclick="currentDiv(3)"></span>
         </div>
     </section>
+
+    {{-- feedback_slide --}}
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" bg-ui-footer-text-darker", " bg-gray-300");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className =
+                "demo w-3 h-3 rounded-full bg-ui-footer-text-darker hover:bg-ui-footer-text-darker cursor-pointer";
+        }
+    </script>
 @endsection
