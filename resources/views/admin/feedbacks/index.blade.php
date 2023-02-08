@@ -8,10 +8,10 @@
             <p class="text-sm">Feedback messages received from users.</p>
         </div>
         <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left">
+            <table class="w-full text-sm">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr class="border">
-                        <th scope="col" class="p-3">Full Name</th>
+                        <th scope="col" class="p-3">Name</th>
                         <th scope="col" class="p-3">Email address</th>
                         <th scope="col" class="p-3">Subject</th>
                         <th scope="col" class="p-3">Batch</th>
@@ -21,7 +21,7 @@
                         <th scope="col" colspan="2" class="p-3">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="text-center">
                     @foreach ($feedbacks as $feedback)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3">{{ $feedback->full_name }}</td>
