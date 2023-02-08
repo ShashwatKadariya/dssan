@@ -16,6 +16,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </div>
 
+    {{-- team section --}}
     <section class="w-11/12 mx-auto mt-8 text-center">
         <p class="text-5xl font-bold">Team</p>
         <p class="text-xl mt-2 font-medium">Dedication. Expertise. Passion</p>
@@ -38,6 +39,30 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+    </section>
+
+    {{-- feedback section --}}
+    <section class="mx-auto my-8 text-center">
+        <p class="text-5xl font-bold">Testimonials</p>
+        <p class="text-xl mt-2 font-medium">WHAT OTHERS SAY</p>
+        @foreach ($feedbacks as $feedback)
+            <div class="mySlides bg-white my-8 w-3/4 mx-auto p-8 border-b-4">
+                <div class="rounded-full bg-cover h-24 w-24 mx-auto"
+                    style="background-image: url({{ asset('/storage/' . $feedback->image) }})">
+                </div>
+                <p class="text-ui-footer-text mt-8 text-lg text-left sm:text-center">{{ $feedback->message }}</p>
+                <p class="mt-6 font-medium text-ui-footer-text-darker">{{ $feedback->full_name }}, {{ $feedback->batch }}
+                </p>
+            </div>
+        @endforeach
+        <div class="mx-auto w-fit z-50 flex space-x-3">
+            <span class="demo w-3 h-3 rounded-full bg-gray-300 hover:bg-ui-footer-text-darker cursor-pointer"
+                onclick="currentDiv(1)"></span>
+            <span class="demo w-3 h-3 rounded-full bg-gray-300 hover:bg-ui-footer-text-darker cursor-pointer"
+                onclick="currentDiv(2)"></span>
+            <span class="demo w-3 h-3 rounded-full bg-gray-300 hover:bg-ui-footer-text-darker cursor-pointer"
+                onclick="currentDiv(3)"></span>
         </div>
     </section>
 @endsection
