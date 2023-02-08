@@ -5,8 +5,8 @@
             <p class="text-ui-footer-text-darker">Get in touch with the team.</p>
             <div class="my-4">
                 <button
-                    class="text-white/90 bg-ui-footer-text hover:bg-ui-footer-text-darker font-medium rounded-sm text-sm px-5 py-2 text-center" onclick="feedbackForm()">GET
-                    IN TOUCH.</button>
+                    class="text-white/90 bg-ui-footer-text hover:bg-ui-footer-text-darker font-medium rounded-sm text-sm px-5 py-2 text-center"
+                    onclick="feedbackForm()">GET IN TOUCH</button>
             </div>
             <div class="py-2 text-ui-footer-text">
                 <p class="text-ui-footer-text-darker font-semibold">Join Our Social Community</p>
