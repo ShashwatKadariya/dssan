@@ -16,24 +16,25 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </div>
 
-    <section class="w-11/12 mx-auto my-2 text-center">
-        <p class="text-3xl font-bold">Our Team</p>
-        <p class="text-xl font-medium">Dedication. Expertise. Passion</p>
-        <p class="leading-5 my-2">Teamwork isn't just about finishing tasks faster. Teamwork increases overall productivity
+    <section class="w-11/12 mx-auto mt-8 text-center">
+        <p class="text-5xl font-bold">Team</p>
+        <p class="text-xl mt-2 font-medium">Dedication. Expertise. Passion</p>
+        <p class="leading-5 mt-2">Teamwork isn't just about finishing tasks faster. Teamwork increases overall productivity
             in a workplace over a sustained period, not just for one moment. Effective teams pursue a common outcome and
             have a common goal they want to reach.</p>
-        <div class="sm:grid sm:grid-cols-3 sm:gap-9 sm:px-10 sm:py-8">
+        <div class="sm:grid sm:grid-cols-3">
             @foreach ($teams as $team)
-                <div class="container max-w-3xs mx-auto m-8 px-8 py-4 border-2 border-dark-green rounded-lg">
+                <div class="container max-w-3xs mx-auto m-8 px-8 py-4 border border-ui-footer-text-darker rounded">
                     <div class="rounded-full bg-cover h-36 w-36 mx-auto"
                         style="background-image: url({{ asset('/storage/' . $team->image) }})">
                     </div>
-                    <p class="text-center text-heading-purple font-bold text-2xl mt-2">{{ $team->first_name }}</p>
-                    <p class="text-center text-heading-purple font-bold text-2xl">{{ $team->last_name }}</p>
-                    <p class="text-center font-medium text-lg mt-2">{{ $team->designation }}</p>
-                    <div class="overlay">
-                        <p>{{ $team->statement }}</p>
-                        <a href="{{ $team->linkedin_url }}">LinkedIn</a>
+                    <p class="text-center font-bold text-2xl mt-2">{{ $team->first_name }}</p>
+                    <p class="text-center font-bold text-2xl mb-10">{{ $team->last_name }}</p>
+                    <div class="overlay text-white text-sm rounded border border-white p-6">
+                        <p class="text-center font-medium text-lg -mt-3">{{ $team->designation }}</p>
+                        <p class="mt-2 text-left">{{ $team->statement }}</p>
+                        <p class="text-left mt-10 underline"><a href="{{ $team->linkedin_url }}">Follow me on LinkedIn</a>
+                        </p>
                     </div>
                 </div>
             @endforeach

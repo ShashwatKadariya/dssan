@@ -56,7 +56,7 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      'ui-white': '#fbfbfb',
+      'ui-white': '#fbfbfd',
       'ui-footer-background': '#f5f5f7',
       'ui-footer-text': '#6e6e73',
       'ui-footer-text-darker': '#424245',
