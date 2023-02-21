@@ -62,6 +62,7 @@ module.exports = {
       'ui-footer-text': '#6e6e73',
       'ui-footer-text-darker': '#424245',
       'ui-hr': '#d2d2d7',
+      'navbar': '#9c63a0',
     }),
     columns: {
       auto: 'auto',
@@ -445,6 +446,7 @@ module.exports = {
       extralight: '200',
       light: '300',
       normal: '400',
+      semi: '450',
       medium: '500',
       semibold: '600',
       bold: '700',
