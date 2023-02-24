@@ -27,7 +27,7 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col bg-ui-white">
+<body class="min-h-screen flex flex-col font-sans">
     <livewire:nav-bar />
     <main>
         @yield('content')

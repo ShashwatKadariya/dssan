@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('full_name');
             $table->string('email');
-            $table->string('subject');
             $table->string('batch');
             $table->longText('message');
             $table->string('image')->nullable();

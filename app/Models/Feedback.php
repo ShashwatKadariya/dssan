@@ -9,6 +9,6 @@ class Feedback extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'full_name', 'email', 'subject', 'batch', 'message', 'image', 'display_status'
+        'full_name', 'email', 'batch', 'message', 'image', 'display_status'
     ];
 }

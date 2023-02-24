@@ -26,7 +26,6 @@ class FeedbackFormRequest extends FormRequest
         $rules = [
             'full_name' => 'required',
             'email' => 'required|email',
-            'subject' => 'required',
             'batch' => 'required',
             'message' => 'required',
             'display_status' => 'required',
