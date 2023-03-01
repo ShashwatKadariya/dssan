@@ -1,21 +1,19 @@
-<div class="mt-auto text-sm bg-ui-footer-background">
+<div class="z-10 mt-auto text-sm bg-ui-footer-background">
     <footer class="pt-5 w-11/12 mx-auto sm:flex sm:flex-row-reverse sm:justify-around">
-        <section class="text-white">
-            <p class="mt-2 font-semibold">Connect With Us</p>
-            <button
-                class="mt-4 text-heading bg-white hover:bg-black hover:text-white font-semibold rounded-uihalf text-sm px-3 py-1.5"
-                onclick="feedbackForm()">GET IN TOUCH</button>
-        </section>
-        <section class="text-white">
-            <p class="mt-2 font-semibold">Join Our Social Community</p>
-            <ul class="md:flex md:mt-3.5">
-                <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Facebook</a></li>
-                <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Instagram</a></li>
-                <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">LinkedIn</a></li>
-                <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Youtube</a></li>
-            </ul>
-        </section>
-        <hr class="border-ui-hr border-t-2 sm:hidden">
+            <section class="text-white">
+                <p class="mt-2 font-semibold">Connect With Us</p>
+                <button
+                    class="mt-4 text-heading bg-white hover:bg-gray-900 hover:text-white font-semibold rounded text-sm px-3 py-1.5"
+                    onclick="feedbackForm()">GET IN TOUCH</button>
+            </section>
+            <section class="text-white my-4 sm:my-0">
+                <p class="mt-2 font-semibold">Join Our Social Community</p>
+                <ul class="md:flex md:mt-3.5">
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Facebook</a></li>
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Instagram</a></li>
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">LinkedIn</a></li>
+                </ul>
+            </section>
         <section>
             <div class="text-white">
                 <a href="https://deerwalk.edu.np/sifalschool/">

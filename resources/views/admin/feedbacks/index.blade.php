@@ -13,7 +13,6 @@
                     <tr class="border">
                         <th scope="col" class="p-3">Name</th>
                         <th scope="col" class="p-3">Email address</th>
-                        <th scope="col" class="p-3">Subject</th>
                         <th scope="col" class="p-3">Batch</th>
                         <th scope="col" class="p-3">Message</th>
                         <th scope="col" class="p-3">Image</th>
@@ -26,7 +25,6 @@
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3">{{ $feedback->full_name }}</td>
                             <td class="p-3">{{ $feedback->email }}</th>
-                            <td class="p-3">{{ $feedback->subject }}</td>
                             <td class="p-3">{{ $feedback->batch }}</td>
                             <td class="p-3">{{ $feedback->message }}</td>
                             <td class="p-3">

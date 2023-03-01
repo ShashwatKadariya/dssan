@@ -10,8 +10,8 @@ module.exports = {
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
-      xs: '550px',
-      sm: '750px',
+      xs: '450px',
+      sm: '650px',
       md: '930px',
       lg: '1024px',
       xl: '1200px',
@@ -61,6 +61,8 @@ module.exports = {
       'ui-footer-background': '#cb87cf',
       'ui-hr': '#d2d2d7',
       'heading': '#833c88',
+      'div-light': '#c47ec8',
+      'div-dark': '#9b629f',
     }),
     columns: {
       auto: 'auto',
@@ -115,6 +117,7 @@ module.exports = {
       20: '5rem',
       24: '6rem',
       28: '7rem',
+      30: '7.5rem',
       32: '8rem',
       34: '8.5rem',
       36: '9rem',
@@ -141,6 +144,7 @@ module.exports = {
     animation: {
       'open-menu': 'open-menu 0.1s ease-in-out forwards',
       'toast-notify': 'toast-notify 1s ease forwards',
+      'appear': 'appear 3s ease-in',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -615,6 +619,11 @@ module.exports = {
       'toast-notify': {
         '0%': { transform: 'translateX(100%)' },
       },
+      'appear': {
+        '0%': { opacity: '0' },
+        '30%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
       spin: {
         to: {
           transform: 'rotate(360deg)',
@@ -965,6 +974,7 @@ module.exports = {
       '4/5': '80%',
       '1/6': '16.666667%',
       '2/6': '33.333333%',
+      '29/100': '29%',
       '3/6': '50%',
       '4/6': '66.666667%',
       '5/6': '83.333333%',

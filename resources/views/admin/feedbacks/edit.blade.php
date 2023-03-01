@@ -25,14 +25,6 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="subject" class="form-input peer" placeholder=" "
-                    value="{{ $feedback->subject }}">
-                <label class="form-label">Subject</label>
-                @error('subject')
-                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
-                @enderror
-            </div>
-            <div class="relative z-0 w-full mb-6 group">
                 <input type="text" name="batch" class="form-input peer" placeholder=" " value="{{ $feedback->batch }}">
                 <label class="form-label">Batch</label>
                 @error('batch')

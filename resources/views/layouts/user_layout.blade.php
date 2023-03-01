@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('css/user.css') }}">
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="{{ asset('js/user.js') }}" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @livewireStyles
     <style>
         /* Minimize autofill highlighting */
@@ -28,6 +30,9 @@
 </head>
 
 <body class="min-h-screen flex flex-col font-sans">
+    <script>
+        AOS.init();
+    </script>
     <livewire:nav-bar />
     <main>
         @yield('content')

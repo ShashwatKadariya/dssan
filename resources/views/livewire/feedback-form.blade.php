@@ -1,7 +1,7 @@
 <div id="feedbackForm" class="hidden">
-    <div class="fixed top-0 bg-black w-full h-screen opacity-40"></div>
+    <div class="fixed top-0 bg-black w-full h-screen opacity-20"></div>
     <div class="feedback-form z-50 p-6 bg-ui-white rounded-uihalf">
-        <button type="button" class="text-black absolute top-2.5 right-2.5"
+        <button type="button" class="text-gray-700 hover:text-gray-900 absolute top-2.5 right-2.5"
             onclick="document.getElementById('feedbackForm').className = 'hidden'">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@
             </svg>
             <span class="sr-only">Close modal</span>
         </button>
-        <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data" class="text-gray-700">
             @csrf
             <p class="font-semibold">GET IN TOUCH</p>
             <p class="text-xs mb-3">Your message may be displayed as feedback.</p>
@@ -51,7 +51,7 @@
                     accept="image/*">
             </div>
             <button type="submit"
-                class="mt-2 text-white bg-black font-semibold text-sm py-2 text-center w-full">Submit</button>
+                class="mt-2 text-white bg-gray-700 hover:bg-gray-900 font-semibold text-sm py-2 text-center w-full">Submit</button>
         </form>
     </div>
 </div>
