@@ -124,6 +124,7 @@ module.exports = {
       40: '10rem',
       42: '10.5rem',
       44: '11rem',
+      46: '11.5rem',
       48: '12rem',
       52: '13rem',
       56: '14rem',
@@ -144,7 +145,7 @@ module.exports = {
     animation: {
       'open-menu': 'open-menu 0.1s ease-in-out forwards',
       'toast-notify': 'toast-notify 1s ease forwards',
-      'appear': 'appear 3s ease-in',
+      'appear': 'appear 0.3s ease-in-out forwards',
       none: 'none',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
@@ -620,9 +621,7 @@ module.exports = {
         '0%': { transform: 'translateX(100%)' },
       },
       'appear': {
-        '0%': { opacity: '0' },
-        '30%': { opacity: '0' },
-        '100%': { opacity: '1' },
+        '0%': { transform: 'translateY(100%)' },
       },
       spin: {
         to: {

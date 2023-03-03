@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ asset('images/logo/deerlogo.png') }}" type="image/x-icon">
     <title>DSSAN</title>
     @vite('resources/css/app.css')
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -26,6 +27,11 @@
         ::-webkit-scrollbar {
             display: none;
             scroll-behavior: smooth;
+        }
+
+        /* css check */
+        * {
+            /* border: 1px solid red; */
         }
     </style>
 </head>

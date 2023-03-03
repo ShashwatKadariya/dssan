@@ -9,14 +9,14 @@
             <section class="text-white my-4 sm:my-0">
                 <p class="mt-2 font-semibold">Join Our Social Community</p>
                 <ul class="md:flex md:mt-3.5">
-                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Facebook</a></li>
-                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">Instagram</a></li>
-                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#">LinkedIn</a></li>
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#" target="blank">Facebook</a></li>
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#" target="blank">Instagram</a></li>
+                    <li class="my-1 mr-4 active:text-blue-600 hover:text-blue-600"><a href="#" target="blank">LinkedIn</a></li>
                 </ul>
             </section>
         <section>
             <div class="text-white">
-                <a href="https://deerwalk.edu.np/sifalschool/">
+                <a href="https://deerwalk.edu.np/sifalschool/" target="blank">
                     <img src="{{ asset('images/logo/dsswhite.png') }}" alt="dsslogo"
                         class="mb-2 max-w-[9rem]">
                 </a>

@@ -14,13 +14,13 @@
                 <div data-aos="fade-up" data-aos-duration="1000"
                     class="w-11/12 sm:w-2/3 mx-auto p-4 xs:p-8 sm:p-4 md:p-16 bg-white rounded-ui">
                     <p class="text-heading font-semibold text-lg sm:text-2xl text-center">A BOLD FUTURE FOR SIFAL SCHOOL</p>
-                    <P data-aos="fade-up" class="text-center mt-2 sm:mt-8 leading-6"> Founded in 2016, Deerwalk Sifal School
-                        is determined to
-                        help our students grow as a good global citizen with solid academic skill in language, math, and
-                        science. We make sure we get the best out of every student and help each find their strength. We
-                        focus on the following areas at every level. Sifal School (also known as Deerwalk Sifal School -
-                        DSS) is a grade 1 to 12 Secondary Science School where our graduates after (+2 Science) go to the
-                        ranges of Universities in Abroad and Nepal.</P>
+                    <P data-aos="fade-up" class="text-justify mt-2 sm:mt-8 leading-6">
+                        Founded in 2016, Deerwalk Sifal School is determined to help our students grow as a good global
+                        citizen with solid academic skill in language, math, and science. We make sure we get the best out
+                        of every student and help each find their strength. We focus on the following areas at every level.
+                        Sifal School (also known as Deerwalk Sifal School - DSS) is a grade 1 to 12 Secondary Science School
+                        where our graduates after (+2 Science) go to the ranges of Universities in Abroad and Nepal.
+                    </P>
                     <div data-aos="fade-up" id="numberAnimation"
                         class="bg-div-dark mt-8 sm:mt-16 rounded-ui sm:flex sm:flex-row sm:justify-between p-8">
                         <div
@@ -45,7 +45,7 @@
 
     {{-- team section --}}
     <section class="w-11/12 mx-auto my-8 text-center">
-        <p data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-semibold text-heading">TEAMS</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR TEAM</p>
         <div class="sm:grid sm:grid-cols-2 md:grid-cols-3">
             @foreach ($teams as $team)
                 <div data-aos="fade-up" data-aos-duration="1000"
@@ -57,7 +57,7 @@
                     <p class="text-center font-semibold text-xl mb-10">{{ $team->last_name }}</p>
                     <div class="overlay text-white text-sm rounded-uihalf p-6 drop-shadow flex flex-col">
                         <p class="text-center font-medium text-lg -mt-3">{{ $team->designation }}</p>
-                        <p class="mt-2 text-left">{{ $team->statement }}</p>
+                        <p class="mt-2 text-justify">{{ $team->statement }}</p>
                         <p class="mt-auto"><a href="{{ $team->linkedin_url }}" target="blank"><img
                                     src="{{ asset('images/icon/linkedin_white.png') }}"
                                     class="h-5 object-contain aspect-3/2" alt=""></a>
@@ -84,7 +84,7 @@
                             <p class="font-semibold text-gray-600">{{ $feedback->batch }}</p>
                         </div>
                     </div>
-                    <div class="mt-4 text-sm sm:text-base">
+                    <div class="mt-4 text-sm sm:text-base text-justify">
                         {{ $feedback->message }}
                     </div>
                 </div>
