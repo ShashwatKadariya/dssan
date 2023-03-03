@@ -15,6 +15,13 @@
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
+            <div class="relative z-0 w-full mb-6 group">
+                <label class="text-gray-500 text-sm">Edit Batch Photo</label>
+                <input type="file" name="image" class="form-input" accept="image/*" onchange="previewImage(event)">
+                <img id="preview" class="hidden mt-2 max-w-20 max-h-20">
+                <img id="oldImage" src="{{ asset('/storage/' . $batch->image) }}"
+                    class="block p-2 max-w-20 max-h-20" alt="team">
+            </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"
                     viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

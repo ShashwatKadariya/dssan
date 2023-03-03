@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BatchFormRequest;
 use App\Models\Alumni;
 use App\Models\Batch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use function Symfony\Component\VarDumper\Dumper\esc;
 
@@ -21,11 +23,10 @@ class BatchController extends Controller
         return view('admin.batch.create');
     }
 
-    public function store(Request $request)
+    public function store(BatchFormRequest $request)
     {
-        $validatedData = $this->validate($request, [
-            'batch' => 'required|unique:batches',
-        ]);
+        $validatedData = $request->validated();
+        $validatedData['image'] = $request->file('image')->store('batchImage');
         Batch::create($validatedData);
         return redirect()->route('batch.index')->with('success', 'Batch added successfully.');
     }
@@ -42,12 +43,15 @@ class BatchController extends Controller
         return view('admin.batch.edit', compact('batch'));
     }
 
-    public function update(Request $request, Batch $batch)
+    public function update(BatchFormRequest $request, Batch $batch)
     {
-        $validatedData = $this->validate($request, [
-            'batch' => 'required',
+        if ($request->hasFile('image')) {
+            Storage::delete($batch->image);
+            $batch->image = $request->file('image')->store('batchImage');
+        }
+        $batch->update($request->validated() + [
+            'image' => $batch->image,
         ]);
-        $batch->update($validatedData);
         return redirect()->route('batch.index')->with('success', 'Batch updated successfully.');
     }
 
@@ -55,6 +59,7 @@ class BatchController extends Controller
     {
         $alumni = $batch->alumni->where('batch_id', $batch->id);
         if (count($alumni) == 0) {
+            Storage::delete($batch->image);
             $batch->delete();
             return redirect()->route('batch.index')->with('danger', 'Batch deleted successfully.');
         } else {

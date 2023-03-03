@@ -9,7 +9,7 @@ class Batch extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id', 'batch',
+        'id', 'batch', 'image',
     ];
 
     public function alumni()

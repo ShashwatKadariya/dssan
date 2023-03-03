@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('batches', function (Blueprint $table) {
             $table->id('id');
             $table->string('batch')->unique();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
