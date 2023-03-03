@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlumniController;
+use App\Http\Controllers\AlumniPageController;
 use App\Http\Controllers\BatchController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
@@ -20,13 +21,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [HomeController::class, 'home']);
+Route::get('/alumni', [AlumniPageController::class, 'alumni']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
-});
-
-Route::get('/alumni', function () {
-    return view('users.alumni');
 });
 
 Route::get('/news&events', function () {

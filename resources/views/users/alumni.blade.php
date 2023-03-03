@@ -6,10 +6,11 @@
         <p data-aos="zoom-in" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-heading text-center">
             A MESSAGE FROM PRINCIPAL
         </p>
-        <div class="my-4 md:my-8 flex flex-col md:flex-row">
-            <div data-aos="fade-right" data-aos-duration="800" class="md:w-3/5 md:pr-8 md:border-r text-sm text-justify">
+        <div data-aos="fade-up" data-aos-duration="1000" class="my-4 md:my-8 flex flex-col md:flex-row">
+            <div class="md:w-3/5 md:pr-8 md:border-r text-sm text-justify">
                 <div class="flex flex-col justify-center items-center sm:float-left sm:mt-2 sm:mr-8 mb-2">
-                    <img src="{{ asset('images/images/principal.png') }}" alt="Mr. Bijay Shrestha" class="h-64">
+                    <img src="{{ asset('images/images/principal.png') }}" alt="Mr. Bijay Shrestha"
+                        class="h-64 object-contain">
                     <p class="mt-1">Mr. Bijay Shrestha, Principal</p>
                 </div>
                 <p class="text-lg font-medium">Welcome!</p>
@@ -40,18 +41,18 @@
                 <p>Tracy Carmichael, Ph.D.</p>
                 <p>President, Anteaters in Education Alumni Chapter</p>
                 <p>Chief Innovation Officer, Long Beach City College</p>
-                <p data-aos="fade-up"
+                <p data-aos="zoom-in"
                     class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading">
                     <a href="https://deerwalk.edu.np/sifalschool/" target="blank">MEET OUR FACULTY MEMBERS</a>
                 </p>
             </div>
-            <div data-aos="fade-left" data-aos-duration="800" class="md:w-2/5 md:pl-8 mt-8 md:mt-0">
+            <div class="md:w-2/5 md:pl-8 mt-8 md:mt-0">
                 <p class="text-lg font-medium text-center mb-4">Alumni Benefits</p>
-                <div class="flex flex-col gap-4 sm:gap-8 items-center justify-around">
-                    <div class="bg-cover h-68 w-80 xs:w-92 md:w-80 lg:w-92"
+                <div class="flex flex-col sm:flex-row md:flex-col gap-6 sm:gap-8 items-center justify-around">
+                    <div class="bg-cover w-80 xs:w-92 md:w-80 lg:w-92 aspect-3/2 object-contain"
                         style="background-image: url('{{ asset('images/images/unnamed.jpg') }}')">
                     </div>
-                    <div class="bg-cover h-68 w-80 xs:w-92 md:w-80 lg:w-92"
+                    <div class="bg-cover w-80 xs:w-92 md:w-80 lg:w-92 aspect-3/2 object-contain"
                         style="background-image: url('{{ asset('images/images/unnamed.jpg') }}')">
                     </div>
                 </div>
@@ -60,48 +61,18 @@
     </section>
 
     {{-- batch section --}}
-    {{-- <section class="w-11/12 mx-auto my-8 sm:my-16 text-center">
-        <p data-aos="zoom-in" data-aos-duration="1500" class="text-3xl font-semibold text-heading">OUR ALUMNI</p>
-        <div data-aos="fade-up" class="bg-div-dark w-10/12 mx-auto mt-8 rounded-ui sm:grid sm:grid-cols-2 p-8">
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
-            <div class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                <p class="font-medium">Batch of 2025</p>
-            </div>
+    <section class="w-11/12 mx-auto my-8 sm:my-16 text-center">
+        <p data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR ALUMNI</p>
+        <div data-aos="fade-up" data-aos-duration="1000"
+            class="bg-div-dark xs:w-10/12 mx-auto mt-4 md:mt-8 p-6 xs:p-8 lg:p-13 2xl:p-16 rounded-ui grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            @foreach ($batches as $batch)
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
+                        style="background-image: url({{ asset('/storage/' . $batch->image) }})">
+                    </div>
+                    <p class="mt-2 text-white">{{ $batch->batch }}</p>
+                </div>
+            @endforeach
         </div>
-    </section> --}}
+    </section>
 @endsection
