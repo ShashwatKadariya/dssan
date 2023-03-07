@@ -11,29 +11,37 @@
                     <p class="drop-shadow-xl">MEETING THE MOMENT,</p>
                     <P class="drop-shadow-xl">TOGETHER</P>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000"
-                    class="w-11/12 sm:w-2/3 mx-auto p-4 xs:p-8 sm:p-4 md:p-16 bg-white rounded-ui">
-                    <p class="text-heading font-semibold text-lg sm:text-2xl text-center">A BOLD FUTURE FOR SIFAL SCHOOL</p>
-                    <P data-aos="fade-up" class="text-justify mt-2 sm:mt-8 leading-6">
-                        Founded in 2016, Deerwalk Sifal School is determined to help our students grow as a good global
-                        citizen with solid academic skill in language, math, and science. We make sure we get the best out
-                        of every student and help each find their strength. We focus on the following areas at every level.
-                        Sifal School (also known as Deerwalk Sifal School - DSS) is a grade 1 to 12 Secondary Science School
-                        where our graduates after (+2 Science) go to the ranges of Universities in Abroad and Nepal.
-                    </P>
-                    <div data-aos="fade-up" id="numberAnimation"
-                        class="bg-div-dark mt-8 sm:mt-16 rounded-ui sm:flex sm:flex-row sm:justify-between p-8">
-                        <div
-                            class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
+                <div data-aos="zoom-in-up" data-aos-duration="1000"
+                    class="w-11/12 xs:w-10/12 sm:w-2/3 mx-auto p-6 xs:p-8 lg:p-13 xl:p-16 bg-white rounded-ui flex flex-col gap-4 lg:gap-6 xl:gap-8">
+                    <div data-aos="fade-up" data-aos-duration="800">
+                        <p class="text-heading font-semibold sm:text-2xl text-center">A BOLD FUTURE FOR SIFAL SCHOOL</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800">
+                        <P class="text-justify text-sm sm:text-base">
+                            Founded in 2016, Deerwalk Sifal School is determined to help our students grow as a good global
+                            citizen with solid academic skill in language, math, and science. We make sure we get the best
+                            out
+                            of every student and help each find their strength. We focus on the following areas at every
+                            level.
+                            Sifal School (also known as Deerwalk Sifal School - DSS) is a grade 1 to 12 Secondary Science
+                            School
+                            where our graduates after (+2 Science) go to the ranges of Universities in Abroad and Nepal.
+                        </P>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800"
+                        class="flex flex-col sm:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-8">
+                        <div id="numberAnimation"
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
                             <p class="font-medium">GRADUATES</p>
                             <p class="text-3xl font-medium mt-2" id="numberOne">0</p>
                         </div>
-                        <div
-                            class="text-center py-8 max-w-xs mx-auto mb-8 sm:mb-0 sm:w-29/100 bg-div-light rounded-uihalf text-white">
-                            <p class="font-medium">TEAM MEMBERS</p>
+                        <div id="numberAnimation"
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
+                            <p class="font-medium">TEAM</p>
                             <p class="text-3xl font-medium mt-2" id="numberTwo">0</p>
                         </div>
-                        <div class="text-center py-8 max-w-xs mx-auto sm:w-29/100 bg-div-light rounded-uihalf text-white">
+                        <div id="numberAnimation"
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
                             <p class="font-medium">BATCHES</p>
                             <p class="text-3xl font-medium mt-2" id="numberThree">0</p>
                         </div>
@@ -44,12 +52,12 @@
     </section>
 
     {{-- team section --}}
-    <section class="w-11/12 mx-auto my-8 text-center">
-        <p data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR TEAM</p>
+    <section class="w-11/12 mx-auto my-8 lg:my-16 text-center">
+        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR TEAM</p>
         <div class="sm:grid sm:grid-cols-2 md:grid-cols-3">
             @foreach ($teams as $team)
-                <div data-aos="fade-up" data-aos-duration="1000"
-                    class="container max-w-3xs mx-auto m-8 px-8 py-4 bg-ui-white rounded-ui drop-shadow">
+                <div data-aos="fade-up" data-aos-duration="800"
+                    class="container max-w-3xs mx-auto mt-8 px-8 py-4 bg-ui-white rounded-ui drop-shadow">
                     <div class="rounded-full bg-cover h-28 w-28 mx-auto"
                         style="background-image: url({{ asset('/storage/' . $team->image) }})">
                     </div>
@@ -69,8 +77,8 @@
     </section>
 
     {{-- feedback section --}}
-    <section class="mx-auto text-center bg-ui-white p-8">
-        <p data-aos="zoom-in" data-aos-duration="1000" class="text-3xl font-semibold text-heading">TESTIMONIALS</p>
+    <section class="mx-auto text-center bg-ui-white py-8 lg:py-16">
+        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">TESTIMONIALS</p>
         <div>
             @foreach ($feedbacks as $feedback)
                 <div
