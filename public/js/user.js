@@ -41,4 +41,6 @@ var observer = new IntersectionObserver(function (entries) {
         })
     }
 }, { threshold: [1] });
-observer.observe(document.getElementById('numberAnimation'));
+if (window.location.pathname == '/home') {
+    observer.observe(document.getElementById('numberAnimation'));
+}
