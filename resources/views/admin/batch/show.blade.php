@@ -40,7 +40,7 @@
                                         style="background-image: url({{ asset('/storage/' . $alumnus->image) }})"></div>
                                 @else
                                     <div class="w-20 h-20 rounded-full bg-cover mx-auto"
-                                        style="background-image: url({{ asset('/storage/default/default.png') }})"></div>
+                                        style="background-image: url({{ asset('images/default/default.png') }})"></div>
                                 @endif
                             </td>
                             <td class="p-3">{{ $alumnus->full_name }}</td>

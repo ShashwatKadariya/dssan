@@ -59,9 +59,6 @@
                 @if ($feedback->image)
                     <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}"
                         class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
-                @else
-                    <img id="oldImage" src="{{ asset('/storage/default/default.png') }}" alt="&#10060;"
-                        class="p-2 max-w-20 max-h-20 rounded-full">
                 @endif
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"

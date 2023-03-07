@@ -11,9 +11,15 @@
             @foreach ($alumni as $alumnus)
                 <a href="{{ $alumnus->social_link }}" target="blank">
                     <div data-aos="fade-up" data-aos-duration="800" class="drop-shadow">
-                        <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
-                            style="background-image: url({{ asset('/storage/' . $alumnus->image) }})">
-                        </div>
+                        @if ($alumnus->image)
+                            <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
+                                style="background-image: url({{ asset('/storage/' . $alumnus->image) }})">
+                            </div>
+                        @else
+                            <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
+                                style="background-image: url({{ asset('images/default/default.png') }})">
+                            </div>
+                        @endif
                         <p class="-mt-2 font-semibold text-xl bg-div-dark text-white text-center py-2">
                             {{ $alumnus->full_name }}</p>
                     </div>

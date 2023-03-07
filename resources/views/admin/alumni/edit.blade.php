@@ -89,9 +89,6 @@
                 @if ($alumni->image)
                     <img id="oldImage" src="{{ asset('/storage/' . $alumni->image) }}"
                         class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
-                @else
-                    <img id="oldImage" src="{{ asset('/storage/default/default.png') }}" alt="&#10060;"
-                        class="p-2 max-h-20 max-w-20 rounded-full"></td>
                 @endif
                 @error('image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
