@@ -65,12 +65,14 @@
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR ALUMNI</p>
         <div class="w-10/12 mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-8">
             @foreach ($batches as $batch)
-                <div data-aos="fade-up" data-aos-duration="800">
-                    <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
-                        style="background-image: url({{ asset('/storage/' . $batch->image) }})">
+                <a href="{{ route('alumni.show', $batch->id) }}" target="blank">
+                    <div data-aos="fade-up" data-aos-duration="800">
+                        <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
+                            style="background-image: url({{ asset('/storage/' . $batch->image) }})">
+                        </div>
+                        <p class="mt-2 font-medium text-lg">{{ $batch->batch }}</p>
                     </div>
-                    <p class="mt-2 font-medium text-lg">{{ $batch->batch }}</p>
-                </div>
+                </a>
             @endforeach
         </div>
     </section>

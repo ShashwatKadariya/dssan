@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [HomeController::class, 'home']);
-Route::get('/alumni', [AlumniPageController::class, 'alumni']);
+Route::resource('/alumni', AlumniPageController::class);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
