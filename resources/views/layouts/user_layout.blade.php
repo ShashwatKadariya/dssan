@@ -9,11 +9,18 @@
     <title>DSSAN</title>
     @vite('resources/css/app.css')
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+    {{-- aos animation library from https://michalsnik.github.io/aos/ --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    {{-- public css/js flies --}}
     <link rel="stylesheet" href="{{ asset('css/user.css') }}">
     <script src="{{ asset('js/user.js') }}" defer></script>
+
+    {{-- number increment animation --}}
     <script src="{{ asset('js/number-rush.js') }}"></script>
+
     @livewireStyles
     <style>
         /* Minimize autofill highlighting */
@@ -36,18 +43,32 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col font-sans">
+<body class="min-h-screen flex flex-col">
+    {{-- aos animation activation --}}
     <script>
         AOS.init();
     </script>
+
+    {{-- navbar --}}
     <livewire:nav-bar />
+
+    {{-- main content --}}
     <main>
         @yield('content')
     </main>
+
+    {{-- footer feedback form --}}
     <livewire:feedback-form />
+
+    {{-- feedback success notification --}}
     <livewire:notification-box />
+
+    {{-- social icons bottom-right --}}
     <livewire:social-icons />
+
+    {{-- footer --}}
     <livewire:footer />
+
     @livewireScripts
 </body>
 
