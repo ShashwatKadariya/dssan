@@ -29,7 +29,7 @@
                         </P>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="800"
-                        class="flex flex-col sm:flex-row justify-between items-center gap-4 lg:gap-6 xl:gap-8">
+                        class="flex flex-col sm:flex-row justify-between items-center gap-8 lg:gap-16">
                         <div id="numberAnimation"
                             class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
                             <p class="font-medium">GRADUATES</p>
@@ -54,10 +54,10 @@
     {{-- team section --}}
     <section class="w-11/12 mx-auto my-8 lg:my-16 text-center">
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR TEAM</p>
-        <div class="sm:grid sm:grid-cols-2 md:grid-cols-3">
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($teams as $team)
                 <div data-aos="fade-up" data-aos-duration="800"
-                    class="container max-w-3xs mx-auto mt-8 px-8 py-4 bg-ui-white rounded-ui drop-shadow">
+                    class="container max-w-3xs mx-auto p-4 bg-ui-white rounded-ui drop-shadow">
                     <div class="rounded-full bg-cover h-28 w-28 mx-auto"
                         style="background-image: url({{ asset('/storage/' . $team->image) }})">
                     </div>
@@ -79,10 +79,10 @@
     {{-- feedback section --}}
     <section class="mx-auto text-center bg-ui-white py-8 lg:py-16">
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">TESTIMONIALS</p>
-        <div>
+        <div class="mt-8">
             @foreach ($feedbacks as $feedback)
                 <div
-                    class="bg-white max-w-2xs xs:max-w-xs sm:max-w-md md:max-w-md xl:w-1/3 h-fit mx-auto mt-8 p-4 sm:p-8 rounded-ui drop-shadow-sm flex flex-col justify-around">
+                    class="bg-white max-w-2xs xs:max-w-xs sm:max-w-md md:max-w-md xl:w-1/3 h-fit mx-auto p-4 sm:p-8 rounded-ui drop-shadow-sm flex flex-col justify-around">
                     <div class="flex justify-center space-x-5 items-center">
                         <div class="rounded-full bg-cover h-18 w-18 sm:h-24 sm:w-24"
                             style="background-image: url({{ asset('/storage/' . $feedback->image) }})">
