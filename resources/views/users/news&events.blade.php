@@ -28,7 +28,7 @@
         </div>
         <p data-aos="fade-up" data-aos-duration="800"
             class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
-            <a href="/news" target="blank">View All News</a>
+            <a href="/news">View All News</a>
         </p>
     </section>
 
@@ -58,7 +58,7 @@
         </div>
         <p data-aos="fade-up" data-aos-duration="800"
             class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
-            <a href="/events" target="blank">View All Events</a>
+            <a href="/events">View All Events</a>
         </p>
     </section>
 @endsection
