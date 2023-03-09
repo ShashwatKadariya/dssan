@@ -39,7 +39,7 @@
                 <p>President, Anteaters in Education Alumni Chapter</p>
                 <p>Chief Innovation Officer, Long Beach City College</p>
                 <p
-                    class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading">
+                    class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
                     <a href="https://deerwalk.edu.np/sifalschool/" target="blank">MEET OUR FACULTY MEMBERS</a>
                 </p>
             </div>
