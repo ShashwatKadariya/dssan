@@ -31,6 +31,10 @@ Route::get('/news&events', function () {
     return view('users.news&events');
 });
 
+Route::get('/news', function () {
+    return view('users.all_news');
+});
+
 Route::get('/events', function () {
     return view('users.all_events');
 });
