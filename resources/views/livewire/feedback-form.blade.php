@@ -1,5 +1,6 @@
 <div id="feedbackForm" class="hidden">
-    <div class="fixed top-0 bg-black w-full h-screen opacity-20"></div>
+    <div class="fixed top-0 bg-black w-full h-screen opacity-20"
+        onclick="document.getElementById('feedbackForm').className = 'hidden'"></div>
     <div class="feedback-form z-50 p-6 bg-ui-white rounded-uihalf animate-appear">
         <button type="button" class="text-gray-700 hover:text-gray-900 absolute top-2.5 right-2.5"
             onclick="document.getElementById('feedbackForm').className = 'hidden'">
