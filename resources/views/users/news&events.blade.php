@@ -9,7 +9,7 @@
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @for ($i = 0; $i < 3; $i++)
-                <a href="#" target="blank">
+                <a href="/article" target="blank">
                     <div data-aos="fade-up" data-aos-duration="800" class="border rounded-uihalf drop-shadow-sm">
                         <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
                             style="background-image: url({{ asset('images/images/unnamed.jpg') }})">
@@ -21,6 +21,10 @@
                             <p class="font-normal text-base">Feb 28, 2023</p>
                             <p class="font-light text-sm">Looking back on the time the 39th President came to Omaha for two
                                 Sifal events.</p>
+                            <div class="flex gap-1">
+                                <p class="font-normal text-sm">By:</p>
+                                <p class="font-normal text-sm text-heading">Binayak Bhai</p>
+                            </div>
                         </div>
                     </div>
                 </a>
