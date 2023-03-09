@@ -1,7 +1,7 @@
 <header class="z-10 fixed w-full top-0 bg-white border-b sm:drop-shadow-sm">
-    <section class="mx-auto w-11/12 py-2.5 flex justify-between items-center">
+    <section class="mx-auto w-11/12 py-1.5 flex justify-between items-center">
         <a href="/home">
-            <img src="{{ asset('images/logo/dssanblue.png') }}" alt="dssanlogo" class="max-w-[12rem]">
+            <img src="{{ asset('images/logo/dssanblue.png') }}" alt="dssanlogo" class="max-w-[6rem]">
         </a>
         {{-- big screen navbar --}}
         <div>
