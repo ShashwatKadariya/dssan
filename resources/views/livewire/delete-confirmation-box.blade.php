@@ -1,5 +1,6 @@
 <div id="deleteBox" class="hidden">
-    <div class="fixed top-0 bg-black w-full h-screen opacity-40"></div>
+    <div class="fixed top-0 bg-black w-full h-screen opacity-40"
+        onclick="document.getElementById('deleteBox').className = 'hidden'"></div>
     <div tabindex="-1" aria-hidden="true" class="delete-box">
         <div class="p-8 text-center rounded-sm shadow-sm bg-gray-50 border">
             <button type="button"
