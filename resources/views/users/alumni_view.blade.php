@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- alumni section --}}
-    <section class="w-11/12 mx-auto mt-18 xs:mt-20 mb-8 lg:mb-16">
+    <section class="w-11/12 mx-auto mt-16 mb-8 lg:mb-16">
         <p data-aos="zoom-in-up" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-heading text-center">
             {{ $batch->batch }}
         </p>
