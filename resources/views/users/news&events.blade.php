@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- latest news section --}}
-    <section class="w-11/12 mx-auto mt-18 xs:mt-20">
+    <section class="w-11/12 mx-auto mt-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
             <p class="text-3xl font-semibold text-heading">LATEST NEWS</p>
             <hr class="mt-2">
@@ -30,10 +30,11 @@
                 </a>
             @endfor
         </div>
-        <p data-aos="fade-up" data-aos-duration="800"
-            class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
-            <a href="/news">View All News</a>
-        </p>
+        <a href="/news">
+            <p data-aos="fade-up" data-aos-duration="800"
+                class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                View All News</p>
+        </a>
     </section>
 
     {{-- upcoming events section --}}
@@ -60,9 +61,10 @@
                 </div>
             @endfor
         </div>
-        <p data-aos="fade-up" data-aos-duration="800"
-            class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
-            <a href="/events">View All Events</a>
-        </p>
+        <a href="/events">
+            <p data-aos="fade-up" data-aos-duration="800"
+                class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                View All Events</p>
+        </a>
     </section>
 @endsection
