@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- principal's message section --}}
-    <section class="w-11/12 mx-auto mt-18 xs:mt-20">
+    <section class="w-11/12 mx-auto mt-16">
         <p data-aos="zoom-in-up" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-heading text-center">
             A MESSAGE FROM PRINCIPAL
         </p>
@@ -38,19 +38,35 @@
                 <p>Tracy Carmichael, Ph.D.</p>
                 <p>President, Anteaters in Education Alumni Chapter</p>
                 <p>Chief Innovation Officer, Long Beach City College</p>
-                <p
-                    class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
-                    <a href="https://deerwalk.edu.np/sifalschool/" target="blank">MEET OUR FACULTY MEMBERS</a>
-                </p>
+                <a href="https://deerwalk.edu.np/sifalschool/" target="blank">
+                    <p
+                        class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                        MEET OUR FACULTY MEMBERS
+                    </p>
+                </a>
             </div>
-            <div class="mx-auto w-10/12 md:w-2/5 md:pl-8 mt-8 md:mt-0">
-                <p class="text-lg font-medium text-center mb-4">Alumni Benefits</p>
-                <div class="flex flex-col sm:flex-row md:flex-col gap-4 lg:gap-6 xl:gap-8 items-center justify-between">
-                    <div class="bg-cover w-80 xs:w-92 md:w-80 lg:w-92 aspect-3/2 object-contain"
-                        style="background-image: url('{{ asset('images/images/unnamed.jpg') }}')">
+            <div class="mx-auto md:w-2/5 md:pl-8 mt-8 md:mt-0">
+                <p class="text-lg font-medium text-center mb-4 text-heading">Alumni Benefits</p>
+                <div class="flex flex-col sm:flex-row md:flex-col gap-8 lg:gap-16 justify-between">
+                    <div class="text-justify">
+                        <p class="font-semibold sm:text-center md:text-left mb-1">Alumni Meet</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet dolorem quod atque,
+                            recusandae numquam adipisci magni sed a molestias, animi fugiat nobis. Voluptatem cum
+                            exercitationem impedit eaque quidem dicta! Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Atque sunt vel cupiditate eius reiciendis laudantium. Exercitationem nam fugit natus!
+                            Asperiores culpa et, pariatur laborum perferendis iste temporibus facere blanditiis beatae.
+                        </p>
                     </div>
-                    <div class="bg-cover w-80 xs:w-92 md:w-80 lg:w-92 aspect-3/2 object-contain"
-                        style="background-image: url('{{ asset('images/images/unnamed.jpg') }}')">
+                    <div class="text-justify">
+                        <p class="font-semibold sm:text-center md:text-left mb-1">Internship</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquam impedit voluptatem
+                            assumenda nesciunt beatae odio reiciendis earum, harum nisi architecto laborum autem ullam sint
+                            officiis, similique dignissimos. Labore, eveniet. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Laudantium quis totam aliquam odit culpa, molestiae quos ea ducimus saepe
+                            earum. Quos, eum culpa necessitatibus unde consequuntur sapiente laborum temporibus alias.
+                        </p>
                     </div>
                 </div>
             </div>
