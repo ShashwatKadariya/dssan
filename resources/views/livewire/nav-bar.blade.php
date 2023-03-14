@@ -7,10 +7,10 @@
         <div>
             <button id="hamburger-button" class="text-black text-lg sm:hidden cursor-pointer">&#9776;</button>
             <nav class="hidden sm:block space-x-6 text-black font-semibold" aria-label="main">
-                <a href="/home" class="active:text-heading hover:text-heading delay-75">Home</a>
-                <a href="/gallery" class="active:text-heading hover:text-heading delay-75">Gallery</a>
-                <a href="/alumni" class="active:text-heading hover:text-heading delay-75">Alumni</a>
-                <a href="/news&events" class="active:text-heading hover:text-heading delay-75">News & Events</a>
+                <a href="/home" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Home</a>
+                <a href="/gallery" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Gallery</a>
+                <a href="/alumni" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Alumni</a>
+                <a href="/news&events" class="active:text-dwit-blue hover:text-dwit-blue delay-75">News & Events</a>
             </nav>
         </div>
     </section>
@@ -18,11 +18,13 @@
     <section id="mobile-menu"
         class="absolute top-12 bg-ui-white backdrop-filter backdrop-blur bg-opacity-40 sm:hidden w-full hidden flex-col origin-top animate-open-menu">
         <nav class="flex flex-col w-11/12 mx-auto pb-4 text-black" aria-label="mobile">
-            <a href="/home" class="py-1 active:text-heading hover:text-heading border-b border-black/70">Home</a>
-            <a href="/gallery" class="py-1 active:text-heading hover:text-heading border-b border-black/70">Gallery</a>
-            <a href="/alumni" class="py-1 active:text-heading hover:text-heading border-b border-black/70">Alumni</a>
-            <a href="/news&events" class="py-1 active:text-heading hover:text-heading border-b border-black/70">News &
-                Events</a>
+            <a href="/home" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">Home</a>
+            <a href="/gallery"
+                class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">Gallery</a>
+            <a href="/alumni"
+                class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">Alumni</a>
+            <a href="/news&events" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">News
+                & Events</a>
         </nav>
     </section>
     {{-- current page nav-link highlighting script --}}
@@ -30,7 +32,7 @@
         $(function() {
             $('a').each(function() {
                 if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('text-heading');
+                    $(this).addClass('text-dwit-blue');
                 }
             });
         });
