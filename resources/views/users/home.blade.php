@@ -14,7 +14,7 @@
                 <div data-aos="zoom-in-up" data-aos-duration="1000"
                     class="w-11/12 xs:w-10/12 sm:w-2/3 mx-auto p-6 xs:p-8 lg:p-13 xl:p-16 bg-white rounded-ui flex flex-col gap-4 lg:gap-6 xl:gap-8">
                     <div data-aos="fade-up" data-aos-duration="800">
-                        <p class="text-heading font-semibold sm:text-2xl text-center">A BOLD FUTURE FOR SIFAL SCHOOL</p>
+                        <p class="text-dwit-blue font-semibold sm:text-2xl text-center">A BOLD FUTURE FOR SIFAL SCHOOL</p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="800">
                         <P class="text-justify text-sm sm:text-base">
@@ -31,19 +31,20 @@
                     <div data-aos="fade-up" data-aos-duration="800"
                         class="flex flex-col sm:flex-row justify-between items-center gap-8 lg:gap-16">
                         <div id="numberAnimation"
-                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
                             <p class="font-medium">GRADUATES</p>
-                            <p class="text-3xl font-medium mt-2" id="numberOne">0</p>
+                            <p class="text-3xl font-medium mt-2" id="numberOne" data-max-number="{{ $alumni }}">0</p>
                         </div>
                         <div id="numberAnimation"
-                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
-                            <p class="font-medium">TEAM</p>
-                            <p class="text-3xl font-medium mt-2" id="numberTwo">0</p>
-                        </div>
-                        <div id="numberAnimation"
-                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-div-light rounded-uihalf text-white">
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
                             <p class="font-medium">BATCHES</p>
-                            <p class="text-3xl font-medium mt-2" id="numberThree">0</p>
+                            <p class="text-3xl font-medium mt-2" id="numberThree" data-max-number="{{ $batch }}">0
+                            </p>
+                        </div>
+                        <div id="numberAnimation"
+                            class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
+                            <p class="font-medium">TEAM</p>
+                            <p class="text-3xl font-medium mt-2" id="numberTwo" data-max-number="{{ $team }}">0</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,7 @@
 
     {{-- team section --}}
     <section class="w-11/12 mx-auto my-8 lg:my-16 text-center">
-        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR TEAM</p>
+        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">OUR TEAM</p>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($teams as $team)
                 <div data-aos="fade-up" data-aos-duration="800"
@@ -78,7 +79,7 @@
 
     {{-- feedback section --}}
     <section class="mx-auto text-center bg-ui-white py-8 lg:py-16">
-        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">TESTIMONIALS</p>
+        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">TESTIMONIALS</p>
         <div class="mt-8">
             @foreach ($feedbacks as $feedback)
                 <div
