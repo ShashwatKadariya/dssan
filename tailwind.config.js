@@ -58,11 +58,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       'ui-white': '#f5f5f5',
-      'ui-footer-background': '#cb87cf',
-      'ui-hr': '#d2d2d7',
-      'heading': '#833c88',
-      'div-light': '#c47ec8',
-      'div-dark': '#9b629f',
+      'dwit-blue': '#0f5288',
     }),
     columns: {
       auto: 'auto',
