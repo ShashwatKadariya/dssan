@@ -2,8 +2,8 @@
 
 @section('content')
     {{-- principal's message section --}}
-    <section class="w-11/12 mx-auto mt-16">
-        <p data-aos="zoom-in-up" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-heading text-center">
+    <section class="w-11/12 mx-auto mt-16 mb-8 lg:mb-16">
+        <p data-aos="zoom-in-up" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-dwit-blue text-center">
             A MESSAGE FROM PRINCIPAL
         </p>
         <div data-aos="fade-up" data-aos-duration="800" class="mt-8 flex flex-col md:flex-row">
@@ -40,13 +40,13 @@
                 <p>Chief Innovation Officer, Long Beach City College</p>
                 <a href="https://deerwalk.edu.np/sifalschool/" target="blank">
                     <p
-                        class="text-sm py-2 px-5 w-fit border border-heading mt-8 mx-auto active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                        class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 mx-auto active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                         MEET OUR FACULTY MEMBERS
                     </p>
                 </a>
             </div>
             <div class="mx-auto md:w-2/5 md:pl-8 mt-8 md:mt-0">
-                <p class="text-lg font-medium text-center mb-4 text-heading">Alumni Benefits</p>
+                <p class="text-lg font-medium text-center mb-4 text-dwit-blue">Alumni Benefits</p>
                 <div class="flex flex-col sm:flex-row md:flex-col gap-8 lg:gap-16 justify-between">
                     <div class="text-justify">
                         <p class="font-semibold sm:text-center md:text-left mb-1">Alumni Meet</p>
@@ -74,8 +74,9 @@
     </section>
 
     {{-- batch section --}}
-    <section class="w-11/12 mx-auto my-8 lg:my-16 text-center">
-        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-heading">OUR ALUMNI</p>
+    <section class="mx-auto text-center bg-ui-white py-8 lg:py-16">
+
+        <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">OUR ALUMNI</p>
         <div class="w-10/12 mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($batches as $batch)
                 <a href="{{ route('alumni.show', $batch->id) }}" target="blank">
