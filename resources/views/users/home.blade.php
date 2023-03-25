@@ -66,7 +66,7 @@
                     <p class="text-center font-semibold text-xl mb-10">{{ $team->last_name }}</p>
                     <div class="overlay text-white text-sm rounded-uihalf p-6 drop-shadow flex flex-col">
                         <p class="text-center font-medium text-lg -mt-3">{{ $team->designation }}</p>
-                        <p class="mt-2 text-justify">{{ $team->statement }}</p>
+                        <p class="mt-2 text-justify text-sm font-light">{{ $team->statement }}</p>
                         <p class="mt-auto"><a href="{{ $team->linkedin_url }}" target="blank"><img
                                     src="{{ asset('images/icon/linkedin_white.png') }}"
                                     class="h-5 object-contain aspect-3/2" alt=""></a>
