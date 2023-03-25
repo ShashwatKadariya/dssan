@@ -4,7 +4,7 @@
     {{-- latest news section --}}
     <section class="w-11/12 mx-auto mt-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
-            <p class="text-3xl font-semibold text-heading">LATEST NEWS</p>
+            <p class="text-3xl font-semibold text-dwit-blue">LATEST NEWS</p>
             <hr class="mt-2">
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
@@ -23,7 +23,7 @@
                                 Sifal events.</p>
                             <div class="flex gap-1">
                                 <p class="font-normal text-sm">By:</p>
-                                <p class="font-normal text-sm text-heading">Binayak Bhai</p>
+                                <p class="font-normal text-sm text-dwit-blue">Binayak Bhai</p>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
         </div>
         <a href="/news">
             <p data-aos="fade-up" data-aos-duration="800"
-                class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                 View All News</p>
         </a>
     </section>
@@ -40,7 +40,7 @@
     {{-- upcoming events section --}}
     <section class="w-11/12 mx-auto my-8 lg:my-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
-            <p class="text-3xl font-semibold text-heading">UPCOMING EVENTS</p>
+            <p class="text-3xl font-semibold text-dwit-blue">UPCOMING EVENTS</p>
             <hr class="mt-2">
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
@@ -63,7 +63,7 @@
         </div>
         <a href="/events">
             <p data-aos="fade-up" data-aos-duration="800"
-                class="text-sm py-2 px-5 w-fit border border-heading mt-8 active:text-white active:bg-heading hover:text-white hover:bg-heading cursor-pointer">
+                class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                 View All Events</p>
         </a>
     </section>
