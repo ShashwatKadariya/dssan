@@ -53,7 +53,7 @@
     </section>
 
     {{-- team section --}}
-    <section class="w-11/12 mx-auto my-8 lg:my-16 text-center">
+    <section class="bg-ui-white mx-auto py-8 lg:py-16 text-center">
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">OUR TEAM</p>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($teams as $team)
@@ -78,7 +78,7 @@
     </section>
 
     {{-- feedback section --}}
-    <section class="mx-auto text-center bg-ui-white py-8 lg:py-16">
+    <section class="mx-auto text-center my-8 lg:my-16">
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">TESTIMONIALS</p>
         <div class="mt-8">
             @foreach ($feedbacks as $feedback)

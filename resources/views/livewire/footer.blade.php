@@ -1,4 +1,4 @@
-<div class="z-10 mt-auto text-sm bg-white border-t">
+<div class="z-10 mt-auto text-sm bg-ui-white border-t">
     <footer class="pt-5 w-11/12 mx-auto sm:flex sm:flex-row-reverse sm:justify-around">
         <section>
             <p class="mt-2 font-semibold">Connect With Us</p>
