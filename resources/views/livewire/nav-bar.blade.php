@@ -1,4 +1,4 @@
-<header class="z-10 fixed w-full top-0 bg-white border-b sm:drop-shadow-sm">
+<header class="z-10 fixed w-full top-0 bg-white/90 backdrop-blur-sm border-b sm:drop-shadow-sm">
     <section class="mx-auto w-11/12 py-1.5 flex justify-between items-center">
         <a href="/home">
             <img src="{{ asset('images/logo/dssanblue.png') }}" alt="dssanlogo" class="max-w-[6rem]">
