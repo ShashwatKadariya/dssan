@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- principal's message section --}}
-    <section class="w-11/12 mx-auto mt-16 mb-8 lg:mb-16">
+    <section class="w-11/12 mx-auto mt-16">
         <p data-aos="zoom-in-up" data-aos-duration="500" class="text-xl xs:text-2xl font-semibold text-dwit-blue text-center">
             A MESSAGE FROM PRINCIPAL
         </p>
@@ -74,7 +74,7 @@
     </section>
 
     {{-- batch section --}}
-    <section class="mx-auto text-center py-8 lg:py-16">
+    <section class="mx-auto text-center my-8 lg:my-16">
 
         <p data-aos="zoom-in-up" data-aos-duration="1000" class="text-3xl font-semibold text-dwit-blue">OUR ALUMNI</p>
         <div class="w-10/12 mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
