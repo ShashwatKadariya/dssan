@@ -4,7 +4,7 @@
     {{-- events calender section --}}
     <section class="w-11/12 lg:w-9/12 mx-auto mt-16 mb-8 lg:mb-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
-            <p class="text-3xl font-semibold text-heading">NEWS</p>
+            <p class="text-3xl font-semibold text-dwit-blue">NEWS</p>
             <hr class="mt-2">
         </div>
         <div class="mt-8 flex flex-col gap-8 lg:gap-16">
@@ -21,7 +21,7 @@
                                 Sifal events.</p>
                             <div class="flex gap-1">
                                 <p class="font-normal text-sm">By:</p>
-                                <p class="font-normal text-sm text-heading">Binayak Bhai</p>
+                                <p class="font-normal text-sm text-dwit-blue">Binayak Bhai</p>
                             </div>
                         </div>
                         <div class="w-68 aspect-3/2 object-contain bg-cover rounded-uihalf"

@@ -15,7 +15,7 @@
                     <p class="font-normal">Feb 28, 2023</p>
                     <div class="flex gap-1">
                         <p class="font-normal">By:</p>
-                        <p class="font-normal text-heading">Binayak Bhai</p>
+                        <p class="font-normal text-dwit-blue">Binayak Bhai</p>
                     </div>
                 </div>
                 <p class="text-justify text-sm">
@@ -38,7 +38,7 @@
                 </p>
             </div>
             <div data-aos="fade-up" data-aos-duration="800" class="h-fit md:w-2/5 p-4 border">
-                <p class="text-3xl font-semibold text-heading text-center pb-4 border-b">LATEST NEWS</p>
+                <p class="text-3xl font-semibold text-dwit-blue text-center pb-4 border-b">LATEST NEWS</p>
                 <div class="my-8 flex flex-col gap-8 lg:gap-16">
                     @for ($i = 0; $i < 3; $i++)
                         <a href="/article" class="text-black">
@@ -48,7 +48,7 @@
                                 </p>
                                 <div class="flex gap-1">
                                     <p class="font-normal text-sm">By:</p>
-                                    <p class="font-normal text-sm text-heading">Binayak Bhai</p>
+                                    <p class="font-normal text-sm text-dwit-blue">Binayak Bhai</p>
                                 </div>
                             </div>
                         </a>

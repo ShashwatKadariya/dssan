@@ -4,7 +4,7 @@
     {{-- events calender section --}}
     <section class="w-11/12 lg:w-9/12 mx-auto mt-16 mb-8 lg:mb-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
-            <p class="text-3xl font-semibold text-heading">EVENTS CALENDAR</p>
+            <p class="text-3xl font-semibold text-dwit-blue">EVENTS CALENDAR</p>
             <hr class="mt-2">
         </div>
         <div class="mt-8 flex flex-col gap-8 lg:gap-16">
