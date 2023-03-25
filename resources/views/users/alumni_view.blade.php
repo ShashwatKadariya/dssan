@@ -20,7 +20,7 @@
                                 style="background-image: url({{ asset('images/default/default.png') }})">
                             </div>
                         @endif
-                        <p class="-mt-2 font-semibold text-xl bg-div-dark text-white text-center py-2">
+                        <p class="-mt-2 font-semibold text-xl bg-dwit-blue text-white text-center py-2">
                             {{ $alumnus->full_name }}</p>
                     </div>
                 </a>
