@@ -9,7 +9,7 @@ const initApp = () => {
     hamburgerBtm.addEventListener('click', toggleMenu)
     mobileMenu.addEventListener('click', toggleMenu)
 }
-if ($(window).width() <= 600) {
+if ($(window).width() <= 650) {
     document.addEventListener('DOMContentLoaded', initApp)
 }
 
