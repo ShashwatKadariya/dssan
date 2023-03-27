@@ -26,8 +26,7 @@ class EventFormRequest extends FormRequest
         $rules = [
             'event_title' => 'required',
             'description' => 'required',
-            'event_date' => 'required|date',
-            'event_time' => 'required|',
+            'event_date_time' => 'required',
         ];
         if (in_array($this->method(), ['POST'])) {
             $rules['image'] = 'required|image';

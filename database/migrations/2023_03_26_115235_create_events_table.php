@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('event_title');
             $table->longText('description');
-            $table->time('event_time');
-            $table->date('event_date');
+            $table->dateTime('event_date_time');
             $table->timestamps();
         });
     }

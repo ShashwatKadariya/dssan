@@ -33,8 +33,8 @@
                             </td>
                             <td class="p-3">{{ $event->event_title }}</td>
                             <td class="p-3">{{ $event->description }}</th>
-                            <td class="p-3">{{ $event->event_date }}</td>
-                            <td class="p-3">{{ $event->event_time }}</td>
+                            <td class="p-3">{{ $event->event_date_time->format('d M, Y') }}</td>
+                            <td class="p-3">{{ $event->event_date_time->format('h:i A') }}</td>
                             <td class="p-3">
                                 <form id="submitForm_{{ $event->id }}" action="{{ route('events.destroy', $event->id) }}"
                                     method="POST">

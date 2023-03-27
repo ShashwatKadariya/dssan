@@ -25,18 +25,10 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="date" name="event_date" class="form-input peer" placeholder=" "
-                    value="{{ $event->event_date }}">
-                <label class="form-label">Event Date</label>
-                @error('event_date')
-                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
-                @enderror
-            </div>
-            <div class="relative z-0 w-full mb-6 group">
-                <input type="time" name="event_time" class="form-input peer" placeholder=" "
-                    value="{{ $event->event_time }}">
-                <label class="form-label">Event Time</label>
-                @error('event_time')
+                <label class="text-gray-500 text-sm">Event Date $ Time</label>
+                <input type="datetime-local" name="event_date_time" class="form-input peer" placeholder=" "
+                    value="{{ $event->event_date_time }}">
+                @error('event_date_time')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
