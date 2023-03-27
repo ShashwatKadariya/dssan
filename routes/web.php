@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsEventsController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::resource('/alumni', AlumniPageController::class);
+Route::get('/all_events', [NewsEventsController::class, 'allevents']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
@@ -34,10 +36,6 @@ Route::get('/news&events', function () {
 
 Route::get('/all_news', function () {
     return view('users.all_news');
-});
-
-Route::get('/all_events', function () {
-    return view('users.all_events');
 });
 
 Route::get('/article', function () {
