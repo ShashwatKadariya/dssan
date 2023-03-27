@@ -24,14 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::resource('/alumni', AlumniPageController::class);
+Route::get('/news&events', [NewsEventsController::class, 'index']);
 Route::get('/all_events', [NewsEventsController::class, 'allevents']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
-});
-
-Route::get('/news&events', function () {
-    return view('users.news&events');
 });
 
 Route::get('/all_news', function () {

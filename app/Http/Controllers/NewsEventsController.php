@@ -10,6 +10,9 @@ class NewsEventsController extends Controller
 {
     public function index()
     {
+        $events = Event::orderBy('event_date_time', 'desc')->take(3)->get();
+        // dd($all_events);
+        return view('users.news&events', compact('events'));
     }
 
     public function allevents()
