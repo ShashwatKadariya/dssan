@@ -21,7 +21,7 @@
                             <p class="font-semibold sm:text-xl">{{ $event->event_title }}</p>
                             <div class="flex gap-1 items-center">
                                 <img src="{{ asset('images/icon/time.png') }}" class="h-5 object-contain aspect-3/2">
-                                <p class="font-medium">{{ $event->event_date_time->format('h:s A') }}</p>
+                                <p class="font-medium">{{ $event->event_date_time->format('h:i A') }}</p>
                             </div>
                             <p class="font-light text-xs sm:text-sm text-justify">{{ $event->description }}</p>
                         </div>
