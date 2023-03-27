@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AlumniPageController;
 use App\Http\Controllers\BatchController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
@@ -31,11 +32,11 @@ Route::get('/news&events', function () {
     return view('users.news&events');
 });
 
-Route::get('/news', function () {
+Route::get('/all_news', function () {
     return view('users.all_news');
 });
 
-Route::get('/events', function () {
+Route::get('/all_events', function () {
     return view('users.all_events');
 });
 
@@ -60,3 +61,4 @@ Route::post('/alumni/store/{id}', [AlumniController::class, 'store'])->name('alu
 Route::get('/alumni/edit/{id}', [AlumniController::class, 'edit'])->name('alumni.edit');
 Route::post('/alumni/update/{id}', [AlumniController::class, 'update'])->name('alumni.update');
 Route::delete('/alumni/destroy/{id}', [AlumniController::class, 'destroy'])->name('alumni.destroy');
+Route::resource('/events', EventController::class);

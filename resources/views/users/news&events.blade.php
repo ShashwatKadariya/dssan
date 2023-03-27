@@ -30,7 +30,7 @@
                 </a>
             @endfor
         </div>
-        <a href="/news">
+        <a href="/all_news">
             <p data-aos="fade-up" data-aos-duration="800"
                 class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                 View All News</p>
@@ -61,7 +61,7 @@
                 </div>
             @endfor
         </div>
-        <a href="/events">
+        <a href="/all_events">
             <p data-aos="fade-up" data-aos-duration="800"
                 class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                 View All Events</p>
