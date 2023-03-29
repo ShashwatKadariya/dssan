@@ -14,10 +14,9 @@
             </div>
             <div class="mb-6">
                 <label for="password" class="text-gray-700">Password</label>
-                <input type="password" id="passwordField"
+                <input type="password"
                     class="w-full px-4 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded focus:border-blue-600 focus:outline-none">
             </div>
-            <i class="far fa-eye cursor-pointer text-gray-700 absolute right-9 -mt-13" id="togglePassword"></i>
             <div class="mb-4">
                 <button type="button"
                     class="w-full py-3 bg-blue-600 text-white font-medium rounded shadow-sm hover:bg-blue-700">
