@@ -27,17 +27,11 @@ Route::get('/home', [HomeController::class, 'home']);
 Route::resource('/alumni', AlumniPageController::class);
 Route::get('/news&events', [NewsEventsController::class, 'index']);
 Route::get('/all_events', [NewsEventsController::class, 'allevents']);
+Route::get('/all_news', [NewsEventsController::class, 'allnews']);
+Route::get('/article/{id}', [NewsEventsController::class, 'article']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
-});
-
-Route::get('/all_news', function () {
-    return view('users.all_news');
-});
-
-Route::get('/article', function () {
-    return view('users.news_article');
 });
 
 Route::get('/login', function () {

@@ -8,27 +8,24 @@
             <hr class="mt-2">
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
-            @for ($i = 0; $i < 3; $i++)
-                <a href="/article" target="blank">
+            @foreach ($news as $single_news)
+                <a href="/article/{{ $single_news->id }}">
                     <div data-aos="fade-up" data-aos-duration="800" class="border rounded-uihalf drop-shadow-sm">
                         <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
-                            style="background-image: url({{ asset('images/images/unnamed.jpg') }})">
+                            style="background-image: url({{ asset('/storage/' . $single_news->image) }})">
                         </div>
                         <div class="p-4 flex flex-col gap-2 justify-between">
-                            <p class="font-medium text-lg leading-6">What a decade in the BIG EAST has meant for Sifal
-                                School
-                            </p>
-                            <p class="font-normal text-base">Feb 28, 2023</p>
-                            <p class="font-light text-sm">Looking back on the time the 39th President came to Omaha for two
-                                Sifal events.</p>
+                            <p class="font-medium text-lg leading-6">{{ $single_news->headline }}</p>
+                            <p class="font-normal text-base">{{ $single_news->release_date->format('d M, Y') }}</p>
+                            <p class="font-light text-sm">{{ $single_news->tagline }}</p>
                             <div class="flex gap-1">
                                 <p class="font-normal text-sm">By:</p>
-                                <p class="font-normal text-sm text-dwit-blue">Binayak Bhai</p>
+                                <p class="font-normal text-sm text-dwit-blue">{{ $single_news->reported_by }}</p>
                             </div>
                         </div>
                     </div>
                 </a>
-            @endfor
+            @endforeach
         </div>
         <a href="/all_news">
             <p data-aos="fade-up" data-aos-duration="800"
