@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsEventsController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -57,3 +58,4 @@ Route::get('/alumni/edit/{id}', [AlumniController::class, 'edit'])->name('alumni
 Route::post('/alumni/update/{id}', [AlumniController::class, 'update'])->name('alumni.update');
 Route::delete('/alumni/destroy/{id}', [AlumniController::class, 'destroy'])->name('alumni.destroy');
 Route::resource('/events', EventController::class);
+Route::resource('/news', NewsController::class);

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="{{ asset('images/logo/deerlogo.png') }}" type="image/x-icon">
     <title>ADMIN | DSSAN</title>
     @vite('resources/css/app.css')
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
     <script src="{{ asset('js/admin.js') }}" defer></script>
     @livewireStyles
     <style>
