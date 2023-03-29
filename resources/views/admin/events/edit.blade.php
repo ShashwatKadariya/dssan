@@ -17,15 +17,15 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="description" class="form-input peer" placeholder=" "
-                    value="{{ $event->description }}">
-                <label class="form-label">Description</label>
+                <label class="text-gray-500 text-sm">Description</label>
+                <textarea required rows="2" name="description"
+                    class="block mt-2 p-2 w-full text-sm border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600">{{ $event->description }}</textarea>
                 @error('description')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="text-gray-500 text-sm">Event Date $ Time</label>
+                <label class="text-gray-500 text-sm">Event Date & Time</label>
                 <input type="datetime-local" name="event_date_time" class="form-input peer" placeholder=" "
                     value="{{ $event->event_date_time }}">
                 @error('event_date_time')

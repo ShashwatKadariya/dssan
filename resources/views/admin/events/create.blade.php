@@ -24,7 +24,7 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <label class="text-gray-500 text-sm">Event Date $ Time</label>
+                <label class="text-gray-500 text-sm">Event Date & Time</label>
                 <input type="datetime-local" name="event_date_time" class="form-input peer" placeholder=" " required
                     value="{{ old('event_date_time') }}">
                 @error('event_date_time')
