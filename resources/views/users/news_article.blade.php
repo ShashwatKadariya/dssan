@@ -6,7 +6,7 @@
         <div data-aos="fade-up" data-aos-duration="800" class="flex flex-col md:flex-row gap-8 lg:gap-16">
             <div class="md:w-3/5 flex flex-col gap-4 justify-between">
                 <p class="font-medium text-lg leading-6">{{ $article->headline }}</p>
-                <div class="w-full aspect-3/2 object-contain bg-cover rounded-uihalf"
+                <div class="w-full aspect-square object-contain bg-cover rounded-uihalf"
                     style="background-image: url({{ asset('/storage/' . $article->image) }})">
                 </div>
                 <div class="flex justify-between items-center text-sm">
@@ -26,10 +26,10 @@
                             <div class="flex flex-col gap-2">
                                 <p class="font-medium text-lg leading-6">{{ $news->headline }}</p>
                                 <div class="flex gap-1">
-                                    <p class="font-normal text-sm">By:</p>
+                                    <p class="font-normal text-sm text-black">By:</p>
                                     <p class="font-normal text-sm text-dwit-blue">{{ $news->reported_by }}</p>
                                 </div>
-                                <p class="font-normal text-sm">{{ $news->release_date->format('d M, Y') }}</p>
+                                <p class="font-normal text-sm text-black">{{ $news->release_date->format('d M, Y') }}</p>
                             </div>
                         </a>
                     @endforeach

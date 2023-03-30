@@ -17,7 +17,7 @@
             </div>
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-gray-500 text-sm">Description</label>
-                <textarea required rows="2" name="description"
+                <textarea required rows="5" name="description"
                     class="block mt-2 p-2 w-full text-sm border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600"></textarea>
                 @error('description')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>

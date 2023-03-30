@@ -32,9 +32,9 @@
                 @enderror
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="message" class="form-input peer" placeholder=" "
-                    value="{{ $feedback->message }}">
-                <label class="form-label">Message</label>
+                <label class="text-gray-500 text-sm">Message</label>
+                <textarea required rows="5" name="message"
+                    class="block mt-2 p-2 w-full text-sm border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600">{{ $feedback->message }}</textarea>
                 @error('message')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

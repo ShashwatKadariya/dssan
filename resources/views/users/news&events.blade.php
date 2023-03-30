@@ -11,7 +11,7 @@
             @foreach ($news as $single_news)
                 <a href="/article/{{ $single_news->id }}">
                     <div data-aos="fade-up" data-aos-duration="800" class="border rounded-uihalf drop-shadow-sm">
-                        <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
+                        <div class="mx-auto aspect-square object-contain bg-cover rounded-uihalf"
                             style="background-image: url({{ asset('/storage/' . $single_news->image) }})">
                         </div>
                         <div class="p-4 flex flex-col gap-2 justify-between">
@@ -51,7 +51,7 @@
                     <div class="flex flex-col justify-between">
                         <p class="font-semibold text-xl">{{ $event->event_title }}</p>
                         <div class="flex gap-1 items-center">
-                            <img src="{{ asset('images/icon/time.png') }}" class="h-5 object-contain aspect-3/2">
+                            <img src="{{ asset('images/icon/time.png') }}" class="h-5 object-contain aspect-square">
                             <p class="font-medium">{{ $event->event_date_time->format('h:i A') }}</p>
                         </div>
                     </div>

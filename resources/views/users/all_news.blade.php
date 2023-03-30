@@ -11,8 +11,8 @@
             @foreach ($all_news as $news)
                 <a href="/article/{{ $news->id }}">
                     <div data-aos="fade-up" data-aos-duration="800"
-                        class="flex flex-col-reverse sm:flex-row gap-2 justify-between items-center pl-4 border rounded-uihalf drop-shadow-sm">
-                        <div class="flex flex-col gap-2 justify-between">
+                        class="flex flex-col-reverse sm:flex-row justify-between border rounded-uihalf drop-shadow-sm">
+                        <div class="p-4 flex flex-col gap-2">
                             <p class="font-medium text-lg leading-6">{{ $news->headline }}</p>
                             <p class="font-normal text-base">{{ $news->release_date->format('d M, Y') }}</p>
                             <p class="font-light text-sm">{{ $news->tagline }}</p>
@@ -21,7 +21,7 @@
                                 <p class="font-normal text-sm text-dwit-blue">{{ $news->reported_by }}</p>
                             </div>
                         </div>
-                        <div class="w-68 aspect-3/2 object-contain bg-cover rounded-uihalf"
+                        <div class="w-68 aspect-square object-contain bg-cover rounded-uihalf"
                             style="background-image: url({{ asset('/storage/' . $news->image) }})">
                         </div>
                     </div>

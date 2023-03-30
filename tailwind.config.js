@@ -163,6 +163,7 @@ module.exports = {
       square: '1 / 1',
       video: '16 / 9',
       '3/2': '3 / 2',
+      '4/3': '4 / 3',
     },
     backdropBlur: ({ theme }) => theme('blur'),
     backdropBrightness: ({ theme }) => theme('brightness'),
