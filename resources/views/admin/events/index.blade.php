@@ -28,7 +28,7 @@
                     @foreach ($events as $event)
                         <tr class="bg-white border hover:bg-gray-50">
                             <td class="p-3">
-                                <div class="h-20 aspect-3/2 object-contain bg-cover mx-auto"
+                                <div class="h-20 aspect-square object-contain bg-cover mx-auto"
                                     style="background-image: url({{ asset('/storage/' . $event->image) }})"></div>
                             </td>
                             <td class="p-3">{{ $event->event_title }}</td>

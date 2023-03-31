@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\EventFormRequest;
 use App\Models\Event;
-use Illuminate\Http\Request;
+use App\Http\Requests\EventFormRequest;
 use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
