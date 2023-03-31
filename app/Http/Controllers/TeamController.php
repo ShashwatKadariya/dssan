@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TeamFormRequest;
 use App\Models\Team;
-use Illuminate\Http\Request;
+use App\Http\Requests\TeamFormRequest;
 use Illuminate\Support\Facades\Storage;
 
 class TeamController extends Controller

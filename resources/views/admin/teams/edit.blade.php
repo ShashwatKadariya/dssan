@@ -58,9 +58,8 @@
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-gray-500 text-sm">Edit Photo</label>
                 <input type="file" name="image" class="form-input" accept="image/*" onchange="previewImage(event)">
-                <img id="preview" class="hidden mt-2 max-w-20 max-h-20 rounded-full">
-                <img id="oldImage" src="{{ asset('/storage/' . $team->image) }}"
-                    class="block p-2 max-w-20 max-h-20 rounded-full" alt="team">
+                <img id="preview" class="hidden mt-2 h-20">
+                <img id="oldImage" src="{{ asset('/storage/' . $team->image) }}" class="block p-2 h-20" alt="team">
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"

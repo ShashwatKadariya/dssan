@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('designation');
             $table->integer('position');
-            $table->longText('statement');
-            $table->mediumText('linkedin_url');
+            $table->mediumText('statement');
+            $table->text('linkedin_url');
             $table->timestamps();
         });
     }
