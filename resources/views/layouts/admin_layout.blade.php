@@ -10,7 +10,6 @@
     @vite('resources/css/app.css')
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
     <script src="{{ asset('js/admin.js') }}" defer></script>
-    @livewireStyles
     <style>
         /* Minimize autofill highlighting */
         input:-webkit-autofill {
@@ -31,9 +30,8 @@
     <div>
         @yield('content')
     </div>
-    <livewire:delete-confirmation-box />
-    <livewire:message-box />
-    @livewireScripts
+    @include('components.delete-confirmation-box')
+    @include('components.message-box')
 </body>
 
 </html>

@@ -21,7 +21,6 @@
     {{-- number increment animation --}}
     <script src="{{ asset('js/number-rush.js') }}"></script>
 
-    @livewireStyles
     <style>
         /* Minimize autofill highlighting */
         input:-webkit-autofill {
@@ -50,7 +49,7 @@
     </script>
 
     {{-- navbar --}}
-    <livewire:nav-bar />
+    @include('components.nav-bar')
 
     {{-- main content --}}
     <main>
@@ -58,18 +57,16 @@
     </main>
 
     {{-- footer feedback form --}}
-    <livewire:feedback-form />
+    @include('components.feedback-form')
 
     {{-- feedback success notification --}}
-    <livewire:notification-box />
+    @include('components.notification-box')
 
     {{-- social icons bottom-right --}}
-    <livewire:social-icons />
+    @include('components.social-icons')
 
     {{-- footer --}}
-    <livewire:footer />
-
-    @livewireScripts
+    @include('components.footer')
 </body>
 
 </html>
