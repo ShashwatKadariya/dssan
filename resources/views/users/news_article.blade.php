@@ -6,6 +6,7 @@
         <div data-aos="fade-up" data-aos-duration="800" class="flex flex-col md:flex-row gap-8 lg:gap-16">
             <div class="md:w-3/5 flex flex-col gap-4 justify-between">
                 <p class="font-medium text-lg leading-6">{{ $article->headline }}</p>
+                <p>{{ $article->tagline }}</p>
                 <div class="w-full sm:w-136 aspect-square object-contain bg-cover mx-auto rounded-uihalf"
                     style="background-image: url({{ asset('/storage/' . $article->image) }})">
                 </div>
@@ -22,7 +23,7 @@
                 <p class="text-3xl font-semibold text-dwit-blue text-center pb-4 border-b">LATEST NEWS</p>
                 <div class="my-8 flex flex-col gap-8 lg:gap-16">
                     @foreach ($latest_news as $news)
-                        <a href="/article/{{ $news->id }}">
+                        <a href="/article/{{ $news->slug }}">
                             <div class="flex flex-col gap-2">
                                 <p class="font-medium text-lg leading-6">{{ $news->headline }}</p>
                                 <div class="flex gap-1">

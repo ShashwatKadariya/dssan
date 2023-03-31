@@ -29,9 +29,10 @@ class NewsEventsController extends Controller
         return view('users.all_news', compact('all_news'));
     }
 
-    public function article($id)
+    public function article($slug)
     {
-        $article = News::findorFail($id);
+        $article = News::where('slug', $slug)->first();
+        // dd($article);
         $latest_news = News::orderBy('release_date', 'desc')->take(3)->get();
         return view('users.news_article', compact('article', 'latest_news'));
     }

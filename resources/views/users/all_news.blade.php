@@ -9,7 +9,7 @@
         </div>
         <div class="mt-8 flex flex-col gap-8 lg:gap-16">
             @foreach ($all_news as $news)
-                <a href="/article/{{ $news->id }}">
+                <a href="/article/{{ $news->slug }}">
                     <div data-aos="fade-up" data-aos-duration="800"
                         class="flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start border rounded-uihalf drop-shadow-sm">
                         <div class="p-4 flex flex-col gap-4">

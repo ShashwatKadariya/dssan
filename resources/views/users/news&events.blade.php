@@ -9,7 +9,7 @@
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($news as $single_news)
-                <a href="/article/{{ $single_news->id }}">
+                <a href="/article/{{ $single_news->slug }}">
                     <div data-aos="fade-up" data-aos-duration="800" class="border rounded-uihalf drop-shadow-sm">
                         <div class="mx-auto aspect-square object-contain bg-cover rounded-uihalf"
                             style="background-image: url({{ asset('/storage/' . $single_news->image) }})">

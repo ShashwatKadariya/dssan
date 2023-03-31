@@ -28,7 +28,7 @@ Route::resource('/alumni', AlumniPageController::class);
 Route::get('/news&events', [NewsEventsController::class, 'index']);
 Route::get('/all_events', [NewsEventsController::class, 'allevents']);
 Route::get('/all_news', [NewsEventsController::class, 'allnews']);
-Route::get('/article/{id}', [NewsEventsController::class, 'article']);
+Route::get('/article/{slug}', [NewsEventsController::class, 'article']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
