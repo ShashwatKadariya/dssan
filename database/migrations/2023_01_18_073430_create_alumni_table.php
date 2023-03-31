@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('full_name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('address');
-            $table->string('contact');
+            $table->string('contact')->unique();
             $table->foreignId('batch_id')->references('id')->on('batches');
-            $table->mediumText('social_link');
+            $table->string('social_link')->unique();
             $table->date('birth_date');
             $table->enum('gender', ['Male', 'Female'])->default('Male');
-            $table->mediumText('current_university');
+            $table->string('current_university');
             $table->string('major_subject');
             $table->timestamps();
         });
