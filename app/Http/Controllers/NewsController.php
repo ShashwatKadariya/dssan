@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\NewsFormRequest;
 use App\Models\News;
-use Illuminate\Http\Request;
+use App\Http\Requests\NewsFormRequest;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller

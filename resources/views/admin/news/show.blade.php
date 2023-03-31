@@ -5,7 +5,7 @@
         <a class="back-btn" href="{{ route('news.index') }}">Back</a>
         <div class="p-8 md:w-3/5 mx-auto flex flex-col gap-4 justify-between">
             <p class="font-medium text-lg leading-6">{{ $news->headline }}</p>
-            <div class="w-152 aspect-square object-contain bg-cover mx-auto rounded-uihalf"
+            <div class="w-152 aspect-square object-contain bg-cover mx-auto"
                 style="background-image: url({{ asset('/storage/' . $news->image) }})">
             </div>
             <div class="flex justify-between items-center text-sm">

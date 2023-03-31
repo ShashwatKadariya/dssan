@@ -50,7 +50,7 @@
                 <label class="text-gray-500 text-sm">Upload News Banner</label>
                 <input type="file" name="image" class="form-input" accept="image/*" onchange="previewImage(event)"
                     aria-required="true">
-                <img id="preview" class="hidden mt-2 max-h-20">
+                <img id="preview" class="hidden mt-2 h-20">
                 @error('image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror
