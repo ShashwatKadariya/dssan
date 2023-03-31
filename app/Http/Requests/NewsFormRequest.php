@@ -28,7 +28,7 @@ class NewsFormRequest extends FormRequest
             'tagline' => 'required',
             'reported_by' => 'required',
             'article' => 'required',
-            'release_date' => 'required',
+            'release_date' => 'required|date',
         ];
         if (in_array($this->method(), ['POST'])) {
             $rules['image'] = 'required|image';
