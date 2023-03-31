@@ -6,7 +6,7 @@
         <div class="flex flex-row justify-between px-2 py-4">
             <div>
                 <p class="text-xl font-semibold">Batch</p>
-                <p class="text-sm">Current batches in Deerwalk Sifal School.</p>
+                <p class="text-sm">All batches in Deerwalk Sifal School.</p>
             </div>
             <form action="{{ route('batch.create') }}">
                 <button type="submit" class="create-btn">Add

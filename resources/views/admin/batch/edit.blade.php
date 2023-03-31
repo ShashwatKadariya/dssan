@@ -3,8 +3,8 @@
 @section('content')
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.index') }}">Back</a>
-        <form action="{{ route('batch.update', $batch->id) }}" method="POST" enctype="multipart/form-data"
-            class="w-2/4 m-auto" id="submitForm">
+        <form action="{{ route('batch.update', $batch->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
+            id="submitForm">
             @csrf
             @method('PUT')
             <p class="mb-6">Edit Details</p>
@@ -18,9 +18,8 @@
             <div class="relative z-0 w-full mb-6 group">
                 <label class="text-gray-500 text-sm">Edit Batch Photo</label>
                 <input type="file" name="image" class="form-input" accept="image/*" onchange="previewImage(event)">
-                <img id="preview" class="hidden mt-2 max-w-20 max-h-20">
-                <img id="oldImage" src="{{ asset('/storage/' . $batch->image) }}"
-                    class="block p-2 max-w-20 max-h-20" alt="team">
+                <img id="preview" class="hidden mt-2 h-20">
+                <img id="oldImage" src="{{ asset('/storage/' . $batch->image) }}" class="block p-2 h-20" alt="batch_image">
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"
