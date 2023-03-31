@@ -137,6 +137,7 @@ module.exports = {
       96: '24rem',
       104: '26rem',
       136: '34rem',
+      152: '38rem',
     },
     animation: {
       'open-menu': 'open-menu 0.1s ease-in-out forwards',

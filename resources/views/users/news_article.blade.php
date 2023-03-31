@@ -6,7 +6,7 @@
         <div data-aos="fade-up" data-aos-duration="800" class="flex flex-col md:flex-row gap-8 lg:gap-16">
             <div class="md:w-3/5 flex flex-col gap-4 justify-between">
                 <p class="font-medium text-lg leading-6">{{ $article->headline }}</p>
-                <div class="w-full aspect-square object-contain bg-cover rounded-uihalf"
+                <div class="w-full sm:w-136 aspect-square object-contain bg-cover mx-auto rounded-uihalf"
                     style="background-image: url({{ asset('/storage/' . $article->image) }})">
                 </div>
                 <div class="flex justify-between items-center text-sm">
