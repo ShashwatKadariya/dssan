@@ -55,10 +55,9 @@
                 <label class="form-label">Edit Photo</label>
                 <input type="file" name="image" class="form-input peer" accept="image/*"
                     onchange="previewImage(event)">
-                <img id="preview" class="hidden mt-2 w-20 h-20 rounded-full">
+                <img id="preview" class="hidden mt-2 h-20">
                 @if ($feedback->image)
-                    <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}"
-                        class="p-2 max-w-20 max-h-20 rounded-full" alt="&#10060;">
+                    <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}" class="p-2 h-20" alt="&#10060;">
                 @endif
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
