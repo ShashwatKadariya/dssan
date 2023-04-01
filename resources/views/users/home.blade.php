@@ -33,18 +33,18 @@
                         <div id="numberAnimation"
                             class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
                             <p class="font-medium">GRADUATES</p>
-                            <p class="text-3xl font-medium mt-2" id="numberOne" data-max-number="{{ $alumni }}">0</p>
+                            <p class="text-3xl font-medium mt-2" id="numberOne" data-max-number="{{ $alumni_count }}">0</p>
                         </div>
                         <div id="numberAnimation"
                             class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
                             <p class="font-medium">BATCHES</p>
-                            <p class="text-3xl font-medium mt-2" id="numberThree" data-max-number="{{ $batch }}">0
+                            <p class="text-3xl font-medium mt-2" id="numberThree" data-max-number="{{ $batch_count }}">0
                             </p>
                         </div>
                         <div id="numberAnimation"
                             class="text-center py-8 aspect-3/2 sm:w-full sm:aspect-auto bg-dwit-blue brightness-140 rounded-uihalf text-white">
                             <p class="font-medium">TEAM</p>
-                            <p class="text-3xl font-medium mt-2" id="numberTwo" data-max-number="{{ $team }}">0</p>
+                            <p class="text-3xl font-medium mt-2" id="numberTwo" data-max-number="{{ $team_count }}">0</p>
                         </div>
                     </div>
                 </div>
