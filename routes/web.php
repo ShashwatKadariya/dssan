@@ -44,10 +44,6 @@ Route::get('/dashboard', function () {
 Route::resource('/team', TeamController::class);
 Route::resource('/feedback', FeedbackController::class);
 Route::resource('/batch', BatchController::class);
-Route::get('/alumni/create/{id}', [AlumniController::class, 'create'])->name('alumni.create');
-Route::post('/alumni/store/{id}', [AlumniController::class, 'store'])->name('alumni.store');
-Route::get('/alumni/edit/{id}', [AlumniController::class, 'edit'])->name('alumni.edit');
-Route::post('/alumni/update/{id}', [AlumniController::class, 'update'])->name('alumni.update');
-Route::delete('/alumni/destroy/{id}', [AlumniController::class, 'destroy'])->name('alumni.destroy');
+Route::resource('/batch.alumni', AlumniController::class)->shallow();
 Route::resource('/events', EventController::class);
 Route::resource('/news', NewsController::class);

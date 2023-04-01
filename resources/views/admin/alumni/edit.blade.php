@@ -6,6 +6,7 @@
         <form action="{{ route('alumni.update', $alumni->id) }}" method="POST" enctype="multipart/form-data"
             class="w-2/4 m-auto" id="submitForm">
             @csrf
+            @method('PUT')
             <p class="mb-6">Edit details for {{ $alumni->full_name }}, {{ $alumni->batch->batch }}</p>
             <div class="relative z-0 w-full mb-6 group">
                 <input type="text" name="full_name" class="form-input peer" placeholder=" "

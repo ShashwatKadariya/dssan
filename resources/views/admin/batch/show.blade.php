@@ -8,7 +8,7 @@
                 <p class="text-xl font-semibold">Alumni</p>
                 <p class="text-sm">A list of students in {{ $batch->batch }}.</p>
             </div>
-            <form action="{{ route('alumni.create', $batch->id) }}">
+            <form action="{{ route('batch.alumni.create', $batch->id) }}">
                 <button type="submit" class="create-btn">Add
                     Student</button>
             </form>
@@ -54,7 +54,7 @@
                             <td class="p-3">{{ $alumnus->major_subject }}</td>
                             <td class="p-3">
                                 <form id="submitForm_{{ $alumnus->id }}"
-                                    action="{{ route('alumni.destroy', $alumnus->id, $batch->id) }}" method="POST">
+                                    action="{{ route('alumni.destroy', $alumnus->id) }}" method="POST">
                                     <a class="font-medium text-blue-600 hover:underline pb-1"
                                         href="{{ route('alumni.edit', $alumnus->id) }}">Edit</a>
                                     <br>
