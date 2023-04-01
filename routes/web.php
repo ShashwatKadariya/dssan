@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AlumniPageController;
 use App\Http\Controllers\BatchController;
+use App\Http\Controllers\ClientSideController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FactController;
 use App\Http\Controllers\FeedbackController;
@@ -23,12 +24,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', [HomeController::class, 'home']);
-Route::resource('/alumni', AlumniPageController::class);
-Route::get('/news&events', [NewsEventsController::class, 'index']);
-Route::get('/all_events', [NewsEventsController::class, 'allevents']);
-Route::get('/all_news', [NewsEventsController::class, 'allnews']);
-Route::get('/article/{slug}', [NewsEventsController::class, 'article']);
+Route::get('/', [ClientSideController::class, 'home']);
+Route::get('/alumni', [ClientSideController::class, 'batch']);
+Route::get('/alumni/{slug}', [ClientSideController::class, 'alumni']);
+Route::get('/news&events', [ClientSideController::class, 'news_events']);
+Route::get('/all_news', [ClientSideController::class, 'allnews']);
+Route::get('/article/{slug}', [ClientSideController::class, 'article']);
+Route::get('/all_events', [ClientSideController::class, 'allevents']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
