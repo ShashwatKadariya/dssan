@@ -24,7 +24,7 @@ class BatchFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'batch' => 'required|unique:batches',
+            'batch' => 'required|unique:batches|min:13',
         ];
         if (in_array($this->method(), ['POST'])) {
             $rules['image'] = 'required|image';
