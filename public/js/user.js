@@ -38,6 +38,6 @@ var observer = new IntersectionObserver(function (entries) {
         })
     }
 }, { threshold: [1] });
-if (window.location.pathname == '/home') {
+if (window.location.pathname == '/') {
     observer.observe(document.getElementById('numberAnimation'));
 }
