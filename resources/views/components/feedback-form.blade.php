@@ -10,7 +10,7 @@
                     clip-rule="evenodd"></path>
             </svg>
         </button>
-        <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data" class="text-gray-900">
+        <form action="/message" method="POST" enctype="multipart/form-data" class="text-gray-900">
             @csrf
             <p class="font-semibold">GET IN TOUCH</p>
             <p class="text-xs mb-3">Your message may be displayed as feedback.</p>

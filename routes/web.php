@@ -1,17 +1,13 @@
 <?php
 
-use App\Http\Controllers\AlumniController;
-use App\Http\Controllers\AlumniPageController;
-use App\Http\Controllers\BatchController;
-use App\Http\Controllers\ClientSideController;
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\FactController;
-use App\Http\Controllers\FeedbackController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NewsController;
-use App\Http\Controllers\NewsEventsController;
-use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\BatchController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\AlumniController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\ClientSideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +27,7 @@ Route::get('/news&events', [ClientSideController::class, 'news_events']);
 Route::get('/all_news', [ClientSideController::class, 'allnews']);
 Route::get('/article/{slug}', [ClientSideController::class, 'article']);
 Route::get('/all_events', [ClientSideController::class, 'allevents']);
+Route::post('/message', [ClientSideController::class, 'feedback']);
 
 Route::get('/gallery', function () {
     return view('users.gallery');
@@ -45,7 +42,6 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('/team', TeamController::class);
-Route::resource('/fact', FactController::class);
 Route::resource('/feedback', FeedbackController::class);
 Route::resource('/batch', BatchController::class);
 Route::get('/alumni/create/{id}', [AlumniController::class, 'create'])->name('alumni.create');

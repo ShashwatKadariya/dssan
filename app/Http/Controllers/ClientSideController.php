@@ -8,6 +8,7 @@ use App\Models\Batch;
 use App\Models\Event;
 use App\Models\Alumni;
 use App\Models\Feedback;
+use App\Http\Requests\FeedbackFormRequest;
 
 class ClientSideController extends Controller
 {
@@ -58,5 +59,15 @@ class ClientSideController extends Controller
     {
         $all_events = Event::orderBy('event_date_time', 'desc')->get();
         return view('users.all_events', compact('all_events'));
+    }
+
+    public function feedback(FeedbackFormRequest $request)
+    {
+        $validatedData = $request->validated();
+        if ($request->hasFile('image')) {
+            $validatedData['image'] = $request->file('image')->store('feedbackImage');
+        }
+        Feedback::create($validatedData);
+        return redirect('/')->with('info', 'Your message has been recorded.');
     }
 }

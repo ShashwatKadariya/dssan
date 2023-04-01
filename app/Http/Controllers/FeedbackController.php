@@ -21,12 +21,7 @@ class FeedbackController extends Controller
 
     public function store(FeedbackFormRequest $request)
     {
-        $validatedData = $request->validated();
-        if ($request->hasFile('image')) {
-            $validatedData['image'] = $request->file('image')->store('feedbackImage');
-        }
-        Feedback::create($validatedData);
-        return redirect('/home')->with('info', 'Your message has been recorded.');
+        //
     }
 
     public function show(Feedback $feedback)
