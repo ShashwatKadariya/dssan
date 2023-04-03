@@ -48,6 +48,9 @@
                 <input type="file" name="image"
                     class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
                     accept="image/*">
+                @error('image')
+                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                @enderror
             </div>
             <button type="submit"
                 class="mt-2 text-white bg-gray-900 font-semibold text-sm py-2 text-center w-full">Submit</button>

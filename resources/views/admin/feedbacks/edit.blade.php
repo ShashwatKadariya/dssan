@@ -59,6 +59,9 @@
                 @if ($feedback->image)
                     <img id="oldImage" src="{{ asset('/storage/' . $feedback->image) }}" class="p-2 h-20" alt="&#10060;">
                 @endif
+                @error('image')
+                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                @enderror
             </div>
             <button type="submit" class="create-btn" id="create" onclick="loading()"><svg aria-hidden="true"
                     role="status" class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon"
