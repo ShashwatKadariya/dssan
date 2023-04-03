@@ -29,6 +29,7 @@ class FeedbackFormRequest extends FormRequest
             'batch' => 'required',
             'message' => 'required',
             'display_status' => 'required',
+            'image' => 'image|max:8192'
         ];
         return $rules;
     }
