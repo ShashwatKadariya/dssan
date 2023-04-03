@@ -30,9 +30,10 @@ class TeamFormRequest extends FormRequest
             'position' => 'required',
             'statement' => 'required',
             'linkedin_url' => 'required',
+            'image' => 'image|max:8192'
         ];
         if (in_array($this->method(), ['POST'])) {
-            $rules['image'] = 'required|image';
+            $rules['image'] = 'required|image|max:8192';
         }
         return $rules;
     }

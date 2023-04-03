@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('designation');
-            $table->integer('position');
+            $table->integer('position')->unique();
             $table->mediumText('statement');
-            $table->text('linkedin_url');
+            $table->string('linkedin_url')->unique();
             $table->timestamps();
         });
     }
