@@ -27,9 +27,10 @@ class EventFormRequest extends FormRequest
             'event_title' => 'required',
             'description' => 'required',
             'event_date_time' => 'required',
+            'image' => 'image|max:8192'
         ];
         if (in_array($this->method(), ['POST'])) {
-            $rules['image'] = 'required|image';
+            $rules['image'] = 'required|image|max:8192';
         }
         return $rules;
     }
