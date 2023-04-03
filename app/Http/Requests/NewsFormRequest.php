@@ -29,9 +29,10 @@ class NewsFormRequest extends FormRequest
             'reported_by' => 'required',
             'article' => 'required',
             'release_date' => 'required|date',
+            'image' => 'image|max:8192'
         ];
         if (in_array($this->method(), ['POST'])) {
-            $rules['image'] = 'required|image';
+            $rules['image'] = 'required|image|max:8192';
         }
         return $rules;
     }
