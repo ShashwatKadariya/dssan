@@ -24,13 +24,14 @@ class BatchFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'batch' => 'required|unique:batches|min:13',
+            'batch' => 'required|min:13|unique:batches',
+            'image' => 'required|image|max:512',
         ];
-        if (in_array($this->method(), ['POST'])) {
-            $rules['image'] = 'required|image';
-        }
-        if (in_array($this->method(), ['PUT'])) {
-            $rules['batch'] = 'required';
+        if ($this->method() == 'PUT') {
+            $rules = [
+                'image' => 'image|max:512',
+                'batch' => 'required|min:13|unique:batches,batch,' . $this->route('batch')->id,
+            ];
         }
         return $rules;
     }

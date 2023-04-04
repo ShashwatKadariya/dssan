@@ -42,13 +42,12 @@ class BatchController extends Controller
 
     public function update(BatchFormRequest $request, Batch $batch)
     {
+        $validatedData = $request->validated();
         if ($request->hasFile('image')) {
             Storage::delete($batch->image);
-            $batch->image = $request->file('image')->store('batchImage');
+            $validatedData['image'] = $request->file('image')->store('batchImage');
         }
-        $batch->update($request->validated() + [
-            'image' => $batch->image,
-        ]);
+        $batch->update($validatedData);
         return redirect()->route('batch.index')->with('success', 'Batch updated successfully.');
     }
 
