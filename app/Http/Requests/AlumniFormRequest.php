@@ -24,16 +24,22 @@ class AlumniFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
+            'image' => 'image|max:512',
             'full_name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:alumnis',
             'address' => 'required',
-            'contact' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'social_link' => 'required|url',
+            'contact' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|unique:alumnis',
+            'social_link' => 'required|active_url|unique:alumnis',
             'birth_date' => 'required|date',
             'gender' => 'required',
             'current_university' => 'required',
             'major_subject' => 'required',
         ];
+        if ($this->method() == 'PUT') {
+            $rules['email'] = 'required|email|unique:alumnis,email,' . $this->route('alumnus');
+            $rules['contact'] = 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|unique:alumnis,contact,' . $this->route('alumnus');
+            $rules['social_link'] = 'required|active_url|unique:alumnis,social_link,' . $this->route('alumnus');
+        }
         return $rules;
     }
 }

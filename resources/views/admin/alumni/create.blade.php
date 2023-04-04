@@ -3,7 +3,7 @@
 @section('content')
     <div class="p-4">
         <a class="back-btn" href="{{ route('batch.show', $batch->id) }}">Back</a>
-        <form action="{{ route('batch.alumni.store', $batch->id) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
+        <form action="{{ route('batch.alumni.store', $batch) }}" method="POST" enctype="multipart/form-data" class="w-2/4 m-auto"
             id="submitForm">
             @csrf
             <p class="mb-6">Add alumnus for {{ $batch->batch }}</p>
