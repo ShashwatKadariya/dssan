@@ -28,10 +28,9 @@ class BatchController extends Controller
         return redirect()->route('batch.index')->with('success', 'Batch added successfully.');
     }
 
-    public function show($id)
+    public function show(Batch $batch)
     {
-        $batch = Batch::findorFail($id);
-        $alumni = Alumni::where('batch_id', $id)->orderBy('full_name', 'asc')->get();
+        $alumni = Alumni::where('batch_id', $batch->id)->orderBy('full_name', 'asc')->get();
         return view('admin.batch.show', compact('batch', 'alumni'));
     }
 
