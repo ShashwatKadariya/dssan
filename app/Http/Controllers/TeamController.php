@@ -39,13 +39,12 @@ class TeamController extends Controller
 
     public function update(TeamFormRequest $request, Team $team)
     {
+        $validatedData = $request->validated();
         if ($request->hasFile('image')) {
             Storage::delete($team->image);
-            $team->image = $request->file('image')->store('teamImage');
+            $validatedData['image'] = $request->file('image')->store('teamImage');
         }
-        $team->update($request->validated() + [
-            'image' => $team->image,
-        ]);
+        $team->update($validatedData);
         return redirect()->route('team.index')->with('success', 'Details updated successfully.');
     }
 

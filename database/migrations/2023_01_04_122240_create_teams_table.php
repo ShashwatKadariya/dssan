@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('designation');
             $table->integer('position')->unique();
-            $table->mediumText('statement');
+            $table->text('statement');
             $table->string('linkedin_url')->unique();
             $table->timestamps();
         });

@@ -24,16 +24,20 @@ class TeamFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
+            'image' => 'required|image|max:512',
             'first_name' => 'required',
             'last_name' => 'required',
             'designation' => 'required',
-            'position' => 'required',
+            'position' => 'required|numeric|unique:teams',
             'statement' => 'required',
-            'linkedin_url' => 'required',
-            'image' => 'image|max:8192'
+            'linkedin_url' => 'required|active_url|unique:teams',
         ];
-        if (in_array($this->method(), ['POST'])) {
-            $rules['image'] = 'required|image|max:8192';
+        if ($this->method() == 'PUT') {
+            $rules = [
+                'image' => 'image|max:512',
+                'position' => 'required|numeric|unique:teams,position,' . $this->route('team')->id,
+                'linkedin_url' => 'required|active_url|unique:teams,linkedin_url,' . $this->route('team')->id,
+            ];
         }
         return $rules;
     }
