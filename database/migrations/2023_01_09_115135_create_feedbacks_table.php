@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('full_name');
             $table->string('email');
             $table->string('batch');
-            $table->longText('message');
+            $table->mediumText('message');
             $table->string('image')->nullable();
             $table->enum('display_status', ['Displayed', 'Hidden'])->default('Hidden');
             $table->timestamps();

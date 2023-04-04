@@ -36,15 +36,14 @@ class FeedbackController extends Controller
 
     public function update(FeedbackFormRequest $request, Feedback $feedback)
     {
+        $validatedData = $request->validated();
         if ($request->hasFile('image')) {
             if (!is_null($feedback->image)) {
                 Storage::delete($feedback->image);
             }
-            $feedback->image = $request->file('image')->store('feedbackImage');
+            $validatedData['image'] = $request->file('image')->store('feedbackImage');
         }
-        $feedback->update($request->validated() + [
-            'image' => $feedback->image,
-        ]);
+        $feedback->update($validatedData);
         return redirect()->route('feedback.index')->with('success', 'Details updated successfully.');
     }
 
