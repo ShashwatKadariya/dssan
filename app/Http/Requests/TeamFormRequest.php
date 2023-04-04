@@ -33,11 +33,9 @@ class TeamFormRequest extends FormRequest
             'linkedin_url' => 'required|active_url|unique:teams',
         ];
         if ($this->method() == 'PUT') {
-            $rules = [
-                'image' => 'image|max:512',
-                'position' => 'required|numeric|unique:teams,position,' . $this->route('team')->id,
-                'linkedin_url' => 'required|active_url|unique:teams,linkedin_url,' . $this->route('team')->id,
-            ];
+            $rules['image'] = 'image|max:512';
+            $rules['position'] = 'required|numeric|unique:teams,position,' . $this->route('team')->id;
+            $rules['linkedin_url'] = 'required|active_url|unique:teams,linkedin_url,' . $this->route('team')->id;
         }
         return $rules;
     }

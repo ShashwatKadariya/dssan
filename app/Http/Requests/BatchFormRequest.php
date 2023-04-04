@@ -28,10 +28,8 @@ class BatchFormRequest extends FormRequest
             'image' => 'required|image|max:512',
         ];
         if ($this->method() == 'PUT') {
-            $rules = [
-                'image' => 'image|max:512',
-                'batch' => 'required|min:13|unique:batches,batch,' . $this->route('batch')->id,
-            ];
+            $rules['batch'] = 'required|min:13|unique:batches,batch,' . $this->route('batch')->id;
+            $rules['image'] = 'image|max:512';
         }
         return $rules;
     }
