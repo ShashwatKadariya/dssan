@@ -27,9 +27,8 @@ class NewsController extends Controller
         return redirect()->route('news.index')->with('success', 'News created successfully.');
     }
 
-    public function show($id)
+    public function show(News $news)
     {
-        $news = News::findorFail($id);
         return view('admin.news.show', compact('news'));
     }
 
@@ -41,13 +40,12 @@ class NewsController extends Controller
 
     public function update(NewsFormRequest $request, News $news)
     {
+        $validatedData = $request->validated();
         if ($request->hasFile('image')) {
             Storage::delete($news->image);
-            $news->image = $request->file('image')->store('newsImage');
+            $validatedData['image'] = $request->file('image')->store('newsImage');
         }
-        $news->update($request->validated() + [
-            'image' => $news->image,
-        ]);
+        $news->update($validatedData);
         return redirect()->route('news.index')->with('success', 'News updated successfully.');
     }
 
