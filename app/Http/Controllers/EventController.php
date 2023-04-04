@@ -39,13 +39,12 @@ class EventController extends Controller
 
     public function update(EventFormRequest $request, Event $event)
     {
+        $validatedData = $request->validated();
         if ($request->hasFile('image')) {
             Storage::delete($event->image);
-            $event->image = $request->file('image')->store('eventImage');
+            $validatedData['image'] = $request->file('image')->store('eventImage');
         }
-        $event->update($request->validated() + [
-            'image' => $event->image,
-        ]);
+        $event->update($validatedData);
         return redirect()->route('events.index')->with('success', 'Details updated successfully.');
     }
 
