@@ -34,3 +34,9 @@ function deleteBox(id) {
 function confirmDelete() {
     document.getElementById(`submitForm_${global_id}`).submit();
 }
+
+function dropdownUser() {
+    var dropdown = document.getElementById('dropdown-user');
+    dropdown.classList.toggle('hidden')
+    dropdown.classList.toggle('block')
+}

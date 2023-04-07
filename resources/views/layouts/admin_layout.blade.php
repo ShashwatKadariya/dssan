@@ -27,11 +27,14 @@
 </head>
 
 <body class="min-h-screen bg-gray-100">
+    @include('components.admin-navbar')
+    @include('components.admin-sidebar')
+    @include('components.user-dropdown')
+    @include('components.delete-confirmation-box')
+    @include('components.message-box')
     <div>
         @yield('content')
     </div>
-    @include('components.delete-confirmation-box')
-    @include('components.message-box')
 </body>
 
 </html>
