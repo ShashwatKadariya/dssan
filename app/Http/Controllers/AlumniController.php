@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AlumniFormRequest;
-use App\Models\Alumni;
 use App\Models\Batch;
-use Illuminate\Auth\Events\Validated;
-use Illuminate\Http\Request;
+use App\Models\Alumni;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\AlumniFormRequest;
 
 class AlumniController extends Controller
 {
@@ -54,7 +52,7 @@ class AlumniController extends Controller
             $validatedData['image'] = $request->file('image')->store('alumniImage');
         }
         $alumni->update($validatedData);
-        return redirect()->route('batch.show', $alumni->batch_id)->with('success', 'Details edited successfully.');
+        return redirect()->route('batch.show', $alumni->batch_id)->with('info', 'Details updated successfully.');
     }
 
     public function destroy($id)

@@ -68,6 +68,6 @@ class ClientSideController extends Controller
             $validatedData['image'] = $request->file('image')->store('feedbackImage');
         }
         Feedback::create($validatedData);
-        return redirect('/')->with('info', 'Your message has been recorded.');
+        return redirect('/')->with('info', 'Thankyou for your feedback.');
     }
 }

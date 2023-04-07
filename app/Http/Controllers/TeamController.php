@@ -24,7 +24,7 @@ class TeamController extends Controller
         $validatedData = $request->validated();
         $validatedData['image'] = $request->file('image')->store('teamImage');
         Team::create($validatedData);
-        return redirect()->route('team.index')->with('success', 'Team member added successfully.');
+        return redirect()->route('team.index')->with('success', 'Member added successfully.');
     }
 
     public function show($id)
@@ -45,13 +45,13 @@ class TeamController extends Controller
             $validatedData['image'] = $request->file('image')->store('teamImage');
         }
         $team->update($validatedData);
-        return redirect()->route('team.index')->with('success', 'Details updated successfully.');
+        return redirect()->route('team.index')->with('info', 'Details updated successfully.');
     }
 
     public function destroy(Team $team)
     {
         Storage::delete($team->image);
         $team->delete();
-        return redirect()->route('team.index')->with('danger', 'Team member removed successfully.');
+        return redirect()->route('team.index')->with('danger', 'Member removed successfully.');
     }
 }

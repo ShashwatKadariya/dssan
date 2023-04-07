@@ -42,7 +42,7 @@ class FortifyServiceProvider extends ServiceProvider
         {
             public function toResponse($request)
             {
-                return redirect('/dashboard')->with('success', 'Password updated successfully.');
+                return redirect('/dashboard')->with('info', 'Password updated successfully.');
             }
         });
     }

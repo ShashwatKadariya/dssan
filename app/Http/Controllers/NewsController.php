@@ -24,7 +24,7 @@ class NewsController extends Controller
         $validatedData = $request->validated();
         $validatedData['image'] = $request->file('image')->store('newsImage');
         News::create($validatedData);
-        return redirect()->route('news.index')->with('success', 'News created successfully.');
+        return redirect()->route('news.index')->with('success', 'News added successfully.');
     }
 
     public function show(News $news)
@@ -46,13 +46,13 @@ class NewsController extends Controller
             $validatedData['image'] = $request->file('image')->store('newsImage');
         }
         $news->update($validatedData);
-        return redirect()->route('news.index')->with('success', 'News updated successfully.');
+        return redirect()->route('news.index')->with('info', 'Details updated successfully.');
     }
 
     public function destroy(News $news)
     {
         Storage::delete($news->image);
         $news->delete();
-        return redirect()->route('news.index')->with('danger', 'News deleted successfully.');
+        return redirect()->route('news.index')->with('danger', 'News removed successfully.');
     }
 }

@@ -44,7 +44,7 @@ class FeedbackController extends Controller
             $validatedData['image'] = $request->file('image')->store('feedbackImage');
         }
         $feedback->update($validatedData);
-        return redirect()->route('feedback.index')->with('success', 'Details updated successfully.');
+        return redirect()->route('feedback.index')->with('info', 'Details updated successfully.');
     }
 
     public function destroy(Feedback $feedback)
@@ -53,6 +53,6 @@ class FeedbackController extends Controller
             Storage::delete($feedback->image);
         }
         $feedback->delete();
-        return redirect()->route('feedback.index')->with('danger', 'Details deleted successfully.');
+        return redirect()->route('feedback.index')->with('danger', 'Message removed successfully.');
     }
 }

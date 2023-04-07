@@ -24,7 +24,7 @@ class EventController extends Controller
         $validatedData = $request->validated();
         $validatedData['image'] = $request->file('image')->store('eventImage');
         Event::create($validatedData);
-        return redirect()->route('events.index')->with('success', 'Event created successfully.');
+        return redirect()->route('events.index')->with('success', 'Event added successfully.');
     }
 
     public function show($id)
@@ -45,13 +45,13 @@ class EventController extends Controller
             $validatedData['image'] = $request->file('image')->store('eventImage');
         }
         $event->update($validatedData);
-        return redirect()->route('events.index')->with('success', 'Details updated successfully.');
+        return redirect()->route('events.index')->with('info', 'Details updated successfully.');
     }
 
     public function destroy(Event $event)
     {
         Storage::delete($event->image);
         $event->delete();
-        return redirect()->route('events.index')->with('danger', 'Event deleted successfully.');
+        return redirect()->route('events.index')->with('danger', 'Event removed successfully.');
     }
 }

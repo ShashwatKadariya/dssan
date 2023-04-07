@@ -47,7 +47,7 @@ class BatchController extends Controller
             $validatedData['image'] = $request->file('image')->store('batchImage');
         }
         $batch->update($validatedData);
-        return redirect()->route('batch.index')->with('success', 'Batch updated successfully.');
+        return redirect()->route('batch.index')->with('info', 'Batch updated successfully.');
     }
 
     public function destroy(Batch $batch)
@@ -58,7 +58,7 @@ class BatchController extends Controller
             $batch->delete();
             return redirect()->route('batch.index')->with('danger', 'Batch deleted successfully.');
         } else {
-            return redirect()->route('batch.index')->with('danger', 'Batch not empty.');
+            return redirect()->route('batch.index')->with('danger', 'Batch is not empty.');
         }
     }
 }
