@@ -21,19 +21,19 @@ use App\Http\Controllers\ClientSideController;
 |
 */
 
-Route::get('/', [ClientSideController::class, 'home']);
-Route::get('/alumni', [ClientSideController::class, 'batch']);
-Route::get('/alumni/{slug}', [ClientSideController::class, 'alumni']);
-Route::get('/news&events', [ClientSideController::class, 'news_events']);
-Route::get('/all_news', [ClientSideController::class, 'allnews']);
-Route::get('/article/{slug}', [ClientSideController::class, 'article']);
-Route::get('/all_events', [ClientSideController::class, 'allevents']);
-Route::post('/message', [ClientSideController::class, 'feedback']);
-
-Route::get('/gallery', function () {
-    return view('users.gallery');
+Route::middleware('guest')->group(function () {
+    Route::get('/', [ClientSideController::class, 'home']);
+    Route::get('/alumni', [ClientSideController::class, 'batch']);
+    Route::get('/alumni/{slug}', [ClientSideController::class, 'alumni']);
+    Route::get('/news&events', [ClientSideController::class, 'news_events']);
+    Route::get('/all_news', [ClientSideController::class, 'allnews']);
+    Route::get('/article/{slug}', [ClientSideController::class, 'article']);
+    Route::get('/all_events', [ClientSideController::class, 'allevents']);
+    Route::post('/message', [ClientSideController::class, 'feedback']);
+    Route::get('/gallery', function () {
+        return view('users.gallery');
+    });
 });
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/news', NewsController::class);
     Route::get('/user/register', [AuthController::class, 'register']);
     Route::post('/register', [AuthController::class, 'store']);
-    Route::get('/user/update-password', function () {
+    Route::get('/update-password', function () {
         return view('auth.update-password');
     });
 });
