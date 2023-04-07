@@ -6,6 +6,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BatchController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AlumniController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ClientSideController;
 
@@ -33,17 +34,20 @@ Route::get('/gallery', function () {
     return view('users.gallery');
 });
 
-Route::get('/login', function () {
-    return view('admin.login');
-});
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+    Route::resource('/team', TeamController::class);
+    Route::resource('/feedback', FeedbackController::class);
+    Route::resource('/batch', BatchController::class);
+    Route::resource('/batch.alumni', AlumniController::class)->shallow();
+    Route::resource('/events', EventController::class);
+    Route::resource('/news', NewsController::class);
+    Route::get('/user/register', [AuthController::class, 'register']);
+    Route::post('/register', [AuthController::class, 'store']);
+    Route::get('/user/update-password', function () {
+        return view('auth.update-password');
+    });
 });
-
-Route::resource('/team', TeamController::class);
-Route::resource('/feedback', FeedbackController::class);
-Route::resource('/batch', BatchController::class);
-Route::resource('/batch.alumni', AlumniController::class)->shallow();
-Route::resource('/events', EventController::class);
-Route::resource('/news', NewsController::class);
