@@ -1,4 +1,4 @@
-@extends('layouts.admin_layout')
+@extends('layouts.auth_layout')
 @section('content')
     <div class="relative bg-cover" style="background-image: url({{ asset('images/loginBG.png') }})">
         <div class="bg-black w-full h-screen opacity-40">

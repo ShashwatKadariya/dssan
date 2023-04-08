@@ -1,4 +1,4 @@
-@extends('layouts.admin_layout')
+@extends('layouts.auth_layout')
 @section('content')
     <div class="relative bg-cover" style="background-image: url({{ asset('images/loginBG.png') }})">
         <div class="bg-black w-full h-screen opacity-40">
@@ -17,7 +17,7 @@
                         <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                     @enderror
                     @if (session('status'))
-                        <div class="text-sm text-green-600">
+                        <div class="mt-1 text-sm text-green-600">
                             {{ session('status') }}
                         </div>
                     @endif
