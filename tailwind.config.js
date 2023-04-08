@@ -617,7 +617,8 @@ module.exports = {
         '100%': { transform: 'scaleY(1)' },
       },
       'toast-notify': {
-        '0%': { transform: 'translateX(100%)' },
+        '0%': { transform: 'translateY(-100%)' },
+        '100%': { transform: 'translateY(0%)' },
       },
       'appear': {
         '0%': { transform: 'translateY(100%)' },

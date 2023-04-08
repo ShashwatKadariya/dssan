@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="{{ asset('images/logo/deerlogo.png') }}" type="image/x-icon">
     <title>ADMIN | DSSAN</title>
     @vite('resources/css/app.css')
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
     <script src="{{ asset('js/admin.js') }}" defer></script>
     <style>
         /* Minimize autofill highlighting */
@@ -26,15 +25,17 @@
     </style>
 </head>
 
-<body class="min-h-screen bg-gray-100">
+<body class="bg-gray-100">
     @include('components.admin-navbar')
     @include('components.admin-sidebar')
     @include('components.user-dropdown')
-    @include('components.delete-confirmation-box')
-    @include('components.message-box')
-    <div>
+    <div class="absolute z-50 top-8 w-full flex justify-center">
+        @include('components.message-box')
+    </div>
+    <div class="mt-18 mr-5 ml-56 z-0">
         @yield('content')
     </div>
+    @include('components.delete-confirmation-box')
 </body>
 
 </html>
