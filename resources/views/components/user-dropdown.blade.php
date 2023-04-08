@@ -7,6 +7,7 @@
             <div class="px-4 py-3">
                 <p class="text-sm font-medium">{{ Auth::user()->name }}</p>
                 <p class="text-sm font-medium">{{ Auth::user()->email }}</p>
+                <p class="text-sm font-medium">{{ Auth::user()->role }}</p>
             </div>
             <ul class="p-2">
                 <a href="/update-password">
