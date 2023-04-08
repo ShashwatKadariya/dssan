@@ -67,6 +67,7 @@
                 </svg>Submit</button>
         </form>
     </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
     <script src="{{ asset('js/text-editor.js') }}" defer></script>
     <style>
         /* editing area */
