@@ -9,6 +9,7 @@ use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ClientSideController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,8 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/batch.alumni', AlumniController::class)->shallow();
     Route::resource('/events', EventController::class);
     Route::resource('/news', NewsController::class);
-    Route::get('/user/register', [AuthController::class, 'register']);
-    Route::post('/register', [AuthController::class, 'store']);
+    Route::resource('/user', UserController::class);
     Route::get('/update-password', function () {
         return view('auth.update-password');
     });

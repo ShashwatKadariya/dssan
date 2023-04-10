@@ -24,10 +24,15 @@ class UserFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
+            'image' => 'required|image|max:512',
             'role' => 'required',
             'name' => 'required',
             'email' => 'required|email|unique:users',
         ];
+        if ($this->method() == 'PUT') {
+            $rules['image'] = 'image|max:512';
+            $rules['email'] = 'required|unique:users,email,' . $this->route('user')->id;
+        }
         return $rules;
     }
 }
