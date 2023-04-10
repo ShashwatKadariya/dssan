@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-ui-white">
     @include('components.admin-navbar')
     @include('components.admin-sidebar')
     @include('components.user-dropdown')
