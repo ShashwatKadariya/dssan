@@ -71,7 +71,7 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
         ]
     },
     // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-    placeholder: 'Write the news article here...',
+    placeholder: 'please justify text alignment before submitting...',
     // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
     fontFamily: {
         options: [
