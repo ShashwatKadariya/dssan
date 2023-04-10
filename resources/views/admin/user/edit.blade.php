@@ -62,5 +62,4 @@
             Submit
         </button>
     </form>
-    </div>
 @endsection
