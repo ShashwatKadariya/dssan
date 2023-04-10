@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <button type="button" onclick="dropdownUser()" class="align-middle">
+            <button type="button" onclick="dropdownUser()" class="align-middle hover:drop-shadow">
                 @if (Auth::user()->role == 'Admin')
                     <div class="w-10 h-10 rounded-full bg-cover"
                         style="background-image: url({{ asset('images/logo/deerlogo.png') }})"></div>
