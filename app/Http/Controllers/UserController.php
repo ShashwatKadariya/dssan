@@ -6,6 +6,7 @@ use App\Http\Requests\UserFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
@@ -27,6 +28,7 @@ class UserController extends Controller
         $validatedData['image'] = $request->file('image')->store('userImage');
         $validatedData['password'] = Hash::make('password');
         User::create($validatedData);
+        Password::sendResetLink($request->only(['email']));
         return redirect()->route('user.index')->with('success', 'User added successfully.');
     }
 
