@@ -1,8 +1,8 @@
 @auth
     <div id="deleteBox" class="hidden">
-        <div class="fixed top-0 bg-black w-full h-screen opacity-40">
+        <div class="fixed top-0 bg-black/20 w-full h-screen">
         </div>
-        <div aria-hidden="true" class="absolute top-0 h-screen w-full flex justify-center items-center"
+        <div aria-hidden="true" class="absolute top-0 left-26 h-screen w-full flex justify-center items-center"
             onclick="document.getElementById('deleteBox').className = 'hidden'">
             <div class="p-8 rounded-uihalf shadow-sm bg-gray-50 border">
                 <p class="text-gray-600 text-lg">Are you sure you want to delete?</p>

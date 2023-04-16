@@ -1,6 +1,6 @@
 @auth
     <div id="dropdown-user" class="hidden">
-        <div class="z-20 fixed top-0 w-full h-screen bg-black/10" onclick="dropdownUser()">
+        <div class="z-20 fixed top-0 w-full h-screen bg-black/20" onclick="dropdownUser()">
         </div>
         <div
             class="z-40 absolute top-16 right-5 border bg-white divide-y divide-gray-300 rounded-uihalf shadow origin-top animate-open-menu">
