@@ -26,7 +26,7 @@ class FeedbackController extends Controller
 
     public function show(Feedback $feedback)
     {
-        //
+        return view('admin.feedbacks.show', compact('feedback'));
     }
 
     public function edit(Feedback $feedback)
