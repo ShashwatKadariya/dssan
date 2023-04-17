@@ -17,4 +17,8 @@ class Alumni extends Model
     {
         return $this->belongsTo(Batch::class, 'batch_id');
     }
+
+    protected $casts = [
+        'birth_date' => 'datetime:Y-m-d',
+    ];
 }
