@@ -29,16 +29,14 @@
                         <td class="p-3">{{ $batch->batch }}</td>
                         <td class="p-3">
                             <form id="submitForm_{{ $batch->id }}" action="{{ route('batch.destroy', $batch->id) }}"
-                                method="POST">
-                                <a class="mx-2 font-medium text-green-600 hover:underline"
+                                method="POST" class="flex flex-col gap-1">
+                                <a class="font-medium text-green-600 hover:underline"
                                     href="{{ route('batch.show', $batch->id) }}">View</a>
-                                <br>
-                                <a class="mx-2 font-medium text-blue-600 hover:underline"
+                                <a class="font-medium text-blue-600 hover:underline"
                                     href="{{ route('batch.edit', $batch->id) }}">Edit</a>
-                                <br>
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="mx-2 font-medium text-red-600 hover:underline"
+                                <button type="button" class="font-medium text-red-600 hover:underline"
                                     onclick="deleteBox({{ $batch->id }})">Delete</button>
                             </form>
                         </td>

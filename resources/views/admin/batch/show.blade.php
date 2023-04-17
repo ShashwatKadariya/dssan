@@ -56,13 +56,12 @@
                         <td class="p-3">{{ $alumnus->major_subject }}</td>
                         <td class="p-3">
                             <form id="submitForm_{{ $alumnus->id }}" action="{{ route('alumni.destroy', $alumnus->id) }}"
-                                method="POST">
-                                <a class="font-medium text-blue-600 hover:underline pb-1"
+                                method="POST" class="flex flex-col gap-1">
+                                <a class="font-medium text-blue-600 hover:underline"
                                     href="{{ route('alumni.edit', $alumnus->id) }}">Edit</a>
-                                <br>
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="font-medium text-red-600 hover:underline pt-1"
+                                <button type="button" class="font-medium text-red-600 hover:underline"
                                     onclick="deleteBox({{ $alumnus->id }})">Delete</button>
                             </form>
                         </td>

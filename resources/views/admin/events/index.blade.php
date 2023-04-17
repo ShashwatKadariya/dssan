@@ -35,13 +35,12 @@
                         <td class="p-3">{{ $event->event_date_time->format('h:i A') }}</td>
                         <td class="p-3">
                             <form id="submitForm_{{ $event->id }}" action="{{ route('events.destroy', $event->id) }}"
-                                method="POST">
-                                <a class="font-medium text-blue-600 hover:underline pb-1"
+                                method="POST" class="flex flex-col gap-1">
+                                <a class="font-medium text-blue-600 hover:underline"
                                     href="{{ route('events.edit', $event->id) }}">Edit</a>
-                                <br>
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="font-medium text-red-600 hover:underline pt-1"
+                                <button type="button" class="font-medium text-red-600 hover:underline"
                                     onclick="deleteBox({{ $event->id }})">Delete</button>
                             </form>
                         </td>

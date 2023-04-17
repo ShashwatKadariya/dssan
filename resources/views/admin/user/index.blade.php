@@ -38,14 +38,13 @@
                         <td class="p-3">{{ $user->role }}</td>
                         <td class="p-3">
                             <form id="submitForm_{{ $user->id }}" action="{{ route('user.destroy', $user->id) }}"
-                                method="POST">
-                                <a class="font-medium text-blue-600 hover:underline pb-1"
+                                method="POST" class="flex flex-col gap-1">
+                                <a class="font-medium text-blue-600 hover:underline"
                                     href="{{ route('user.edit', $user->id) }}">Edit</a>
-                                <br>
                                 @csrf
                                 @method('DELETE')
                                 @if ($user->id != Auth::user()->id)
-                                    <button type="button" class="font-medium text-red-600 hover:underline pt-1"
+                                    <button type="button" class="font-medium text-red-600 hover:underline"
                                         onclick="deleteBox({{ $user->id }})">Delete</button>
                                 @endif
                             </form>

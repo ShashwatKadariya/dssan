@@ -35,16 +35,15 @@
                         <td class="p-3">{{ $single_news->release_date->format('d M, Y') }}</td>
                         <td class="p-3">
                             <form id="submitForm_{{ $single_news->id }}"
-                                action="{{ route('news.destroy', $single_news->id) }}" method="POST">
-                                <a class="mx-2 font-medium text-green-600 hover:underline"
+                                action="{{ route('news.destroy', $single_news->id) }}" method="POST"
+                                class="flex flex-col gap-1">
+                                <a class="font-medium text-green-600 hover:underline"
                                     href="{{ route('news.show', $single_news->id) }}">View</a>
-                                <br>
-                                <a class="mx-2 font-medium text-blue-600 hover:underline"
+                                <a class="font-medium text-blue-600 hover:underline"
                                     href="{{ route('news.edit', $single_news->id) }}">Edit</a>
-                                <br>
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="mx-2 font-medium text-red-600 hover:underline"
+                                <button type="button" class="font-medium text-red-600 hover:underline"
                                     onclick="deleteBox({{ $single_news->id }})">Delete</button>
                             </form>
                         </td>
