@@ -21,7 +21,7 @@
             @enderror
         </div>
         <div class="mb-6">
-            <label for="image" class="form-label">Upload Batch Photo</label>
+            <label for="image" class="form-label">Edit Batch Photo</label>
             <input type="file" id="image" name="image" class="form-input" accept="image/*"
                 onchange="previewImage(event)">
             <img id="preview" class="hidden mt-2 h-20">
