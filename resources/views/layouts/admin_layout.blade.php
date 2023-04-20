@@ -32,7 +32,7 @@
     <div class="absolute z-50 top-8 w-full flex justify-center">
         @include('components.message-box')
     </div>
-    <div class="mt-18 mr-5 ml-56 z-0">
+    <div class="mt-18 mr-5 ml-56 mb-18 z-0">
         @yield('content')
     </div>
     @include('components.delete-confirmation-box')
