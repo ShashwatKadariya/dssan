@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\Team;
+use App\Models\User;
 use App\Models\Batch;
 use App\Models\Event;
 use App\Models\Alumni;
 use App\Models\Feedback;
+use App\Mail\FeedbackMessage;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\FeedbackFormRequest;
 
 class ClientSideController extends Controller
@@ -68,6 +71,10 @@ class ClientSideController extends Controller
             $validatedData['image'] = $request->file('image')->store('feedbackImage');
         }
         Feedback::create($validatedData);
+        // feedback message mail notification
+        $to = User::where('role', 'Admin')->get('email');
+        $cc = User::where('role', 'Manager')->get('email');
+        Mail::to($to)->cc($cc)->send(new FeedbackMessage($request));
         return redirect('/')->with('info', 'Thankyou for your feedback.');
     }
 }
