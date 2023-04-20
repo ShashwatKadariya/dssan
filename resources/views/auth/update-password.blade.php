@@ -1,43 +1,47 @@
 @extends('layouts.admin_layout')
 @section('content')
-    <form action="/user/password" method="POST" enctype="multipart/form-data">
+    <div class="flex flex-row justify-between my-4">
+        <p class="text-xl font-semibold">Update Password</p>
+    </div>
+    <form action="/user/password" method="POST" enctype="multipart/form-data" id="submitForm" class="form">
         @csrf
         @method('PUT')
         <div class="mb-6">
-            <label for="current_password" class="text-gray-700">Current Password</label>
-            <input type="password" name="current_password"
-                class="w-full px-4 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded focus:border-blue-600 focus:outline-none">
+            <label for="current_password" class="form-label">Current Password</label>
+            <input type="password" id="current_password" name="current_password" class="form-input">
             @error('current_password')
+                <script>
+                    document.getElementById('current_password').classList.add('border-red-600')
+                </script>
                 <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
             @enderror
         </div>
         <div class="mb-6">
-            <label for="password" class="text-gray-700">Password</label>
-            <input type="password" name="password"
-                class="w-full px-4 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded focus:border-blue-600 focus:outline-none">
+            <label for="password" class="form-label">New Password</label>
+            <input type="password" id="password" name="password" class="form-input">
             @error('password')
+                <script>
+                    document.getElementById('password').classList.add('border-red-600')
+                </script>
                 <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
             @enderror
         </div>
         <div class="mb-6">
-            <label for="password_confirmation" class="text-gray-700">Confirm Password</label>
-            <input type="password" name="password_confirmation"
-                class="w-full px-4 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded focus:border-blue-600 focus:outline-none">
+            <label for="password_confirmation" class="form-label">Confirm New Password</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" class="form-input">
             @error('password_confirmation')
+                <script>
+                    document.getElementById('password_confirmation').classList.add('border-red-600')
+                </script>
                 <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
             @enderror
         </div>
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
         <div class="mb-4">
-            <button type="sumbit"
-                class="w-full py-3 bg-blue-600 text-white font-medium rounded shadow-sm hover:bg-blue-700">
-                Register
+            <button type="submit" class="button" id="create" onclick="loading()">
+                <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
+                    class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
+                Update Password
             </button>
         </div>
     </form>
-    </div>
 @endsection
