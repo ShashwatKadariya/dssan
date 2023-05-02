@@ -1,8 +1,8 @@
 # DSSAN
 
-Alumni network for Deerwalk Sifal School
+## Alumni network for Deerwalk Sifal School
 
-#initial setup </br>
+# initial setup </br>
 
 setup .env from .env.example </br>
 Open the console and cd your project root directory </br>
