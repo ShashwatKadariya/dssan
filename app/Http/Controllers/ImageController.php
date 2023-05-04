@@ -16,10 +16,10 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Gallery $gallery)
     {
-        //
-
+        $images = Image::all();
+        return view('admin.gallery.images.index', compact('gallery', 'images'));
     }
 
     /**

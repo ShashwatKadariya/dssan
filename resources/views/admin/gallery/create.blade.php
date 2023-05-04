@@ -21,15 +21,4 @@
             </button>
         </form>
     </div>
-    @foreach ($gallery as $galleryData)
-        @if ($galleryData->cover_image)
-            <div class="mb-6">
-                <button>
-                    <a href="{{ route('gallery.image.create', $galleryData) }}"><img id="gallery_image"
-                            src="{{ asset('/storage/' . $galleryData->cover_image) }}" class="block mt-2 h-20"
-                            alt="gallery_image"></a>
-                </button>
-            </div>
-        @endif
-    @endforeach
 @endsection
