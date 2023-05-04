@@ -9,33 +9,36 @@
         </div>
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($galleries as $gallery)
-                <a href="#" target="blank">
+                <a href="{{ route('gallery.image.create', $gallery) }}" target="blank">
                     <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
                         <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
                             style="background-image: url({{ asset('/storage/' . $gallery->cover_image) }})">
                         </div>
                         <div class="absolute bg-black top-0 w-full h-full opacity-20"></div>
                         <div class="absolute bottom-4 left-4 flex flex-col gap-2 text-white">
-                            <p class="text-xl font-medium drop-shadow-sm">Alumni Meet</p>
+                            <p class="text-xl font-medium drop-shadow-sm">{{ $gallery->name }}</p>
                             <p class="font-medium drop-shadow-sm">
-                                @foreach ($images as $image)
-                                    @if ($gallery->id == $image->gallery_id)
-                                        Total Photos: {{ $image->count() }}
-                                    @break
-                                @endif
-                            @endforeach
-                        </p>
+                                @php
+                                    $i = 0;
+                                    foreach ($images as $image) {
+                                        if ($gallery->id == $image->gallery_id) {
+                                            ++$i;
+                                        }
+                                    }
+                                @endphp
+                                Total Photos: {{ $i }}
+                            </p>
+                        </div>
                     </div>
+                </a>
+            @endforeach
+            <a href="{{ route('gallery.create') }}">
+                <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
+                    <div class="mx-auto aspect-3/2  bg-cover bg-center  rounded-uihalf "
+                        style="background-image: url({{ 'storage/images/add_logo.png' }})">
+                    </div>
+                    <div class="absolute bg-black top-0 w-full h-full opacity-20"></div>
                 </div>
             </a>
-        @endforeach
-        <a href="{{ route('gallery.create') }}">
-            <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
-                <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf"
-                    style="background-image: url({{ asset('/images/add_logo.png') }})">
-                </div>
-                <div class="absolute bg-black top-0 w-full h-full opacity-20"></div>
-            </div>
-        </a>
-</section>
+    </section>
 @endsection

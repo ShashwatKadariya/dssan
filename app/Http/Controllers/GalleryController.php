@@ -49,7 +49,7 @@ class GalleryController extends Controller
         $validatedData['cover_image'] = $request->file('cover_image')->storeAs('gallery/cover', $imageName);
 
         Gallery::create($validatedData);
-        return redirect()->route('gallery.create')->with('success', 'Gallery Created Succesfully !!');
+        return redirect()->route('gallery.index')->with('success', 'Gallery Created Succesfully !!');
     }
 
     /**

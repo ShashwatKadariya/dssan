@@ -16,19 +16,22 @@
                         </div>
                         <div class="absolute bg-black top-0 w-full h-full opacity-20"></div>
                         <div class="absolute bottom-4 left-4 flex flex-col gap-2 text-white">
-                            <p class="text-xl font-medium drop-shadow-sm">Alumni Meet</p>
+                            <p class="text-xl font-medium drop-shadow-sm">{{ $gallery->name }}</p>
                             <p class="font-medium drop-shadow-sm">
-                                @foreach ($images as $image)
-                                    @if ($gallery->id == $image->gallery_id)
-                                        Total Photos: {{ $image->count() }}
-                                    @break
-                                @endif
-                            @endforeach
-                        </p>
+                                @php
+                                    $i = 0;
+                                    foreach ($images as $image) {
+                                        if ($gallery->id == $image->gallery_id) {
+                                            ++$i;
+                                        }
+                                    }
+                                @endphp
+                                Total Photos: {{ $i }}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        @endforeach
-    </div>
-</section>
+                </a>
+            @endforeach
+        </div>
+    </section>
 @endsection
