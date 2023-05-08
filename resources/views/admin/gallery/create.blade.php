@@ -3,15 +3,20 @@
     <div class="mb-6">
         <form method="POST" action="{{ route('gallery.store') }}" enctype="multipart/form-data" id="submitForm" class="form">
             @csrf
-
             <div class="mb-6">
                 <label for="name" class="form-label"> Name </label>
-                <input type="text" name="name" class="form-input">
+                <input type="text" id="name" name="name" class="form-input">
+                @error('name')
+                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                @enderror
             </div>
 
             <div class="mb-6">
                 <label for="cover_image" class="form-label"> Image </label>
-                <input type="file" name="cover_image" class="form-input">
+                <input type="file" id="cover_image" name="cover_image" class="form-input">
+                @error('cover_image')
+                    <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
+                @enderror
             </div>
 
             <button type="submit" class="button" id="create" onclick="loading()">

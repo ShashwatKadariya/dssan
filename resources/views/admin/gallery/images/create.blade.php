@@ -5,15 +5,19 @@
             <p class="text-3xl font-semibold text-dwit-blue">Images</p>
             <hr class="mt-2">
         </div>
+        <p class="text-red-500">123</p>
+
         <div class="mt-2 block">
             <form method="POST" action="{{ route('gallery.image.store', $gallery) }}" enctype="multipart/form-data"
                 id="submitForm" class="form">
                 @csrf
                 <div class="mb-6">
                     <label for="images[]" class="form-label"> Multiple Images </label>
-                    <input type="file" name="images[]" class="form-input" multiple>
+                    <input type="file" id="images[]" name="images[]" class="form-input" multiple>
+                    @error('images[]')
+                        <p class="text-red-500">123</p>
+                    @enderror
                 </div>
-
                 <button type="submit" class="button" id="create" onclick="loading()">
                     <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
                         class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">

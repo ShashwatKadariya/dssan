@@ -7,8 +7,9 @@
     <div class="absolute top-0 h-screen w-full flex justify-center items-center">
         <div class="bg-ui-white p-6 rounded-lg">
             <p class="text-center mb-6 font-medium">Forgot Password?</p>
-            <form id="submitForm" action="/forgot-password" method="POST" enctype="multipart/form-data">
+            <form id="submitForm" action="{{ route('password.request') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="token" value="">
                 <div class="mb-6">
                     <label for="email" class="text-gray-700">Email address</label>
                     <input type="email" name="email"

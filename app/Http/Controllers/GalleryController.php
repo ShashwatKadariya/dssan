@@ -43,6 +43,9 @@ class GalleryController extends Controller
     public function store(GalleryFormRequest $request)
     {
         $validatedData = $request->validated();
+        if (!$request->hasFile('cover_image')) {
+            return redirect()->route('gallery.create');
+        }
         $uploadedImage = $validatedData['cover_image'];
 
         $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
@@ -88,11 +91,11 @@ class GalleryController extends Controller
         // update gallery image
         $gallery = Gallery::find($id);
         $validatedData = $request->validated();
-        $uploadedImage = $validatedData['cover_image'];
-
-        $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
-        $validatedData['cover_image'] = $uploadedImage->storeAs('gallery/cover', $imageName);
-
+        if ($request->hasFile('cover_image')) {
+            $uploadedImage = $validatedData['cover_image'];
+            $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
+            $validatedData['cover_image'] = $uploadedImage->storeAs('gallery/cover', $imageName);
+        }
 
         if (!is_null($gallery->image))
             Storage::delete($gallery->cover_image);

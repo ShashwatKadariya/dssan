@@ -25,8 +25,18 @@ class GalleryFormRequest extends FormRequest
     {
         $rules  = [
             'name' => 'nullable|string|max:20',
-            'cover_image' => 'required|image|mimes:jpg,png,jpeg|max:512'
+            'cover_image' => 'image|mimes:jpg,png,jpeg|max:512'
         ];
-        return $rules;
+
+        return $rules + $this->isMethod('POST') ? $this->store() : $this->update();
     }
+
+    public function store() {
+
+    }
+
+    public function update() {
+
+    }
+
 }
