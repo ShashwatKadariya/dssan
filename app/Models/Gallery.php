@@ -19,4 +19,9 @@ class Gallery extends Model
     {
         return $this->hasMany(Image::class);
     }
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+    
 }

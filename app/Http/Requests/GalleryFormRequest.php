@@ -28,7 +28,7 @@ class GalleryFormRequest extends FormRequest
             'cover_image' => 'image|mimes:jpg,png,jpeg|max:512'
         ];
 
-        return $rules + $this->isMethod('POST') ? $this->store() : $this->update();
+        return $rules;// + $this->isMethod('POST') ? $this->store() : $this->update();
     }
 
     public function store() {
