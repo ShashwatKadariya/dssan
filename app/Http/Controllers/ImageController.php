@@ -41,7 +41,7 @@ class ImageController extends Controller
      */
     public function store(ImageFormRequest $request, Gallery $gallery)
     {
-
+        
         $validatedData =  $request->validated();
 
         $validatedImages = $validatedData["images"];
@@ -92,6 +92,7 @@ class ImageController extends Controller
      */
     public function update(ImageFormRequest $request, $id)
     {
+        
         $validatedData = $request->validated();
         $uploadedImage = $validatedData['image'];
 
