@@ -34,7 +34,12 @@ Route::middleware('guest')->group(function () {
     Route::get('/all_events', [ClientSideController::class, 'allevents']);
     Route::post('/message', [ClientSideController::class, 'feedback']);
     Route::get('/photo-gallery', [ClientSideController::class, 'photoGallery']);
+   // Route::get('/gallery/{slug}', [ClientSideController::class, 'gallery']);
+    Route::get('/gallery/{id}', [ClientSideController::class, 'gallery'])->name('gallery.show');
+
 });
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
