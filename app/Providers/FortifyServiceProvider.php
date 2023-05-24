@@ -65,16 +65,16 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::resetPasswordView(function (Request $request) {
             return view('auth.reset-password', ['request' => $request]);
-        }); 
-
-        ResetPassword::toMailUsing(function ($user, string $token) {
-            return (new MailMessage)
-                ->subject('Reset Password Notification')
-                ->view('emails.reset-password', [
-                    'user' => $user,
-                    'url' => sprintf('%s/reset-password/%s?email=%s', config('app.url'), $token, $user->email)
-                ]);
         });
+
+        // ResetPassword::toMailUsing(function ($user, string $token) {
+        //     return (new MailMessage)
+        //         ->subject('Reset Password Notification')
+        //         ->view('emails.reset-password', [
+        //             'user' => $user,
+        //             'url' => sprintf('%s/reset-password/%s?email=%s', config('app.url'), $token, $user->email)
+        //         ]);
+        // });
 
         // Fortify::createUsersUsing(CreateNewUser::class);
         // Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);

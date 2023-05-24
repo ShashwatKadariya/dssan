@@ -41,7 +41,9 @@ class ImageController extends Controller
      */
     public function store(ImageFormRequest $request, Gallery $gallery)
     {
+
         $validatedData =  $request->validated();
+
         $validatedImages = $validatedData["images"];
         $gallery_id = $gallery->id;
 
@@ -88,7 +90,7 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(ImageUpdateFormRequest $request, $id)
+    public function update(ImageFormRequest $request, $id)
     {
         $validatedData = $request->validated();
         $uploadedImage = $validatedData['image'];
