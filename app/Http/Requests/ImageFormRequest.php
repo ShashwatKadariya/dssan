@@ -52,6 +52,7 @@ class ImageFormRequest extends FormRequest
             'images.required' => "You must use the 'Choose file' button to select which file you wish to upload",
             'images.*.max' => "Maximum file size to upload is 10MB . If you are uploading a photo, try to reduce its resolution to make it under 10MB",
             'images.*.mimes' => "only .jpg, .png and .jpeg files are accepted",
+            'image.required' => "You must use the 'Choose file' button to select which file you wish to upload",
         ];
     }
 }

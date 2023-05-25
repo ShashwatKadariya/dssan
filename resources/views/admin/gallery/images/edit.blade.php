@@ -16,6 +16,7 @@
                 alt="gallery_image">
         @endif
 
+
         <div class="flex space-x-4 mt-4">
             <button type="submit" class="button" id="edit" onclick="loading()">
                 <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
@@ -28,7 +29,7 @@
     <form method="POST" action="{{ route('image.destroy', $image->id) }}">
         @csrf
         @method('DELETE')
-        
+  
             <button type="submit" class="button" id="delete" onclick="loading()">
                 <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
                     class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
