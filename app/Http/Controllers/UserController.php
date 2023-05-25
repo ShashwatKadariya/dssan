@@ -46,8 +46,8 @@ class UserController extends Controller
     {
         $validatedData = $request->validated();
         if ($request->hasFile('image')) {
-            Storage::delete($user->image);
             $validatedData['image'] = $request->file('image')->store('userImage');
+            !is_null($user->image) ?? Storage::delete($user->image);
         }
         $user->update($validatedData);
         return redirect()->route('user.index')->with('info', 'Details updated successfully.');

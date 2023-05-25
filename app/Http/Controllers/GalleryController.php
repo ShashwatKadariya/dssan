@@ -63,7 +63,6 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -92,7 +91,7 @@ class GalleryController extends Controller
         $gallery = Gallery::find($id);
         $validatedData = $request->validated();
         if ($request->hasFile('cover_image')) {
-            $uploadedImage = $validatedData['cover_image'];
+            $uploadedImage = $request['cover_image'];
             $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
             $validatedData['cover_image'] = $uploadedImage->storeAs('gallery/cover', $imageName);
         }

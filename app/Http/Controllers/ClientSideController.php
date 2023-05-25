@@ -86,7 +86,7 @@ class ClientSideController extends Controller
         $galleries = Gallery::orderBy('created_at', 'DESC')->get();
         return view('users.gallery', compact('galleries', 'images'));
     }
-    public function gallery($id)
+    public function showPhotoGallery($id)
     {
         $gallery = Gallery::findOrFail($id);
         $images = Image::where('gallery_id', $id)->get();
@@ -98,7 +98,4 @@ class ClientSideController extends Controller
         $images = Image::where('gallery_id', $id)->get();
         return view('users.gallery_show', compact('gallery', 'images'));
     }
-
-
 }
-

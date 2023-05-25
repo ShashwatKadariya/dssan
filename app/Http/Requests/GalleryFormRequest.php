@@ -21,21 +21,29 @@ class GalleryFormRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
+
     public function rules()
+    {
+        return $this->method() == 'POST' ?
+            $this->store() :
+            $this->update();
+    }
+
+    public function store()
     {
         $rules  = [
             'name' => 'nullable|string|max:20',
             'cover_image' => 'image|mimes:jpg,png,jpeg|max:8192'
         ];
-
         return $rules;
-    }
-
-    public function store()
-    {
     }
 
     public function update()
     {
+        $rules =  [
+            'name' => 'string|max:20',
+            'cover_image' => 'image|mimes:jpg,png,jpeg|max:8192'
+        ];
+        return $rules;
     }
 }

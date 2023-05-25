@@ -64,7 +64,7 @@
             <a href="{{ route('gallery.create') }}">
                 <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
                     <div class="mx-auto aspect-3/2  bg-cover bg-center  rounded-uihalf "
-                        style="background-image: url({{ 'storage/images/add_logo.png' }})">
+                        style="background-image: url({{ 'images/images/add_logo.png' }})">
                     </div>
                     <div class="absolute bg-black top-0 w-full h-full opacity-20"></div>
                 </div>
