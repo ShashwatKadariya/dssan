@@ -32,8 +32,8 @@ class GalleryFormRequest extends FormRequest
     public function store()
     {
         $rules  = [
-            'name' => 'nullable|string|max:20',
-            'cover_image' => 'image|mimes:jpg,png,jpeg|max:8192'
+            'name' => 'required|string|max:20',
+            'cover_image' => 'required|image|mimes:jpg,png,jpeg|max:8192'
         ];
         return $rules;
     }
