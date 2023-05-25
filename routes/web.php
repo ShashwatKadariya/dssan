@@ -9,6 +9,8 @@ use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ClientSideController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -31,10 +33,12 @@ Route::middleware('guest')->group(function () {
     Route::get('/article/{slug}', [ClientSideController::class, 'article']);
     Route::get('/all_events', [ClientSideController::class, 'allevents']);
     Route::post('/message', [ClientSideController::class, 'feedback']);
-    Route::get('/gallery', function () {
-        return view('users.gallery');
-    });
+    Route::get('/photo-gallery', [ClientSideController::class, 'photoGallery']);
+    // Route::get('/gallery/{slug}', [ClientSideController::class, 'gallery']);
+    Route::get('/photo-gallery/{id}', [ClientSideController::class, 'showPhotoGallery'])->name('photoGallery.show');
 });
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
@@ -47,6 +51,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/events', EventController::class);
     Route::resource('/news', NewsController::class);
     Route::resource('/user', UserController::class);
+    Route::resource('/gallery', GalleryController::class);
+    Route::resource('/gallery.image', ImageController::class)->shallow();
     Route::get('/update-password', function () {
         return view('auth.update-password');
     });

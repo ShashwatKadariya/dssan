@@ -8,7 +8,7 @@
             <button id="hamburger-button" class="text-black text-lg sm:hidden cursor-pointer">&#9776;</button>
             <nav class="hidden sm:block space-x-6 text-black font-semibold" aria-label="main">
                 <a href="/" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Home</a>
-                <a href="/gallery" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Gallery</a>
+                <a href="/photo-gallery" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Gallery</a>
                 <a href="/alumni" class="active:text-dwit-blue hover:text-dwit-blue delay-75">Alumni</a>
                 <a href="/news&events" class="active:text-dwit-blue hover:text-dwit-blue delay-75">News & Events</a>
             </nav>
@@ -21,7 +21,7 @@
             <a href="/" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">
                 Home
             </a>
-            <a href="/gallery" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">
+            <a href="/photo-gallery" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">
                 Gallery
             </a>
             <a href="/alumni" class="py-1 active:text-dwit-blue hover:text-dwit-blue border-b border-black/70">

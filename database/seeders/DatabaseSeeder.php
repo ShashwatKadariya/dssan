@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'role' => 'Admin',
             'name' => 'DSSAN',
-            'email' => 'admin@sifal.deerwalk.edu.np',
-            'password' => Hash::make('Admin@1234!'),
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin123'),
         ]);
     }
 }

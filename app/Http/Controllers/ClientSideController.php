@@ -12,6 +12,8 @@ use App\Models\Feedback;
 use App\Mail\FeedbackMessage;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\FeedbackFormRequest;
+use App\Models\Gallery;
+use App\Models\Image;
 
 class ClientSideController extends Controller
 {
@@ -76,5 +78,24 @@ class ClientSideController extends Controller
         $cc = User::where('role', 'Manager')->get('email');
         Mail::to($to)->cc($cc)->send(new FeedbackMessage($request));
         return redirect('/')->with('info', 'Thankyou for your feedback.');
+    }
+    public function photoGallery()
+    {
+        $galleries = Gallery::orderBy('created_at', 'DESC')->get();
+        $images = Image::where('gallery_id', '>', 0)->get('gallery_id');
+        $galleries = Gallery::orderBy('created_at', 'DESC')->get();
+        return view('users.gallery', compact('galleries', 'images'));
+    }
+    public function showPhotoGallery($id)
+    {
+        $gallery = Gallery::findOrFail($id);
+        $images = Image::where('gallery_id', $id)->get();
+        return view('users.gallery_show', compact('gallery', 'images'));
+    }
+    public function gallery_show($id)
+    {
+        $gallery = Gallery::findOrFail($id);
+        $images = Image::where('gallery_id', $id)->get();
+        return view('users.gallery_show', compact('gallery', 'images'));
     }
 }

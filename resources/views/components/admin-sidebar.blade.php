@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100">
+                <a href="{{ route('gallery.index') }}" class="flex items-center p-2 rounded-lg hover:bg-gray-100">
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
