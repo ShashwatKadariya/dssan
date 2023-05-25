@@ -1,41 +1,46 @@
 @extends('layouts.admin_layout')
-
 @section('content')
-<div class="flex">
-    <form method="POST" action="{{ route('image.update', $image->id) }}" enctype="multipart/form-data" id="submitForm"
-        class="form">
-        @csrf
-        @method('PUT')
+    <div class="flex">
+        <form method="POST" action="{{ route('image.update', $image->id) }}" enctype="multipart/form-data" id="submitForm"
+            class="form">
+            @csrf
+            @method('PUT')
 
-        <div class="mb-6">
-            <label for="image" class="form-label">Image</label>
-            <input type="file" name="image" class="form-input">
-        </div>
-        @if ($image->image)
-            <img id="oldImage" src="{{ asset('/storage/' . $image->image) }}" class="block mt-2 h-20"
-                alt="gallery_image">
-        @endif
+            <div class="mb-6">
+                <div class="mb-6">
+                    <label for="image" class="form-label"> Image </label>
+                    <input type="file" id="image" name="image" class="form-input">
+                </div>
+                @if ($errors->any())
+                    <div class="text-sm text-red-500">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
-
-        <div class="flex space-x-4 mt-4">
+                @if ($image->image)
+                    <img id="oldImage" src="{{ asset('/storage/' . $image->image) }}" class="block mt-2 h-20"
+                        alt="gallery_image">
+                @endif
+            </div>
             <button type="submit" class="button" id="edit" onclick="loading()">
                 <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
                     class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
                 Edit
             </button>
-        
-    </form>
 
-    <form method="POST" action="{{ route('image.destroy', $image->id) }}">
-        @csrf
-        @method('DELETE')
-  
-            <button type="submit" class="button" id="delete" onclick="loading()">
+        </form>
+        <form method="POST" action="{{ route('image.destroy', $image->id) }}">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="button" id="edit" onclick="loading()">
                 <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
                     class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
-                Delete
+                DELETE
             </button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 @endsection
