@@ -21,19 +21,21 @@
             @endif
 
         </div>
-        <button type="submit" class="button" id="edit" onclick="loading()">
-            <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
-                class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
-            Edit
-        </button>
+        <div class="flex space-x-4 mt-4">
+            <button type="submit" class="button" id="edit" onclick="loading()">
+                <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
+                    class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
+                Edit
+            </button>
     </form>
     <form method="POST" action="{{ route('gallery.destroy', $gallery->id) }}">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="button" id="edit" onclick="loading()">
-            <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
-                class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
-            DELETE
-        </button>
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="button" id="edit" onclick="loading()">
+                <img aria-hidden="true" src="{{ asset('images/svg/loading.svg') }}"
+                    class="hidden w-4 h-4 mr-2 text-white animate-spin" id="loading_icon">
+                Delete
+            </button>
+        </div>
     </form>
 @endsection
