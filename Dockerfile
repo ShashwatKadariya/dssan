@@ -4,9 +4,9 @@ RUN apt-get update -y
 RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
 RUN docker-php-ext-install pdo pdo_mysql bcmath
 
-RUN pecl install -o -f redis \
-    && rm -rf tmp/pear \
-    && docker-php-ext-enable redis
+# RUN pecl install -o -f redis \
+#     && rm -rf tmp/pear \
+#     && docker-php-ext-enable redis
 
 WORKDIR /var/www
 COPY . .
@@ -22,10 +22,7 @@ WORKDIR /var/www
 COPY package*.json .
 
 RUN npm install
-COPY . .
+RUN npm start
+CMD ["vite", "build"]
 
-
-COPY /public/build/manifest.json /var/www/public/build
-
-CMD [ "npm", "run", "dev"]
-
+# COPY /public/build/manifest.json /var/www/public/build

@@ -1,7 +1,7 @@
 @auth
     <aside class="fixed top-0 left-0 z-30 w-52 h-screen pt-16 px-3 bg-white border-r">
         <ul class="space-y-3 font-semibold">
-            <li>
+            {{-- <li>
                 <a href="/dashboard" class="flex items-center p-2 rounded-lg hover:bg-gray-100">
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +10,7 @@
                     </svg>
                     <span class="ml-3">Dashboard</span>
                 </a>
-            </li>
+            </li> --}}
             <li>
                 <a href="{{ route('team.index') }}" class="flex items-center p-2 rounded-lg hover:bg-gray-100">
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20"

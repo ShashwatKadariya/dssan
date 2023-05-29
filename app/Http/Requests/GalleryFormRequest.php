@@ -42,7 +42,7 @@ class GalleryFormRequest extends FormRequest
     {
         $rules =  [
             'name' => 'string|max:20',
-            'cover_image' => 'image|mimes:jpg,png,jpeg|max:8192'
+            'cover_image' => 'image|mimes:jpg,png,jpeg,JPG|max:8192'
         ];
         return $rules;
     }
