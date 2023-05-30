@@ -24,29 +24,41 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse
-        {
-            public function toResponse($request)
-            {
-                return redirect('/login');
+        $this->app->instance(
+            LogoutResponse::class,
+            new class implements LogoutResponse {
+                public function toResponse($request)
+                {
+                    return redirect("/login");
+                }
             }
-        });
+        );
 
-        $this->app->instance(LoginResponse::class, new class implements LoginResponse
-        {
-            public function toResponse($request)
-            {
-                return redirect('/dashboard')->with('success', 'Welcome ' . $request->user()->name . '!');
+        $this->app->instance(
+            LoginResponse::class,
+            new class implements LoginResponse {
+                public function toResponse($request)
+                {
+                    return redirect("/team")->with(
+                        "success",
+                        "Welcome " . $request->user()->name . "!"
+                    );
+                }
             }
-        });
+        );
 
-        $this->app->instance(PasswordUpdateResponse::class, new class implements PasswordUpdateResponse
-        {
-            public function toResponse($request)
-            {
-                return redirect('/dashboard')->with('info', 'Password updated successfully.');
+        $this->app->instance(
+            PasswordUpdateResponse::class,
+            new class implements PasswordUpdateResponse {
+                public function toResponse($request)
+                {
+                    return redirect("/dashboard")->with(
+                        "info",
+                        "Password updated successfully."
+                    );
+                }
             }
-        });
+        );
     }
 
     /**
@@ -54,17 +66,16 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         Fortify::loginView(function () {
-            return view('auth.login');
+            return view("auth.login");
         });
 
         Fortify::requestPasswordResetLinkView(function () {
-            return view('auth.forgot-password');
+            return view("auth.forgot-password");
         });
 
         Fortify::resetPasswordView(function (Request $request) {
-            return view('auth.reset-password', ['request' => $request]);
+            return view("auth.reset-password", ["request" => $request]);
         });
 
         // ResetPassword::toMailUsing(function ($user, string $token) {
@@ -81,14 +92,16 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
 
-        RateLimiter::for('login', function (Request $request) {
+        RateLimiter::for("login", function (Request $request) {
             $email = (string) $request->email;
 
             return Limit::perMinute(5)->by($email . $request->ip());
         });
 
-        RateLimiter::for('two-factor', function (Request $request) {
-            return Limit::perMinute(5)->by($request->session()->get('login.id'));
+        RateLimiter::for("two-factor", function (Request $request) {
+            return Limit::perMinute(5)->by(
+                $request->session()->get("login.id")
+            );
         });
     }
 }

@@ -24,15 +24,15 @@ class NewsFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'image' => 'required|image|max:512',
-            'headline' => 'required',
-            'tagline' => 'required',
-            'reported_by' => 'required',
-            'article' => 'required',
-            'release_date' => 'required|date',
+            "image" => "required|image|max:1024",
+            "headline" => "required",
+            "tagline" => "required",
+            "reported_by" => "required",
+            "article" => "required",
+            "release_date" => "required|date",
         ];
-        if ($this->method() == 'PUT') {
-            $rules['image'] = 'image|max:512';
+        if ($this->method() == "PUT") {
+            $rules["image"] = "image|max:512";
         }
         return $rules;
     }

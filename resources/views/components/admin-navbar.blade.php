@@ -1,7 +1,7 @@
 @auth
     <nav class="fixed top-0 z-40 w-full bg-white border-b py-2 px-5 flex items-center justify-between">
         <div>
-            <a href="/dashboard">
+            <a href="/team">
                 <img src="{{ asset('images/logo/dssanblue.png') }}" alt="dssanlogo" class="max-w-[6rem]">
             </a>
         </div>

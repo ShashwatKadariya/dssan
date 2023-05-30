@@ -9,9 +9,9 @@
         {{-- gallery grid section --}}
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($images as $image)
-                <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
-                    <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf hover:"
-                        style="background-image: url({{ asset('/storage/' . $image->image) }})">
+                <div data-aos="fade-up" data-aos-duration="800" class="relative rounded-uihalf drop-shadow-sm">
+                    <div class="mx-auto aspect-3/2  rounded-uihalf hover:scale-125" >
+                    <img src="{{asset('/storage/' . $image->image)}}" alt="pitcures" class="rounded-uihalf">
                     </div>
                 </div>
             @endforeach

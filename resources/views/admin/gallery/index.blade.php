@@ -10,6 +10,7 @@
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
             @foreach ($galleries as $gallery)
                 <div class="flex flex-col">
+
                     <a href="{{ route('gallery.image.create', $gallery) }}" target="blank">
                         <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
                             <div>

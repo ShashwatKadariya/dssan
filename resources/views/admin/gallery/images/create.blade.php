@@ -36,11 +36,9 @@
             @foreach ($images as $image)
                 @if ($image->gallery_id == $gallery->id)
                     <a href="{{ route('image.edit', $image->id) }}" target="blank">
-                        <div data-aos="fade-up" data-aos-duration="800"
-                            class="relative border rounded-uihalf drop-shadow-sm">
-                            <div class="mx-auto aspect-3/2 object-contain rounded-uihalf">
-                                <img src="{{ asset('/storage/' . $image->image) }}" alt="images"
-                                    class="mx-auto aspect-3/2 object-center object-contain rounded-uihalf">
+                        <div data-aos="fade-up" data-aos-duration="800" class="relative border rounded-uihalf drop-shadow-sm">
+                            <div class="mx-auto aspect-3/2 object-contain bg-cover rounded-uihalf hover:scale-125" >
+                                <img src="{{asset('/storage/' . $image->image)}}" alt="pitcures" class="">
                             </div>
                         </div>
                     </a>

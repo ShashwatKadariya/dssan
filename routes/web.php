@@ -24,36 +24,38 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::middleware('guest')->group(function () {
-    Route::get('/', [ClientSideController::class, 'home']);
-    Route::get('/alumni', [ClientSideController::class, 'batch']);
-    Route::get('/alumni/{slug}', [ClientSideController::class, 'alumni']);
-    Route::get('/news&events', [ClientSideController::class, 'news_events']);
-    Route::get('/all_news', [ClientSideController::class, 'allnews']);
-    Route::get('/article/{slug}', [ClientSideController::class, 'article']);
-    Route::get('/all_events', [ClientSideController::class, 'allevents']);
-    Route::post('/message', [ClientSideController::class, 'feedback']);
-    Route::get('/photo-gallery', [ClientSideController::class, 'photoGallery']);
+Route::middleware("guest")->group(function () {
+    Route::get("/", [ClientSideController::class, "home"]);
+    Route::get("/alumni", [ClientSideController::class, "batch"]);
+    Route::get("/alumni/{slug}", [ClientSideController::class, "alumni"]);
+    Route::get("/news&events", [ClientSideController::class, "news_events"]);
+    Route::get("/all_news", [ClientSideController::class, "allnews"]);
+    Route::get("/article/{slug}", [ClientSideController::class, "article"]);
+    Route::get("/all_events", [ClientSideController::class, "allevents"]);
+    Route::post("/message", [ClientSideController::class, "feedback"]);
+    Route::get("/photo-gallery", [ClientSideController::class, "photoGallery"]);
     // Route::get('/gallery/{slug}', [ClientSideController::class, 'gallery']);
-    Route::get('/photo-gallery/{id}', [ClientSideController::class, 'showPhotoGallery'])->name('photoGallery.show');
+    Route::get("/photo-gallery/{slug}", [
+        ClientSideController::class,
+        "showPhotoGallery",
+    ])->name("photoGallery.show");
 });
+use App\Models\User;
 
-
-
-Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+Route::middleware("auth")->group(function () {
+    Route::get("/dashboard", function () {
+        return redirect("/team");
     });
-    Route::resource('/team', TeamController::class);
-    Route::resource('/feedback', FeedbackController::class);
-    Route::resource('/batch', BatchController::class);
-    Route::resource('/batch.alumni', AlumniController::class)->shallow();
-    Route::resource('/events', EventController::class);
-    Route::resource('/news', NewsController::class);
-    Route::resource('/user', UserController::class);
-    Route::resource('/gallery', GalleryController::class);
-    Route::resource('/gallery.image', ImageController::class)->shallow();
-    Route::get('/update-password', function () {
-        return view('auth.update-password');
+    Route::resource("/team", TeamController::class);
+    Route::resource("/feedback", FeedbackController::class);
+    Route::resource("/batch", BatchController::class);
+    Route::resource("/batch.alumni", AlumniController::class)->shallow();
+    Route::resource("/events", EventController::class);
+    Route::resource("/news", NewsController::class);
+    Route::resource("/user", UserController::class);
+    Route::resource("/gallery", GalleryController::class);
+    Route::resource("/gallery.image", ImageController::class)->shallow();
+    Route::get("/update-password", function () {
+        return view("auth.update-password");
     });
 });

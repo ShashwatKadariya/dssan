@@ -13,7 +13,9 @@
 
             <div class="mb-6">
                 <label for="cover_image" class="form-label"> Image </label>
-                <input type="file" id="cover_image" name="cover_image" class="form-input">
+                <input type="file" name="cover_image" class="form-input" accept="image/*" onchange="previewImage(event)">
+                <img id="preview" class="hidden mt-2 h-20">
+
                 @error('cover_image')
                     <p class="text-sm text-red-500"><small>{{ $message }}</small></p>
                 @enderror

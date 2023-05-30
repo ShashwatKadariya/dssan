@@ -19,7 +19,7 @@ class ImageController extends Controller
     public function index(Gallery $gallery)
     {
         $images = Image::all();
-        return view('admin.gallery.images.index', compact('gallery', 'images'));
+        return view("admin.gallery.images.index", compact("gallery", "images"));
     }
 
     /**
@@ -30,7 +30,10 @@ class ImageController extends Controller
     public function create(Gallery $gallery)
     {
         $images = Image::all();
-        return view('admin.gallery.images.create', compact('gallery', 'images'));
+        return view(
+            "admin.gallery.images.create",
+            compact("gallery", "images")
+        );
     }
 
     /**
@@ -41,21 +44,22 @@ class ImageController extends Controller
      */
     public function store(ImageFormRequest $request, Gallery $gallery)
     {
-
-        $validatedData =  $request->validated();
+        $validatedData = $request->validated();
 
         $validatedImages = $validatedData["images"];
         $gallery_id = $gallery->id;
 
         foreach ($validatedImages as $validatedImage) {
-            $image = new Image();;
-            $path = $validatedImage->store('gallery/images');
+            $image = new Image();
+            $path = $validatedImage->store("gallery/images");
 
             $image->image = $path;
             $image->gallery_id = $gallery_id;
             $image->save();
         }
-        return redirect()->route('gallery.image.create', compact('gallery'))->with('success', 'Gallery Created Succesfully !!');
+        return redirect()
+            ->route("gallery.image.create", compact("gallery"))
+            ->with("success", "Gallery Created Succesfully !!");
     }
 
     /**
@@ -78,7 +82,7 @@ class ImageController extends Controller
     public function edit($id)
     {
         $image = Image::find($id);
-        return view('admin.gallery.images.edit', compact('image'));
+        return view("admin.gallery.images.edit", compact("image"));
     }
 
     /**
@@ -91,20 +95,22 @@ class ImageController extends Controller
     public function update(ImageFormRequest $request, $id)
     {
         $validatedData = $request->validated();
-        $uploadedImage = $validatedData['image'];
+        $uploadedImage = $validatedData["image"];
 
         $image = Image::find($id);
 
         $gallery = Gallery::find($image->gallery_id);
 
-        $validatedData['image'] = $uploadedImage->store('gallery/images');
+        $validatedData["image"] = $uploadedImage->store("gallery/images");
 
         if (!is_null($image->image)) {
             Storage::delete($image->image);
         }
 
         $image->update($validatedData);
-        return redirect()->route('gallery.image.create', compact('gallery'))->with('info', 'Image updated successfully.');
+        return redirect()
+            ->route("gallery.image.create", compact("gallery"))
+            ->with("info", "Image updated successfully.");
     }
 
     /**
@@ -122,6 +128,8 @@ class ImageController extends Controller
             Storage::delete($image->image);
         }
         $image->delete();
-        return redirect()->route('gallery.image.create', compact('gallery'))->with('info', 'Image deleted successfully.');
+        return redirect()
+            ->route("gallery.image.create", compact("gallery"))
+            ->with("info", "Image deleted successfully.");
     }
 }

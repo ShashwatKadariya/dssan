@@ -4,12 +4,14 @@
     {{-- hero section --}}
     <section>
         <div class="w-full h-full bg-cover"
-            style="background-image: url('{{ asset('images/images/johns.jpg') }}'); background-attachment: fixed; filter: brightness(90%);">
-            <div class="pb-32">
+            style="background-image: url('{{ asset('images/images/dssan-cover.jpeg') }}'); background-attachment: fixed; filter: brightness(90%);">
+            <div class="pb-32 backdrop-blur-sm">
                 <div data-aos="zoom-in" data-aos-duration="2000"
-                    class="h-screen flex flex-col gap-4 justify-center items-center text-3xl xs:text-4xl sm:text-5xl md:text-7xl text-white font-semibold">
+                    class=" h-screen flex flex-col gap-4 justify-center items-center text-3xl xs:text-4xl sm:text-5xl md:text-7xl text-white font-semibold ">
+                    <div class="">
                     <p class="drop-shadow-xl">MEETING THE MOMENT,</p>
                     <P class="drop-shadow-xl">TOGETHER</P>
+                    </div>
                 </div>
                 <div data-aos="zoom-in-up" data-aos-duration="1000"
                     class="w-11/12 xs:w-10/12 sm:w-2/3 mx-auto p-6 xs:p-8 lg:p-13 xl:p-16 bg-white rounded-ui flex flex-col gap-4 lg:gap-6 xl:gap-8">
@@ -97,6 +99,7 @@
                         {{ $feedback->message }}
                     </div>
                 </div>
+                <br>
             @endforeach
         </div>
     </section>

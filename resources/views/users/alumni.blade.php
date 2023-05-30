@@ -38,7 +38,7 @@
                 <p>Tracy Carmichael, Ph.D.</p>
                 <p>President, Anteaters in Education Alumni Chapter</p>
                 <p>Chief Innovation Officer, Long Beach City College</p>
-                <a href="https://deerwalk.edu.np/sifalschool/" target="blank">
+                <a href="https://deerwalk.edu.np/sifalschool/faculty/view" target="blank">
                     <p
                         class="text-sm py-2 px-5 w-fit border border-dwit-blue mt-8 mx-auto active:text-white active:bg-dwit-blue hover:text-white hover:bg-dwit-blue cursor-pointer">
                         MEET OUR FACULTY MEMBERS
@@ -72,7 +72,8 @@
             </div>
         </div>
     </section>
-
+    
+    
     {{-- batch section --}}
     <section class="mx-auto text-center my-8 lg:my-16">
 
