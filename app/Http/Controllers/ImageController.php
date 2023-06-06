@@ -48,10 +48,8 @@ class ImageController extends Controller
         $gallery_id = $gallery->id;
 
         foreach ($validatedImages as $validatedImage) {
-            $image = new Image();
-
-            $imageName =  time() . '-' . $validatedImage->getClientOriginalName();
-            $path = $validatedImage->storeAs('gallery/images', $imageName);
+            $image = new Image();;
+            $path = $validatedImage->store('gallery/images');
 
             $image->image = $path;
             $image->gallery_id = $gallery_id;
@@ -99,8 +97,7 @@ class ImageController extends Controller
 
         $gallery = Gallery::find($image->gallery_id);
 
-        $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
-        $validatedData['image'] = $uploadedImage->storeAs('gallery/images', $imageName);
+        $validatedData['image'] = $uploadedImage->store('gallery/images');
 
         if (!is_null($image->image)) {
             Storage::delete($image->image);

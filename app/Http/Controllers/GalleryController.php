@@ -8,6 +8,7 @@ use App\Http\Requests\GalleryFormRequest;
 use App\Models\Gallery;
 use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class GalleryController extends Controller
 {
@@ -47,9 +48,7 @@ class GalleryController extends Controller
             return redirect()->route('gallery.create');
         }
         $uploadedImage = $validatedData['cover_image'];
-
-        $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
-        $validatedData['cover_image'] = $request->file('cover_image')->storeAs('gallery/cover', $imageName);
+        $validatedData['cover_image'] = $uploadedImage->store('gallery/cover');
 
         Gallery::create($validatedData);
         return redirect()->route('gallery.index')->with('success', 'Gallery Created Succesfully !!');
@@ -92,11 +91,10 @@ class GalleryController extends Controller
         $validatedData = $request->validated();
         if ($request->hasFile('cover_image')) {
             $uploadedImage = $request['cover_image'];
-            $imageName = time() . '-' . $uploadedImage->getClientOriginalName();
-            $validatedData['cover_image'] = $uploadedImage->storeAs('gallery/cover', $imageName);
+            $validatedData['cover_image'] = $uploadedImage->store('gallery/cover');
         }
 
-        if (!is_null($gallery->image))
+        if (!is_null($gallery->cover_image))
             Storage::delete($gallery->cover_image);
         // save to gallery
         $gallery->update($validatedData);
@@ -111,11 +109,15 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
         $gallery = Gallery::find($id);
+        $images_under_gallery = DB::table('images')->where('gallery_id', $id)->get();
         if (!is_null($gallery->cover_image)) {
             Storage::delete($gallery->cover_image);
+            foreach ($images_under_gallery as $image) {
+                Storage::delete($image->image);
+            }
         }
+
         $gallery->delete();
         return redirect()->route('gallery.index')->with('success', 'Gallery deleted successfully.');
     }

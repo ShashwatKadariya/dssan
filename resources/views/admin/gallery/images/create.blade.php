@@ -2,17 +2,16 @@
 @section('content')
     <section class="w-11/12 mx-auto mt-16 mb-8 lg:mb-16">
         <div data-aos="zoom-in-up" data-aos-duration="500">
-            <p class="text-3xl font-semibold text-dwit-blue">Images</p>
+            <p class="text-3xl font-semibold text-dwit-blue">{{ $gallery->name }}</p>
             <hr class="mt-2">
         </div>
-
 
         <div class="mt-2 block">
             <form method="POST" action="{{ route('gallery.image.store', $gallery) }}" enctype="multipart/form-data"
                 id="submitForm" class="form">
                 @csrf
                 <div class="mb-6">
-                    <label for="images[]" class="form-label"> Multiple Images </label>
+                    <label for="images[]" class="form-label"> Add Images </label>
                     <input type="file" id="images[]" name="images[]" class="form-input" multiple>
 
                 </div>

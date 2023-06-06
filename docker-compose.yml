@@ -31,6 +31,22 @@ services:
 #            - .:/usr/src
 #            - ./node_modules:/usr/src/node_modules
 #        tty: true
+            # - redis
+
+    # node service
+    node:
+        build:
+            context: .
+            target: node
+        ports:
+            - 5173:5173
+        volumes:
+            - .:/usr/src
+            - ./node_modules:/usr/src/node_modules
+        tty: true
+        depends_on:
+            - php
+
     # Database Server
     database:
         image: mysql:8.0
@@ -53,6 +69,12 @@ services:
 #        command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
 #        ports:
 #            - 6379:6379
+    # # Redis Server
+    # redis:
+    #     image: redis:alpine
+    #     command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
+    #     ports:
+    #         - 6379:6379
 
 volumes:
     dbbdata:
