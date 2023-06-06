@@ -17,40 +17,42 @@ services:
             - 8000:8000
         depends_on:
             - database
-            - redis
-            - node
+#            - redis
+#            - node
 
     # node service
-    node:
-        build:
-            context: .
-            target: node
-        ports:
-            - 5173:5173
-        volumes:
-            - .:/usr/src
-            - ./node_modules:/usr/src/node_modules
-        tty: true
+#    node:
+#        build:
+#            context: .
+#            target: node
+#        ports:
+#            - 5173:5173
+#        volumes:
+#            - .:/usr/src
+#            - ./node_modules:/usr/src/node_modules
+#        tty: true
     # Database Server
     database:
         image: mysql:8.0
         ports:
-            - 3306:3306
+            - 3308:3306
+        env_file: 
+            - .env
         environment:
             - MYSQL_DATABASE=${DB_DATABASE}
-            - MYSQL_USER=admin
-            # - MYSQL_PASSWORD=${DB_PASSWORD}
-            - MYSQL_ALLOW_EMPTY_PASSWORD=1
+            - MYSQL_USERNAME=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+#            - MYSQL_ALLOW_EMPTY_PASSWORD=1
 
         volumes:
-            - db-data:/var/lib/mysql
+            - dbbdata:/var/lib/mysql
 
     # Redis Server
-    redis:
-        image: redis:alpine
-        command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
-        ports:
-            - 6379:6379
+#    redis:
+#        image: redis:alpine
+#        command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
+#        ports:
+#            - 6379:6379
 
 volumes:
-    db-data:
+    dbbdata:
