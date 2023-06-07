@@ -56,4 +56,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/update-password', function () {
         return view('auth.update-password');
     });
-});
+})->name('auth');
