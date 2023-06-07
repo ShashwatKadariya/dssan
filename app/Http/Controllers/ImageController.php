@@ -95,7 +95,7 @@ class ImageController extends Controller
 
         $image = Image::find($id);
 
-        $gallery = Gallery::find($image->gallery_id);
+        $gallery = Gallery::find($image->gallery_id);   
 
         $validatedData['image'] = $uploadedImage->store('gallery/images');
 

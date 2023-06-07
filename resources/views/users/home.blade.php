@@ -4,10 +4,10 @@
     {{-- hero section --}}
     <section>
         <div class="w-full h-full bg-cover"
-            style="background-image: url('{{ asset('images/images/johns.jpg') }}'); background-attachment: fixed; filter: brightness(90%);">
+            style="background-image: url('{{ asset('images/images/graduation.png') }}'); background-attachment: fixed; filter: brightness(90%);">
             <div class="pb-32">
                 <div data-aos="zoom-in" data-aos-duration="2000"
-                    class="h-screen flex flex-col gap-4 justify-center items-center text-3xl xs:text-4xl sm:text-5xl md:text-7xl text-white font-semibold">
+                    class="h-screen flex flex-col gap-4 justify-center items-center text-3xl xs:text-4xl sm:text-5xl md:text-7xl text-dwit-blue font-semibold">
                     <p class="drop-shadow-xl">MEETING THE MOMENT,</p>
                     <P class="drop-shadow-xl">TOGETHER</P>
                 </div>
